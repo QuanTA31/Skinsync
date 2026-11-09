@@ -60,7 +60,7 @@ export default function S16MyRoutine() {
                     <line x1="3" x2="21" y1="10" y2="10" />
                   </svg>
                   <span>
-                    Bắt đầu từ <strong className="font-medium text-[#357D64]">15 tháng 3, 2024</strong>
+                    Bắt đầu từ <strong className="font-medium text-[#357D64]">15 tháng 3, 2026</strong>
                   </span>
                 </div>
               </div>
@@ -229,7 +229,7 @@ export default function S16MyRoutine() {
                 <h4 className="text-[12px] font-bold text-[#173B32]">Lịch chụp ảnh da tiếp theo</h4>
                 <div className="text-[10.5px] text-[#557D6F]">
                   <span className="font-semibold text-[#357D64]">Còn 3 ngày nữa</span>
-                  <span className="ml-1 text-[#7E998F]">· Dự kiến: 20 tháng 3, 2024</span>
+                  <span className="ml-1 text-[#7E998F]">· Dự kiến: 20 tháng 3, 2026</span>
                 </div>
               </div>
             </div>

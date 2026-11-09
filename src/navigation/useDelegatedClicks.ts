@@ -80,7 +80,8 @@ export function useDelegatedClicks() {
           if (el.dataset.goAfter) {
             const prev = nav.previous()
             const from = el.dataset.altFrom?.split(',')
-            el.dataset.go = el.dataset.goAfterAlt && prev && from?.includes(prev) ? el.dataset.goAfterAlt : el.dataset.goAfter
+            const routeOverride = prev ? el.getAttribute(`data-go-after-${prev}`) : null
+            el.dataset.go = routeOverride ?? (el.dataset.goAfterAlt && prev && from?.includes(prev) ? el.dataset.goAfterAlt : el.dataset.goAfter)
             delete el.dataset.goAfter
           }
           el.removeAttribute('data-toast')

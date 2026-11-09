@@ -67,7 +67,7 @@ export default function S48Account() {
               </div>
               <div>
                 <p className="text-[14px] font-bold leading-tight text-[#173B32]">Hồ sơ da của bạn</p>
-                <p className="mt-0.5 text-[11px] leading-tight text-[#5F8075]">Đã cập nhật 14/10/2024</p>
+                <p className="mt-0.5 text-[11px] leading-tight text-[#5F8075]">Đã cập nhật 14/10/2026</p>
               </div>
             </div>
             <span className="material-symbols-outlined text-[18px] text-[#173B32]">chevron_right</span>

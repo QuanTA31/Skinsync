@@ -40,7 +40,7 @@ export default function S22SkinJourney() {
               </div>
               <div className="min-w-0">
                 <span className="block truncate text-[9.5px] font-medium leading-tight text-[#6C867D]">Ngày bắt đầu theo dõi</span>
-                <span className="mt-0.5 block text-[12.5px] font-bold tracking-tight text-[#357D64]">10/10/2024</span>
+                <span className="mt-0.5 block text-[12.5px] font-bold tracking-tight text-[#357D64]">10/10/2026</span>
               </div>
             </div>
             <div className="flex items-center space-x-2.5 rounded-2xl border border-[#DFE9E5] bg-white p-2.5 shadow-[0_2px_10px_rgba(23,59,50,0.04)]">
@@ -53,7 +53,7 @@ export default function S22SkinJourney() {
               <div className="min-w-0">
                 <span className="block truncate text-[9.5px] font-medium leading-tight text-[#6C867D]">Lịch chụp da tiếp theo</span>
                 <div className="mt-0.5 flex items-baseline truncate text-[12.5px] font-bold tracking-tight text-[#357D64]">
-                  24/10/2024 <span className="ml-0.5 whitespace-nowrap text-[9px] font-normal text-[#6C867D]">(sau 14 ngày)</span>
+                  24/10/2026 <span className="ml-0.5 whitespace-nowrap text-[9px] font-normal text-[#6C867D]">(sau 14 ngày)</span>
                 </div>
               </div>
             </div>
@@ -95,11 +95,11 @@ export default function S22SkinJourney() {
             <div className="grid grid-cols-2 divide-x divide-[#DFE9E5]/60 pt-2.5 text-center text-xs">
               <div>
                 <span className="block text-[11px] font-bold text-[#173B32]">Trước</span>
-                <span className="text-[10px] font-medium text-[#6C867D]">10/10/2024</span>
+                <span className="text-[10px] font-medium text-[#6C867D]">10/10/2026</span>
               </div>
               <div>
                 <span className="block text-[11px] font-bold text-[#173B32]">Sau 14 ngày</span>
-                <span className="text-[10px] font-medium text-[#6C867D]">24/10/2024</span>
+                <span className="text-[10px] font-medium text-[#6C867D]">24/10/2026</span>
               </div>
             </div>
           </section>
@@ -170,14 +170,14 @@ export default function S22SkinJourney() {
               </a>
             </div>
             <article
-              data-toast="Nhật ký 17/10/2024 (minh họa)"
+              data-toast="Nhật ký 17/10/2026 (minh họa)"
               className="flex items-center space-x-3 rounded-2xl border border-[#DFE9E5] bg-white p-2.5 shadow-[0_2px_10px_rgba(23,59,50,0.04)] transition active:bg-[#F1F6F4]/50"
             >
               <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl border border-[#DFE9E5]/60">
-                <img alt="Nhật ký 17/10/2024" className="h-full w-full object-cover object-center" src="/img/skin/acne-cheek-1.jpg" />
+                <img alt="Nhật ký 17/10/2026" className="h-full w-full object-cover object-center" src="/img/skin/acne-cheek-1.jpg" />
               </div>
               <div className="min-w-0 flex-1">
-                <h4 className="text-[12px] font-bold leading-tight text-[#173B32]">17/10/2024</h4>
+                <h4 className="text-[12px] font-bold leading-tight text-[#173B32]">17/10/2026</h4>
                 <p className="mt-0.5 line-clamp-2 text-[10.5px] leading-relaxed text-[#6C867D]">
                   Da bớt đỏ, ít mụn viêm hơn.
                   <br />

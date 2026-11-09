@@ -12,7 +12,7 @@ const doctor = {
   image: '/img/people/doctor-minh-anh.jpg',
 }
 
-const skinImages = ['/img/products/effaclar-box.jpg', '/img/scenes/facial-treatment.jpg', '/img/products/tube-treatment.jpg']
+const skinImages = ['/img/skin/face-front.jpg', '/img/skin/face-left.jpg', '/img/skin/face-right.jpg']
 
 /** Màn 26 · Xác nhận thông tin đặt lịch */
 export default function S26ConfirmBooking() {
@@ -61,7 +61,7 @@ export default function S26ConfirmBooking() {
           <div className="confirmation-info-row">
             <span className="confirmation-icon">▣</span>
             <strong>Hình thức khám</strong>
-            <span className="confirmation-value">Tư vấn trực tuyến (video call)</span>
+            <span className="confirmation-value">Tư vấn qua điện thoại</span>
           </div>
         </section>
 
@@ -91,7 +91,7 @@ export default function S26ConfirmBooking() {
             <span className="confirmation-icon detail-icon">▱</span>
             <div className="confirmation-detail-content">
               <h3>Hồ sơ da liễu được chia sẻ</h3>
-              <p>Đã chia sẻ 3 ảnh và thông tin tình trạng da</p>
+              <p>Đã chia sẻ 3 ảnh da đủ điều kiện tư vấn</p>
               <div className="skin-image-list">
                 {skinImages.map((image, index) => (
                   <img key={index} src={image} alt={`Hình ảnh hồ sơ da ${index + 1}`} />

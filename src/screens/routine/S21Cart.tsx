@@ -20,12 +20,6 @@ export default function S21Cart() {
             </svg>
           </button>
           <div className="flex flex-col items-center">
-            <div className="mb-0.5 flex h-6 w-6 items-center justify-center">
-              <svg className="h-5 w-5 fill-[#357D64]" viewBox="0 0 32 32">
-                <path d="M16 3C11.58 3 8 7.58 8 13.25C8 18.92 12.45 22.8 16 29C19.55 22.8 24 18.92 24 13.25C24 7.58 20.42 3 16 3ZM16 22.5C14.07 19.2 10.5 16.14 10.5 13.25C10.5 9.17 12.96 5.5 16 5.5C19.04 5.5 21.5 9.17 21.5 13.25C21.5 16.14 17.93 19.2 16 22.5Z" />
-                <path d="M15 8C13 11 13 16 17 20" fill="none" stroke="#357D64" strokeLinecap="round" strokeWidth="1.5" />
-              </svg>
-            </div>
             <BrandLogo />
           </div>
           <div className="w-9" />
@@ -34,13 +28,13 @@ export default function S21Cart() {
           <section className="flex items-center justify-between pt-1">
             <h1 className="flex items-center gap-1.5 text-[17px] font-bold text-[#173B32]">
               <span>Giỏ hàng của bạn</span>
-              <span className="text-[13px] font-normal text-[#717D6F]">(3 sản phẩm)</span>
+              <span className="text-[13px] font-normal text-ink-soft">(3 sản phẩm)</span>
             </h1>
             <button
               data-dismiss="main"
               data-hide="article"
               data-toast="Đã xóa tất cả sản phẩm"
-              className="flex items-center gap-1 text-[12px] text-[#717D6F] transition-colors hover:text-red-700"
+              className="flex items-center gap-1 text-[12px] text-ink-soft transition-colors hover:text-red-700"
               type="button"
             >
               <svg className="h-3.5 w-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
@@ -76,7 +70,7 @@ export default function S21Cart() {
               </div>
               <div className="min-w-0 flex-1">
                 <h2 className="truncate text-[12.5px] font-semibold leading-tight text-[#173B32]">La Roche-Posay Effaclar Purifying Gel</h2>
-                <p className="mt-0.5 text-[11px] text-[#717D6F]">150ml</p>
+                <p className="mt-0.5 text-[11px] text-ink-soft">150ml</p>
                 <div className="mt-1.5 flex items-center justify-between">
                   <span className="text-[13px] font-bold text-[#173B32]">355.000đ</span>
                   <div className="flex items-center gap-2">
@@ -134,7 +128,7 @@ export default function S21Cart() {
               </div>
               <div className="min-w-0 flex-1">
                 <h2 className="truncate text-[12.5px] font-semibold leading-tight text-[#173B32]">The Ordinary Niacinamide 10%</h2>
-                <p className="mt-0.5 text-[11px] text-[#717D6F]">30ml</p>
+                <p className="mt-0.5 text-[11px] text-ink-soft">30ml</p>
                 <div className="mt-1.5 flex items-center justify-between">
                   <span className="text-[13px] font-bold text-[#173B32]">298.000đ</span>
                   <div className="flex items-center gap-2">
@@ -191,7 +185,7 @@ export default function S21Cart() {
               </div>
               <div className="min-w-0 flex-1">
                 <h2 className="truncate text-[12.5px] font-semibold leading-tight text-[#173B32]">CeraVe Moisturizing Cream</h2>
-                <p className="mt-0.5 text-[11px] text-[#717D6F]">340g</p>
+                <p className="mt-0.5 text-[11px] text-ink-soft">340g</p>
                 <div className="mt-1.5 flex items-center justify-between">
                   <span className="text-[13px] font-bold text-[#173B32]">430.000đ</span>
                   <div className="flex items-center gap-2">
@@ -234,7 +228,7 @@ export default function S21Cart() {
             </label>
             <div className="flex items-center gap-2">
               <div className="shadow-2xs flex flex-1 items-center rounded-xl border border-[#E6E8DD] bg-white px-3 py-2">
-                <svg className="mr-2 h-4 w-4 shrink-0 fill-none stroke-current stroke-[1.5] text-[#717D6F]" viewBox="0 0 24 24">
+                <svg className="mr-2 h-4 w-4 shrink-0 fill-none stroke-current stroke-[1.5] text-ink-soft" viewBox="0 0 24 24">
                   <path
                     d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
                     strokeLinecap="round"
@@ -250,7 +244,7 @@ export default function S21Cart() {
               </div>
               <button
                 data-toast="Mã ưu đãi không hợp lệ (minh họa)"
-                className="shrink-0 rounded-xl bg-[#DFE8E4] px-4 py-2 text-xs font-semibold text-[#717D6F] transition-colors hover:bg-[#357D64] hover:text-white"
+                className="shrink-0 rounded-xl bg-primary-soft px-4 py-2 text-xs font-semibold text-ink-soft transition-colors hover:bg-primary hover:text-white"
                 type="button"
               >
                 Áp dụng
@@ -269,9 +263,9 @@ export default function S21Cart() {
               </div>
               <div className="min-w-0 flex-1 pr-1">
                 <p className="truncate text-xs font-bold text-[#173B32]">
-                  Nguyễn Minh Anh <span className="font-normal text-[#717D6F]">| 0901 234 567</span>
+                  Nguyễn Minh Anh <span className="font-normal text-ink-soft">| 0901 234 567</span>
                 </p>
-                <p className="mt-0.5 text-[11px] leading-snug text-[#717D6F]">123 Đường ABC, Quận Cầu Giấy, Hà Nội</p>
+                <p className="mt-0.5 text-[11px] leading-snug text-ink-soft">123 Đường ABC, Quận Cầu Giấy, Hà Nội</p>
               </div>
               <button
                 data-go="s49"
@@ -310,7 +304,7 @@ export default function S21Cart() {
               </label>
               <label className="flex cursor-pointer items-center gap-3 px-3.5 py-3 transition-colors hover:bg-neutral-50/60">
                 <div className="h-4 w-4 shrink-0 rounded-full border border-neutral-300" />
-                <div className="text-[#717D6F]">
+                <div className="text-ink-soft">
                   <svg className="h-4 w-4 fill-none stroke-current stroke-[1.5]" viewBox="0 0 24 24">
                     <path
                       d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
@@ -333,15 +327,15 @@ export default function S21Cart() {
           </section>
           <section className="space-y-1.5 pb-2 pt-2">
             <div className="flex items-center justify-between text-xs">
-              <span className="text-[#717D6F]">Tạm tính (3 sản phẩm)</span>
+              <span className="text-ink-soft">Tạm tính (3 sản phẩm)</span>
               <span className="font-bold text-[#173B32]">1.083.000đ</span>
             </div>
             <div className="flex items-center justify-between text-xs">
-              <span className="text-[#717D6F]">Phí vận chuyển (dự kiến)</span>
+              <span className="text-ink-soft">Phí vận chuyển (dự kiến)</span>
               <span className="font-medium text-[#173B32]">30.000đ</span>
             </div>
             <div className="flex items-center justify-between text-xs">
-              <span className="text-[#717D6F]">Giảm giá</span>
+              <span className="text-ink-soft">Giảm giá</span>
               <span className="font-medium text-[#173B32]">- 0đ</span>
             </div>
             <div className="mt-2 flex items-baseline justify-between border-t border-[#E6E8DD]/60 pt-2">

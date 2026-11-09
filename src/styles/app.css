@@ -39,6 +39,28 @@
   }
 }
 
+/* Đồng bộ font nội dung trong mọi màn; giữ nguyên header, logo và thanh điều hướng. */
+.phone-screen :where(*):not(
+  header,
+  header *,
+  nav,
+  nav *,
+  .booking-header,
+  .booking-header *,
+  .top-header,
+  .top-header *,
+  .header,
+  .header *,
+  .top,
+  .top *,
+  .brand-logo,
+  .brand-logo *,
+  .status-bar,
+  .status-bar *
+) {
+  font-family: var(--font-body) !important;
+}
+
 /* --------------------------- 3. Components --------------------------- */
 @layer components {
   /* Khung điện thoại bọc mọi màn hình (components/layout/Screen.tsx) */

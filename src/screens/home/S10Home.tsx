@@ -70,7 +70,7 @@ export default function S10Home() {
                   />
                 </svg>
               </div>
-              <div className="text-[16px] font-bold leading-tight text-[#173B32]">Ngày 14/10</div>
+              <div className="text-[16px] font-bold leading-tight text-[#173B32]">Ngày 14/28</div>
             </div>
             <div className="mt-2.5">
               <div className="h-2 w-full overflow-hidden rounded-full bg-[#E2EDE8]">
@@ -252,7 +252,7 @@ export default function S10Home() {
                 <div>
                   <h4 className="text-[12.5px] font-bold leading-tight text-[#173B32]">Khám da liễu trực tuyến</h4>
                   <p className="mt-0.5 text-[11px] text-[#66897D]">ThS.BS. Nguyễn Thu Hà</p>
-                  <p className="mt-0.5 text-[10px] text-[#8C948B]">Thứ 6, 25/10/2024 • 10:00</p>
+                  <p className="mt-0.5 text-[10px] text-[#8C948B]">Thứ 6, 25/10/2026 • 10:00</p>
                 </div>
               </div>
               <div className="pr-1 text-[#92A29B]">

@@ -35,6 +35,12 @@ export const SCREENS: ScreenDef[] = [
     component: lazy(() => import('@/screens/onboarding/S03OnboardingIntro')),
   },
   { id: 's04', title: 'Tạo tài khoản', group: GROUPS.onboarding, component: lazy(() => import('@/screens/onboarding/S04SignUp')) },
+  {
+    id: 's62',
+    title: 'Email phụ huynh',
+    group: GROUPS.onboarding,
+    component: lazy(() => import('@/screens/onboarding/S62ParentEmail')),
+  },
   { id: 's61', title: 'Điều khoản sử dụng', group: GROUPS.onboarding, component: lazy(() => import('@/screens/onboarding/S61TermsOfUse')) },
   {
     id: 's05',
@@ -114,7 +120,7 @@ export const SCREENS: ScreenDef[] = [
   { id: 's27', title: 'Buổi tư vấn của bạn', group: GROUPS.doctor, component: lazy(() => import('@/screens/doctor/S27Consultation')) },
   {
     id: 's28',
-    title: 'Liệu trình chăm sóc và điều trị',
+    title: 'Tóm tắt sau buổi tư vấn',
     group: GROUPS.doctor,
     component: lazy(() => import('@/screens/doctor/S28TreatmentPlan')),
   },

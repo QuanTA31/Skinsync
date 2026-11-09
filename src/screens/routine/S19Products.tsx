@@ -22,10 +22,6 @@ export default function S19Products() {
             </button>
             <div className="flex flex-1 flex-col items-center">
               <div className="flex items-center space-x-1.5">
-                <svg className="h-5 w-5 text-[#357D64]" fill="none" viewBox="0 0 32 32">
-                  <path d="M16 4C16 4 11 10 11 16C11 20 14 24 18 24C22 24 25 21 25 17C25 11 16 4 16 4Z" fill="#357D64" />
-                  <path d="M16 11C16 11 12 15 12 19C12 22 14 25 17 25C20 25 22 23 22 20C22 16 16 11 16 11Z" fill="#709A8C" />
-                </svg>
                 <BrandLogo />
               </div>
             </div>

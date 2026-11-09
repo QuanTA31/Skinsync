@@ -41,7 +41,7 @@ export default function S13AnalysisResult() {
               <line x1="3" x2="21" y1="10" y2="10" />
             </svg>
             <span>
-              Ngày phân tích: <strong className="font-semibold text-gray-900">10/10/2024</strong>
+              Ngày phân tích: <strong className="font-semibold text-gray-900">10/10/2026</strong>
             </span>
           </div>
           <div className="shadow-xs flex items-start space-x-3 rounded-2xl border border-[#FADCC7] bg-[#FFF4EB] p-3.5">

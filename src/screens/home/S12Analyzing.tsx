@@ -25,13 +25,6 @@ export default function S12Analyzing() {
               </svg>
             </button>
             <div className="flex flex-col items-center">
-              <svg className="h-6 w-6 fill-current text-[#357D64]" viewBox="0 0 32 32">
-                <path d="M16 2 C13 7 10 13 10 19 C10 24 13 28 17 29 C14 26 13 22 14 17 C15 13 18 8 22 5 C20 4 18 2 16 2 Z" />
-                <path
-                  d="M16 30 C19 25 22 19 22 13 C22 8 19 4 15 3 C18 6 19 10 18 15 C17 19 14 24 10 27 C12 28 14 30 16 30 Z"
-                  opacity="0.75"
-                />
-              </svg>
               <BrandLogo className="mt-0.5" />
             </div>
           </section>

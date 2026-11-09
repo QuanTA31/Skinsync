@@ -19,28 +19,18 @@ export default function S11SkinAnalysis() {
               </svg>
             </button>
             <div className="flex flex-col items-center justify-center">
-              <svg className="h-6 w-6 text-[#467162]" fill="none" viewBox="0 0 32 32">
-                <path
-                  d="M16 4C11 10 10 17 15 22C19 26 24 24 26 19C28 13 22 7 16 4Z"
-                  stroke="#467162"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                />
-                <path d="M16 28C21 22 22 15 17 10C13 6 8 8 6 13C4 19 10 25 16 28Z" fill="#568B78" opacity="0.75" />
-              </svg>
               <BrandLogo className="mt-0.5" />
             </div>
             <div className="w-8" />
           </div>
           <div className="mb-5 mt-3 text-center">
             <h1 className="font-serif text-[22px] font-bold tracking-tight text-[#173B32]">Phân tích làn da</h1>
-            <p className="mt-1 text-[12px] leading-snug text-[#6D8C81]">Theo dõi tình trạng da của bạn qua công nghệ AI</p>
+            <p className="mt-1 text-[12px] leading-snug text-ink-soft">Theo dõi tình trạng da của bạn qua công nghệ AI</p>
           </div>
           <section className="mb-4">
             <div className="mb-2 flex items-center justify-between">
               <h2 className="text-[14px] font-bold text-[#173B32]">Kết quả gần nhất</h2>
-              <span className="text-[12px] font-medium text-[#6D8C81]">10/10/2024</span>
+              <span className="text-[12px] font-medium text-ink-soft">10/10/2026</span>
             </div>
             <div className="rounded-[20px] border border-[#DFEAE5] bg-white p-3 shadow-sm">
               <div className="flex gap-3">
@@ -61,7 +51,7 @@ export default function S11SkinAnalysis() {
                   </div>
                   <button
                     data-go="s13"
-                    className="mt-2.5 flex w-full items-center justify-center gap-1 rounded-full border border-[#467162]/50 px-3 py-1.5 text-[11px] font-semibold text-[#467162] transition-colors hover:bg-[#EDF4F1]"
+                    className="mt-2.5 flex w-full items-center justify-center gap-1 rounded-full border border-primary/50 px-3 py-1.5 text-[11px] font-semibold text-primary transition-colors hover:bg-primary-tint"
                   >
                     <span>Xem chi tiết kết quả</span>
                     <span className="text-xs">→</span>
@@ -73,9 +63,9 @@ export default function S11SkinAnalysis() {
           <section className="mb-4 grid grid-cols-3 gap-2.5">
             <button
               data-go="s13"
-              className="flex flex-col items-center rounded-[16px] border border-[#DFEAE5] bg-white px-1.5 py-3 text-center shadow-sm transition-all hover:border-[#467162]/40 active:scale-[0.98]"
+              className="flex flex-col items-center rounded-[16px] border border-[#DFEAE5] bg-white px-1.5 py-3 text-center shadow-sm transition-all hover:border-primary/40 active:scale-[0.98]"
             >
-              <div className="mb-1.5 flex h-8 w-8 items-center justify-center rounded-full text-[#467162]">
+              <div className="mb-1.5 flex h-8 w-8 items-center justify-center rounded-full text-primary">
                 <svg className="h-5 w-5 stroke-[1.8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M3 7V5a2 2 0 012-2h2m10 0h2a2 2 0 012 2v2m0 10v2a2 2 0 01-2 2h-2m-10 0H5a2 2 0 01-2-2v-2"
@@ -93,9 +83,9 @@ export default function S11SkinAnalysis() {
             </button>
             <button
               data-go="s22"
-              className="flex flex-col items-center rounded-[16px] border border-[#DFEAE5] bg-white px-1.5 py-3 text-center shadow-sm transition-all hover:border-[#467162]/40 active:scale-[0.98]"
+              className="flex flex-col items-center rounded-[16px] border border-[#DFEAE5] bg-white px-1.5 py-3 text-center shadow-sm transition-all hover:border-primary/40 active:scale-[0.98]"
             >
-              <div className="mb-1.5 flex h-8 w-8 items-center justify-center rounded-full text-[#467162]">
+              <div className="mb-1.5 flex h-8 w-8 items-center justify-center rounded-full text-primary">
                 <svg className="h-5 w-5 stroke-[1.8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
@@ -112,9 +102,9 @@ export default function S11SkinAnalysis() {
             </button>
             <button
               data-go="s22"
-              className="flex flex-col items-center rounded-[16px] border border-[#DFEAE5] bg-white px-1.5 py-3 text-center shadow-sm transition-all hover:border-[#467162]/40 active:scale-[0.98]"
+              className="flex flex-col items-center rounded-[16px] border border-[#DFEAE5] bg-white px-1.5 py-3 text-center shadow-sm transition-all hover:border-primary/40 active:scale-[0.98]"
             >
-              <div className="mb-1.5 flex h-8 w-8 items-center justify-center rounded-full text-[#467162]">
+              <div className="mb-1.5 flex h-8 w-8 items-center justify-center rounded-full text-primary">
                 <svg className="h-5 w-5 stroke-[1.8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-3.75h.008v.008H12v-.008z"
@@ -133,7 +123,7 @@ export default function S11SkinAnalysis() {
           <section className="mb-5">
             <button
               data-go="s06"
-              className="flex h-[48px] w-full items-center justify-center space-x-2 rounded-full bg-[#467162] font-medium text-white shadow-md shadow-[#467162]/25 transition-all hover:bg-[#357D64] active:scale-[0.99]"
+              className="flex h-[48px] w-full items-center justify-center space-x-2 rounded-full bg-primary font-medium text-white shadow-md shadow-primary/25 transition-all hover:bg-primary-hover active:scale-[0.99]"
             >
               <svg className="h-5 w-5 stroke-[1.8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -154,7 +144,7 @@ export default function S11SkinAnalysis() {
           <section>
             <div className="mb-2.5 flex items-center justify-between">
               <h2 className="text-[14px] font-bold text-[#173B32]">Lịch sử phân tích</h2>
-              <a data-go="s22" className="flex items-center text-[12px] font-medium text-[#6D8C81] hover:text-[#467162]" href="#">
+              <a data-go="s22" className="flex items-center text-[12px] font-medium text-ink-soft hover:text-primary" href="#">
                 <span>Xem tất cả</span>
                 <span className="ml-0.5 text-[10px]">›</span>
               </a>
@@ -168,7 +158,7 @@ export default function S11SkinAnalysis() {
                     className="h-10 w-10 shrink-0 rounded-[10px] border border-black/5 object-cover"
                   />
                   <div>
-                    <p className="text-[12px] font-semibold leading-tight text-stone-800">10/10/2024</p>
+                    <p className="text-[12px] font-semibold leading-tight text-stone-800">10/10/2026</p>
                     <div className="mt-1 inline-flex items-center gap-1 rounded-full bg-[#FDF1E6] px-1.5 py-0.5 text-[10px] font-semibold text-[#B96316]">
                       <span>👑</span>
                       <span>Có dấu hiệu mụn nhẹ</span>
@@ -187,7 +177,7 @@ export default function S11SkinAnalysis() {
                     className="h-10 w-10 shrink-0 rounded-[10px] border border-black/5 object-cover"
                   />
                   <div>
-                    <p className="text-[12px] font-semibold leading-tight text-stone-800">24/09/2024</p>
+                    <p className="text-[12px] font-semibold leading-tight text-stone-800">24/09/2026</p>
                     <div className="mt-1 inline-flex items-center rounded-full bg-[#E7F2ED] px-2 py-0.5 text-[10px] font-semibold text-[#357D64]">
                       <span>Da tương đối ổn định</span>
                     </div>
@@ -205,7 +195,7 @@ export default function S11SkinAnalysis() {
                     className="h-10 w-10 shrink-0 rounded-[10px] border border-black/5 object-cover"
                   />
                   <div>
-                    <p className="text-[12px] font-semibold leading-tight text-stone-800">05/09/2024</p>
+                    <p className="text-[12px] font-semibold leading-tight text-stone-800">05/09/2026</p>
                     <div className="mt-1 inline-flex items-center gap-1 rounded-full bg-[#FDF1E6] px-1.5 py-0.5 text-[10px] font-semibold text-[#B96316]">
                       <span>👑</span>
                       <span>Có dấu hiệu mụn nhẹ</span>

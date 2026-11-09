@@ -23,15 +23,6 @@ export default function S20ProductDetail() {
             </svg>
           </button>
           <div className="flex flex-col items-center">
-            <svg className="mb-0.5 h-6 w-6 text-[#357D64]" fill="none" stroke="currentColor" viewBox="0 0 32 32">
-              <path
-                d="M16 3C16 3 24 7 24 16C24 25 16 29 16 29C16 29 8 25 8 16C8 7 16 3 16 3Z"
-                stroke="#357D64"
-                strokeLinecap="round"
-                strokeWidth="1.8"
-              />
-              <path d="M16 6C16 13 18 19 22 22" stroke="#357D64" strokeLinecap="round" strokeWidth="1.8" />
-            </svg>
             <BrandLogo />
           </div>
           <div className="flex items-center space-x-2">

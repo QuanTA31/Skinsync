@@ -66,7 +66,7 @@ export default function S54DoctorSchedule() {
             <div className="flex items-center justify-between px-1 pb-1.5 text-xs font-semibold text-[#173B32]">
               <button
                 aria-label="Ngày trước"
-                data-toast="Ngày 21/10/2024"
+                data-toast="Ngày 21/10/2026"
                 className="flex items-center justify-center p-1 text-[#697368] transition-colors hover:text-[#173B32]"
                 type="button"
               >
@@ -74,11 +74,11 @@ export default function S54DoctorSchedule() {
               </button>
               <div className="flex cursor-pointer items-center gap-1.5">
                 <span className="material-symbols-outlined text-[16px] text-[#173B32]">calendar_month</span>
-                <span className="text-[13px] font-bold tracking-tight text-[#173B32]">22/10/2024</span>
+                <span className="text-[13px] font-bold tracking-tight text-[#173B32]">22/10/2026</span>
               </div>
               <button
                 aria-label="Ngày sau"
-                data-toast="Ngày 23/10/2024"
+                data-toast="Ngày 23/10/2026"
                 className="flex items-center justify-center p-1 text-[#697368] transition-colors hover:text-[#173B32]"
                 type="button"
               >

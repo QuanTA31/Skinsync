@@ -44,7 +44,7 @@ export default function S58Dashboard() {
               className="shadow-2xs flex items-center gap-1 rounded-full border border-[#E3E6D3] bg-white px-2.5 py-1 text-[10.5px] font-medium text-[#357D64]"
             >
               <span className="material-symbols-outlined text-[12px] text-[#357D64]">calendar_today</span>
-              <span className="text-[10px] font-semibold">Tháng 10/2024</span>
+              <span className="text-[10px] font-semibold">Tháng 10/2026</span>
               <span className="material-symbols-outlined text-[13px] text-neutral-400">expand_more</span>
             </div>
           </section>

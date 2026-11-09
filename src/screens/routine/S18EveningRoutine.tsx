@@ -57,7 +57,7 @@ export default function S18EveningRoutine() {
                     <p className="mt-0.5 text-[11px] text-[#698B7F]">Bước 1 – Xem hướng dẫn và sản phẩm</p>
                   </div>
                 </div>
-                <span className="pt-0.5 text-[#598173]">
+                <span className="pt-0.5 text-primary">
                   <svg className="h-4 w-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path d="M4.5 15.75l7.5-7.5 7.5 7.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -70,13 +70,13 @@ export default function S18EveningRoutine() {
                   </div>
                   <div className="min-w-0 flex-1">
                     <h4 className="truncate text-[12.5px] font-bold text-[#173B32]">DHC Deep Cleansing Oil</h4>
-                    <p className="text-[11px] text-[#5E8778]">Dầu tẩy trang</p>
+                    <p className="text-[11px] text-ink-soft">Dầu tẩy trang</p>
                   </div>
                 </div>
                 <dl className="mb-3 space-y-1.5 text-[11px]">
                   <div className="flex items-start gap-1.5">
-                    <dt className="flex w-28 shrink-0 items-center gap-1 font-medium text-[#467162]">
-                      <svg className="h-3.5 w-3.5 text-[#598173]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <dt className="flex w-28 shrink-0 items-center gap-1 font-medium text-primary">
+                      <svg className="h-3.5 w-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path
                           d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                           strokeLinecap="round"
@@ -91,8 +91,8 @@ export default function S18EveningRoutine() {
                     </dd>
                   </div>
                   <div className="flex items-start gap-1.5">
-                    <dt className="flex w-28 shrink-0 items-center gap-1 font-medium text-[#467162]">
-                      <svg className="h-3.5 w-3.5 text-[#598173]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <dt className="flex w-28 shrink-0 items-center gap-1 font-medium text-primary">
+                      <svg className="h-3.5 w-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path
                           d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
                           strokeLinecap="round"
@@ -105,8 +105,8 @@ export default function S18EveningRoutine() {
                     <dd className="flex-1 text-[#173B32]">Bước 1 (đầu tiên)</dd>
                   </div>
                   <div className="flex items-start gap-1.5">
-                    <dt className="flex w-28 shrink-0 items-center gap-1 font-medium text-[#467162]">
-                      <svg className="h-3.5 w-3.5 text-[#598173]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <dt className="flex w-28 shrink-0 items-center gap-1 font-medium text-primary">
+                      <svg className="h-3.5 w-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path
                           d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                           strokeLinecap="round"
@@ -176,7 +176,7 @@ export default function S18EveningRoutine() {
                   <p className="mt-0.5 text-[10.5px] text-[#698B7F]">Bước 2 – Xem hướng dẫn và sản phẩm</p>
                 </div>
               </div>
-              <span className="text-[#598173]">
+              <span className="text-primary">
                 <svg className="h-4 w-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -195,7 +195,7 @@ export default function S18EveningRoutine() {
                   <p className="mt-0.5 text-[10.5px] text-[#698B7F]">Bước 3 – Xem hướng dẫn và sản phẩm</p>
                 </div>
               </div>
-              <span className="text-[#598173]">
+              <span className="text-primary">
                 <svg className="h-4 w-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -214,7 +214,7 @@ export default function S18EveningRoutine() {
                   <p className="mt-0.5 text-[10.5px] text-[#698B7F]">Bước 4 – Xem hướng dẫn và sản phẩm</p>
                 </div>
               </div>
-              <span className="text-[#598173]">
+              <span className="text-primary">
                 <svg className="h-4 w-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

@@ -2,7 +2,7 @@ import { BrandLogo } from '@/components/brand/BrandLogo'
 import { ScopedScreen } from '@/components/layout/ScopedScreen'
 import css from './S28TreatmentPlan.css?inline'
 
-/** Màn 28 · Liệu trình chăm sóc và điều trị */
+/** Màn 28 · Tóm tắt sau buổi tư vấn */
 export default function S28TreatmentPlan() {
   return (
     <ScopedScreen id="s28" css={css} tab={0}>
@@ -15,8 +15,8 @@ export default function S28TreatmentPlan() {
         </header>
 
         <section className="sc-treatment-heading">
-          <h1>Liệu trình chăm sóc và điều trị</h1>
-          <p>Dựa trên buổi tư vấn với bác sĩ, đây là phác đồ phù hợp với tình trạng da của bạn.</p>
+          <h1>Tóm tắt sau buổi tư vấn</h1>
+          <p>Thông tin cuộc gọi, ảnh da và hướng dẫn chăm sóc được bác sĩ đề xuất.</p>
         </section>
 
         <section className="sc-treatment-doctor" data-go="s24" style={{ cursor: 'pointer' }}>
@@ -25,7 +25,22 @@ export default function S28TreatmentPlan() {
             <strong>BS. Nguyễn Thị Minh Anh</strong>
             <p>Bác sĩ Chuyên khoa Da liễu</p>
             <p>Bệnh viện Da liễu Trung ương</p>
-            <small>▣ Ngày tư vấn: 22/10/2024 · 10:00</small>
+            <small>☎ Tư vấn qua điện thoại · 22/10/2026 · 10:00</small>
+          </div>
+        </section>
+
+        <section className="sc-treatment-photos">
+          <div className="sc-treatment-photos-heading">
+            <div>
+              <strong>Ảnh da sau buổi tư vấn</strong>
+              <p>Ảnh rõ nét · Đã thêm vào hồ sơ tư vấn</p>
+            </div>
+            <span>✓ Đạt yêu cầu</span>
+          </div>
+          <div className="sc-treatment-photo-list">
+            <img src="/img/skin/face-front.jpg" alt="Ảnh da chính diện sau tư vấn" />
+            <img src="/img/skin/face-left.jpg" alt="Ảnh da góc trái sau tư vấn" />
+            <img src="/img/skin/face-right.jpg" alt="Ảnh da góc phải sau tư vấn" />
           </div>
         </section>
 

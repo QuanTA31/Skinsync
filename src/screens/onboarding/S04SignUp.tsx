@@ -1,9 +1,15 @@
+import { useState } from 'react'
 import { BrandLogo } from '@/components/brand/BrandLogo'
 import { SafeAreaBottom, SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
+import { useNav } from '@/navigation/NavProvider'
 
 /** Màn 04 · Tạo tài khoản */
 export default function S04SignUp() {
+  const { go } = useNav()
+  const [birthYear, setBirthYear] = useState('')
+  const currentYear = new Date().getFullYear()
+
   return (
     <Screen>
       <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans text-[#173B32] antialiased">
@@ -37,7 +43,14 @@ export default function S04SignUp() {
                 Bắt đầu hành trình chăm sóc làn da cá nhân hóa dành riêng cho bạn.
               </p>
             </div>
-            <form className="space-y-2.5">
+            <form
+              className="space-y-2.5"
+              onSubmit={(event) => {
+                event.preventDefault()
+                const requiresParentEmail = ['2009', '2010', '2011'].includes(birthYear)
+                go(requiresParentEmail ? 's62' : 's61')
+              }}
+            >
               <div className="relative flex h-[48px] items-center rounded-2xl border border-[rgba(53,125,100,0.18)] bg-white px-3.5 shadow-[0_1px_3px_rgba(0,0,0,0.02)] transition-all focus-within:border-[#357D64] focus-within:ring-1 focus-within:ring-[#357D64]">
                 <span className="mr-2.5 shrink-0 text-stone-400">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
@@ -64,12 +77,22 @@ export default function S04SignUp() {
                       <line strokeLinecap="round" x1="3" x2="21" y1="10" y2="10" />
                     </svg>
                   </span>
-                  <input
-                    className="h-full w-full cursor-pointer border-none bg-transparent p-0 text-[14px] text-gray-800 placeholder-stone-400 focus:outline-none focus:ring-0"
-                    placeholder="Năm sinh"
-                    type="text"
-                    readOnly
-                  />
+                  <select
+                    aria-label="Năm sinh"
+                    className={`h-full w-full cursor-pointer border-none bg-transparent p-0 text-[14px] focus:outline-none focus:ring-0 ${
+                      birthYear ? 'text-gray-800' : 'text-stone-400'
+                    }`}
+                    onChange={(event) => setBirthYear(event.target.value)}
+                    required
+                    value={birthYear}
+                  >
+                    <option value="">Năm sinh</option>
+                    {Array.from({ length: currentYear - 1899 }, (_, index) => currentYear - index).map((year) => (
+                      <option key={year} value={year}>
+                        {year}
+                      </option>
+                    ))}
+                  </select>
                 </div>
                 <span className="pointer-events-none text-stone-400">
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
@@ -200,7 +223,6 @@ export default function S04SignUp() {
               </div>
               <div className="pt-1">
                 <button
-                  data-go="s61"
                   className="flex h-[52px] w-full items-center justify-center space-x-2 rounded-full bg-[#357D64] font-medium text-white shadow-[0_4px_16px_rgba(53,125,100,0.25)] transition-all hover:bg-[#357D64] active:scale-[0.99]"
                   type="submit"
                 >

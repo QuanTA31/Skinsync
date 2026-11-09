@@ -68,8 +68,8 @@ export default function S25BookAppointment() {
             <button className={`consultation-card ${consultation === 'online' ? 'active' : ''}`} onClick={() => setConsultation('online')}>
               <span className="consultation-icon">▣</span>
               <span className="consultation-text">
-                <strong>Khám trực tuyến</strong>
-                <small>Tư vấn qua video call</small>
+                <strong>Tư vấn qua điện thoại</strong>
+                <small>Bác sĩ xem ảnh da bạn chia sẻ</small>
               </span>
               {consultation === 'online' && <span className="selected-check">✓</span>}
             </button>

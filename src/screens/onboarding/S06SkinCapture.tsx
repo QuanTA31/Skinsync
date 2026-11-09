@@ -1,8 +1,12 @@
 import { SafeAreaBottom, SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
+import { useNav } from '@/navigation/NavProvider'
 
 /** Màn 06 · Chụp ảnh làn da */
 export default function S06SkinCapture() {
+  const nav = useNav()
+  const postConsultation = nav.previous() === 's27'
+
   return (
     <Screen>
       <div
@@ -30,9 +34,16 @@ export default function S06SkinCapture() {
               <path d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <h1 className="-ml-10 flex-1 text-center text-[17px] font-semibold tracking-tight text-[#173B32]">Chụp ảnh làn da của bạn</h1>
+          <h1 className="-ml-10 flex-1 text-center text-[17px] font-semibold tracking-tight text-[#173B32]">
+            {postConsultation ? 'Chụp ảnh da sau tư vấn' : 'Chụp ảnh làn da của bạn'}
+          </h1>
         </nav>
         <main className="flex flex-1 flex-col justify-start overflow-hidden px-4 pt-3">
+          {postConsultation && (
+            <p className="mb-2 rounded-xl border border-[#DEE8E4] bg-[#ECF3F0]/85 px-3 py-2 text-[11px] leading-snug text-[#173B32]">
+              Chụp ảnh rõ ở ba góc để bác sĩ cập nhật hồ sơ và hoàn thiện tóm tắt sau buổi tư vấn.
+            </p>
+          )}
           <div className="relative h-[308px] w-full overflow-hidden rounded-[24px] bg-stone-200 shadow-[0_4px_20px_-2px_rgba(23,59,50,0.06)]">
             <img
               alt="Xem trước khuôn mặt trực tiếp"
@@ -177,6 +188,7 @@ export default function S06SkinCapture() {
               data-toast="Hãy bấm “Chụp ảnh” trước khi tiếp tục"
               data-go-after="s07"
               data-go-after-alt="s12"
+              data-go-after-s27="s28"
               data-alt-from="s10,s11,s13,s14,s15,s22,s50"
               data-alt="w-full h-[46px] rounded-full bg-[#357D64] text-white flex items-center justify-center space-x-2 text-[14px] font-medium tracking-wide shadow-[0_2px_8px_rgba(23,59,50,0.08)] active:scale-95 transition-all"
               className="flex h-[46px] w-full cursor-not-allowed items-center justify-center space-x-2 rounded-full bg-[#D8DEDC]/80 text-[14px] font-medium tracking-wide text-[#889E96]"
