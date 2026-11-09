@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import type { ReactNode } from 'react'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 import { useNav } from '@/navigation/NavProvider'
 
 const UPDATED_AT = '01/11/2026'
@@ -45,7 +44,7 @@ export default function S61TermsOfUse() {
   return (
     <Screen>
       <div className="relative flex h-[844px] w-[390px] flex-col overflow-hidden bg-ivory text-ink">
-        <StatusBar />
+        <SafeAreaTop />
 
         <header className="relative flex shrink-0 items-center justify-center px-5 pb-2 pt-1">
           <button
@@ -107,8 +106,6 @@ export default function S61TermsOfUse() {
             Từ chối
           </button>
         </footer>
-
-        <HomeIndicator />
       </div>
     </Screen>
   )

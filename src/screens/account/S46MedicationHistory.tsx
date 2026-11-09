@@ -1,16 +1,13 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 46 · Lịch sử dùng thuốc */
 export default function S46MedicationHistory() {
   return (
-    <Screen>
-      <div className="botanical-bg relative flex h-[884px] w-[390px] flex-col justify-between overflow-hidden bg-[#F7F8F2] antialiased">
-        <img src="/eucalyptus-corner.png" alt="" aria-hidden="true" className="botanical-img" />
-        <StatusBar />
+    <Screen tab={2}>
+      <div className="botanical-bg relative flex h-[844px] w-[390px] flex-col justify-between overflow-hidden bg-[#F7F8F2] antialiased">
+        <SafeAreaTop />
         <main className="z-10 flex flex-1 flex-col overflow-hidden px-4 pb-1 pt-0" style={{ paddingBottom: '92px' }}>
           <header className="relative mb-1.5 flex items-center justify-between py-1">
             <button
@@ -318,8 +315,6 @@ export default function S46MedicationHistory() {
             </div>
           </section>
         </main>
-        <BottomNav role="user" active={2} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

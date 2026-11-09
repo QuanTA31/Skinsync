@@ -1,30 +1,20 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 51 · Đơn hàng và thanh toán */
 export default function S51OrdersPayments() {
   return (
-    <Screen>
+    <Screen tab={4}>
       <div
         className="relative flex select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans antialiased"
-        style={{ width: '390px', height: '884px' }}
+        style={{ width: '390px', height: '844px' }}
       >
-        <StatusBar />
+        <SafeAreaTop />
         <main
           className="relative z-10 flex flex-1 flex-col overflow-hidden px-4"
           style={{ paddingBottom: '96px', overflowY: 'auto', scrollbarWidth: 'none' }}
         >
-          <div className="pointer-events-none absolute right-0 top-0 z-0 overflow-hidden" style={{ width: '120px', height: '120px' }}>
-            <img
-              src="/eucalyptus-corner.png"
-              alt=""
-              className="pointer-events-none h-full w-full select-none object-cover object-top opacity-70"
-              style={{ mixBlendMode: 'multiply' }}
-            />
-          </div>
           <header className="relative z-10 flex items-center justify-between pb-2 pt-1">
             <button
               aria-label="Quay lại"
@@ -61,7 +51,7 @@ export default function S51OrdersPayments() {
               <div className="flex items-start justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-100 bg-[#F5F6EF] p-1">
-                    <img src="/img/product.svg" alt="Sữa rửa mặt dịu nhẹ" className="h-full w-full object-contain" />
+                    <img src="/img/products/effaclar-gel.jpg" alt="Sữa rửa mặt dịu nhẹ" className="h-full w-full object-contain" />
                   </div>
                   <div>
                     <div className="flex items-center space-x-1.5">
@@ -109,11 +99,7 @@ export default function S51OrdersPayments() {
               <div className="flex items-start justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-100 bg-[#F5F6EF] p-1">
-                    <img
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf3DMlkIW1yd2tLaNQegunXcOkaS4NUUQScRui5neaYfGWqbCwETVdzczuwvyrckotxNY_6mFp_b3oDDpiPUch77xSmTY9Noeatmpah3h0UySsg5NU00EkHVQjbwDLzihCowKOfU-jarYDmabTMGUWQSdeacyWOe1s5r8Ps0wHwMjuZIaUnqj3JF4Bl2jf5KSZCatxzBrtiAjuGFJaIupVKV9EU7aIxRWItdj4PZk"
-                      alt="Bộ dưỡng ẩm phục hồi"
-                      className="h-full w-full object-contain"
-                    />
+                    <img src="/img/products/moisturizer-set.jpg" alt="Bộ dưỡng ẩm phục hồi" className="h-full w-full object-contain" />
                   </div>
                   <div>
                     <div className="flex items-center space-x-1.5">
@@ -204,7 +190,7 @@ export default function S51OrdersPayments() {
                 <div className="flex items-center space-x-3">
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-100 bg-[#F5F6EF]">
                     <img
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIsrsA7RB9a3_GQTLS1ZPXm4MHd1bz8XnN7p9A1k__N8bQ6u-0AXLReCAH26HuiCVjXGv1XPgmpZHT0KXacVCy7sVm5dcMw4YHgGff_YSlQYPEo83n3CfNrXu3Jmopx1XZEbSHs3EFP2SjdkB80o9gmzTC2zygcc1bJZG3HbqAcsabBNKGR3EACAfQ4hhLvOmF33EDTdGV8sU98OP0EM0M70cv4b0koO-rvgGdHZg"
+                      src="/img/people/doctor-minh-anh.jpg"
                       alt="Tư vấn bác sĩ da liễu"
                       className="h-full w-full object-cover object-top"
                     />
@@ -246,7 +232,7 @@ export default function S51OrdersPayments() {
               <div className="flex items-start justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-100 bg-[#F5F6EF] p-1">
-                    <img src="/img/product.svg" alt="Kem chống nắng quang phổ rộng" className="h-full w-full object-contain" />
+                    <img src="/img/products/sunscreen.jpg" alt="Kem chống nắng quang phổ rộng" className="h-full w-full object-contain" />
                   </div>
                   <div>
                     <div className="flex items-center space-x-1.5">
@@ -283,8 +269,6 @@ export default function S51OrdersPayments() {
             </article>
           </div>
         </main>
-        <BottomNav role="user" active={4} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

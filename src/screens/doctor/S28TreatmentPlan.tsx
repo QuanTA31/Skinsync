@@ -7,11 +7,6 @@ export default function S28TreatmentPlan() {
   return (
     <ScopedScreen id="s28" css={css} tab={0}>
       <main className="phone sc-screen sc-treatment">
-        <div className="status-bar">
-          <span>9:41</span>
-          <span>●●● ◖ ▰</span>
-        </div>
-
         <header className="booking-header">
           <button className="back-button" data-back="s27">
             ‹
@@ -25,7 +20,7 @@ export default function S28TreatmentPlan() {
         </section>
 
         <section className="sc-treatment-doctor" data-go="s24" style={{ cursor: 'pointer' }}>
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Bác sĩ Nguyễn Thị Minh Anh" />
+          <img src="/img/people/doctor-minh-anh.jpg" alt="Bác sĩ Nguyễn Thị Minh Anh" />
           <div>
             <strong>BS. Nguyễn Thị Minh Anh</strong>
             <p>Bác sĩ Chuyên khoa Da liễu</p>
@@ -70,21 +65,21 @@ export default function S28TreatmentPlan() {
           <div className="sc-product-list">
             <div className="sc-product" data-go="s20">
               <div className="sc-product-image">
-                <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=150" alt="Effaclar Gel" />
+                <img src="/img/products/effaclar-box.jpg" alt="Effaclar Gel" />
               </div>
               <strong>Effaclar Gel</strong>
               <small>Sữa rửa mặt</small>
             </div>
             <div className="sc-product" data-go="s20">
               <div className="sc-product-image">
-                <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=150" alt="Niacinamide" />
+                <img src="/img/products/cream-jar.jpg" alt="Niacinamide" />
               </div>
               <strong>Niacinamide 10% + Zinc 1%</strong>
               <small>Serum</small>
             </div>
             <div className="sc-product" data-go="s34">
               <div className="sc-product-image">
-                <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=150" alt="Adapalene" />
+                <img src="/img/products/effaclar-box.jpg" alt="Adapalene" />
               </div>
               <strong>Adapalene 0.1%</strong>
               <small>Thuốc bôi</small>

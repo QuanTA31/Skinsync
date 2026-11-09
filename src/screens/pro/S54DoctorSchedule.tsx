@@ -1,24 +1,17 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 54 · Lịch khám của tôi */
 export default function S54DoctorSchedule() {
   return (
-    <Screen iconSize="sm">
+    <Screen tab={2} role="doctor" iconSize="sm">
       <div
         className="relative flex select-none flex-col overflow-hidden"
-        style={{ width: '390px', height: '884px', backgroundColor: '#F7F8F2' }}
+        style={{ width: '390px', height: '844px', backgroundColor: '#F7F8F2' }}
       >
-        <StatusBar />
+        <SafeAreaTop />
         <section className="relative mt-1 flex select-none items-center justify-between px-4 pb-1 pt-3">
-          <img
-            src="/eucalyptus-corner.png"
-            alt=""
-            className="pointer-events-none absolute right-0 top-0 z-0 w-28 object-contain opacity-85"
-            style={{ mixBlendMode: 'multiply' }}
-          />
           <button
             aria-label="Menu"
             data-toast="Menu bác sĩ (minh họa)"
@@ -32,7 +25,7 @@ export default function S54DoctorSchedule() {
           </div>
           <div data-go="s58" className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center">
             <div className="shadow-2xs relative h-9 w-9 overflow-hidden rounded-full border-2 border-[#D1DFD9]">
-              <img alt="Bác sĩ" className="h-full w-full object-cover" src="/img/avatar.svg" />
+              <img alt="Bác sĩ" className="h-full w-full object-cover" src="/img/people/doctor-lan.jpg" />
             </div>
           </div>
         </section>
@@ -133,11 +126,7 @@ export default function S54DoctorSchedule() {
               <div className="shadow-2xs flex-1 rounded-2xl border border-[#E8EBDC] bg-white px-2.5 py-1.5">
                 <div className="flex items-center justify-between">
                   <div className="flex min-w-0 items-center gap-2">
-                    <img
-                      alt="Nguyễn Minh Anh"
-                      className="h-7 w-7 shrink-0 rounded-full object-cover"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuADRsMzBHpZnqvk52ati5ko6DCoG7aBDemSopLE7d1RCAOnkomyeX-edmCZ0mZj2NCuZIchrAWBV2UUKM6763kcVxfo5gTNnXMpcsKXz5xdyxwiKMdKGD1Hwe889MmGkV4LvZjURcP4L3UeWYyH8SNeKWinswTdzb8H6TixYlPLz3tSXUN18gTGCMbUo2B3emDOb42OJQQvnpKm-UzpE2fD3mbx9_ZyAqaizGdeSJ4"
-                    />
+                    <img alt="Nguyễn Minh Anh" className="h-7 w-7 shrink-0 rounded-full object-cover" src="/img/people/user-minh-anh.jpg" />
                     <div className="truncate">
                       <h4 className="truncate text-[11.5px] font-bold leading-tight text-[#173B32]">Nguyễn Minh Anh</h4>
                       <p className="mt-0.5 truncate text-[9.5px] leading-tight text-[#7C8578]">Tư vấn online • Tái khám</p>
@@ -180,7 +169,7 @@ export default function S54DoctorSchedule() {
                     <img
                       alt="Trần Hoàng Nam"
                       className="h-7 w-7 shrink-0 rounded-full object-cover"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYRyOtrSXqsoKWU67bUrNY2QxprgTnsbn8BEuHPS1o21g6ufDElkGEbForqepX7UvFG7sYvIciwpxTv_2AwZ9M_r091sxsmyH3Y_6t7kSEeUy9QsierdfRaFXsB8xcBTQYfOtRt1CjQu2uE-IkSKqnVmmPE6uYRCbwhWM5i15FIYlXh-Qzk6wCEQdpM6aDfd8m92YDK4C_n71b01VEA-94CJHxKeH3rTfmeuMfDcc"
+                      src="/img/people/patient-hoang-nam.jpg"
                     />
                     <div className="truncate">
                       <h4 className="truncate text-[11.5px] font-bold leading-tight text-[#173B32]">Trần Hoàng Nam</h4>
@@ -220,11 +209,7 @@ export default function S54DoctorSchedule() {
               <div className="shadow-2xs flex-1 rounded-2xl border border-[#E8EBDC] bg-white px-2.5 py-1.5">
                 <div className="flex items-center justify-between">
                   <div className="flex min-w-0 items-center gap-2">
-                    <img
-                      alt="Lê Thu Hà"
-                      className="h-7 w-7 shrink-0 rounded-full object-cover"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGHq1hRX8fKc1ZsqWWCMs1HVlSusKKpoZ1E0TBZPyfTgdG2dkO3GBVit5Z8DPPhvnGTWqg_0qNZrHCdDNEz-O4_pc6V9dN_d3UsKlePuzaOIw3oMF7ueuAwXm-9EBaoBWVeAey6MwpJlUUS-d1b_mp1C13aNG2S9-_-XVPgXElzONFOlP9MYxhKwagRnaE8Y_EQmVB-qvz6jt53hXAYX3rNbH7y8z6Ea44pR2fmhw"
-                    />
+                    <img alt="Lê Thu Hà" className="h-7 w-7 shrink-0 rounded-full object-cover" src="/img/people/patient-thu-ha.jpg" />
                     <div className="truncate">
                       <h4 className="truncate text-[11.5px] font-bold leading-tight text-[#173B32]">Lê Thu Hà</h4>
                       <p className="mt-0.5 truncate text-[9.5px] leading-tight text-[#7C8578]">Tư vấn online • Theo dõi</p>
@@ -267,7 +252,7 @@ export default function S54DoctorSchedule() {
                     <img
                       alt="Phạm Quỳnh Trang"
                       className="h-7 w-7 shrink-0 rounded-full object-cover"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-6aXhcrAsC6gxDshZvj77JFS4n6Itqvi91SKrlOFFIHNZohzTLDhcFbX_MvGsbjeBlfp2N2ArWSUh0gNoV0xnTrDvh1Lgh-ivN7CdfWv7td5-zp31Xdp64NY41v0gud6IFi2naGVXEUPGxGwMv-AFFMjZ-v9675G1tb_b9gfysF0pWU0a6ULHYuXXrRxmSh5lf8fmHBPUqvyAUgpucZoA6l2vCcp3vXUXtDNImsg"
+                      src="/img/people/patient-quynh-trang.jpg"
                     />
                     <div className="truncate">
                       <h4 className="truncate text-[11.5px] font-bold leading-tight text-[#173B32]">Phạm Quỳnh Trang</h4>
@@ -310,7 +295,7 @@ export default function S54DoctorSchedule() {
                     <img
                       alt="Hoàng Đức Thịnh"
                       className="h-7 w-7 shrink-0 rounded-full object-cover"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcgZzaN31_mvHFbzqts9Nn3p-g8iBDeNwIL2z32wJPDiub3EnfVkxNwtYlYb-vHqVxJfvY7LjgPd_XrC0LUDrUWioPldbU5fNd8cVv_bzGtmsefN7BWMYvJuG0ZYbEqze9YgaBZP5RuTNCYTIQuCelytUqYTx-c8rgtkDemuvGF8I0sL_ZcLIyrwuLdjK1mPp0ZeLiTnXllHNq890UtHrI5dYff2p3sbgKEzhZRMk"
+                      src="/img/people/patient-duc-thinh.jpg"
                     />
                     <div className="truncate">
                       <h4 className="truncate text-[11.5px] font-bold leading-tight text-[#173B32]">Hoàng Đức Thịnh</h4>
@@ -353,7 +338,6 @@ export default function S54DoctorSchedule() {
             <span>Thêm lịch trống</span>
           </button>
         </main>
-        <BottomNav role="doctor" active={2} />
         <div
           style={{
             width: '134px',

@@ -1,25 +1,12 @@
-import { BottomNav } from '@/components/layout/BottomNav'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 10 · Trang chủ */
 export default function S10Home() {
   return (
-    <Screen>
+    <Screen tab={0}>
       <div className="relative flex h-[844px] w-[390px] select-none flex-col overflow-hidden bg-[#F7F8F2] font-sans antialiased">
-        <div className="pointer-events-none absolute -right-12 -top-10 h-48 w-48 opacity-[0.07]">
-          <svg className="h-full w-full text-[#357D64]" fill="currentColor" viewBox="0 0 200 200">
-            <path d="M42.7,105.7C19.3,77.5,23.4,32.3,51.8,8.9S125.2,5.2,148.6,33.4s19.3,73.4-9.1,96.8S66.1,133.9,42.7,105.7z" />
-            <path d="M110,60 C130,20 180,40 170,90 C160,140 100,160 80,120 Z" />
-          </svg>
-        </div>
-        <div className="pointer-events-none absolute -left-16 top-[480px] h-56 w-56 rotate-45 opacity-[0.05]">
-          <svg className="h-full w-full text-[#357D64]" fill="currentColor" viewBox="0 0 200 200">
-            <path d="M42.7,105.7C19.3,77.5,23.4,32.3,51.8,8.9S125.2,5.2,148.6,33.4s19.3,73.4-9.1,96.8S66.1,133.9,42.7,105.7z" />
-          </svg>
-        </div>
-        <StatusBar />
+        <SafeAreaTop />
         <main className="no-scrollbar z-10 flex-1 space-y-3.5 overflow-y-auto px-4 pb-24 pt-2">
           <section className="flex items-center justify-between pt-1">
             <div className="flex items-center space-x-3">
@@ -27,7 +14,7 @@ export default function S10Home() {
                 data-tab="s48"
                 className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full border border-[#D1DDD8] bg-white p-0.5 shadow-sm"
               >
-                <img alt="Minh Anh Avatar" className="h-full w-full rounded-full object-cover" src="/img/avatar.svg" />
+                <img alt="Minh Anh Avatar" className="h-full w-full rounded-full object-cover" src="/img/people/user-minh-anh.jpg" />
               </div>
               <div>
                 <h1 className="text-[16px] font-bold leading-tight tracking-tight text-[#173B32]">Xin chào, Minh Anh!</h1>
@@ -104,11 +91,7 @@ export default function S10Home() {
                 </button>
               </div>
               <div className="shadow-xs h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl border border-[#C6D8D1] bg-[#F6DDD3]">
-                <img
-                  alt="Chẩn đoán da với chuyên gia"
-                  className="h-full w-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBDfFh0G8z6Ke4SHadSlVEAhxRMOyNIdlUT3FRls9a8NfSi_pLhviFpjS1N6RMg140hUVGdQOW6CIwODAu_xe971r5LUx0-_SWm06Ky_Qd8yz-UdbnECqC0CrCE04fBP4SurfZ-ys2zIRyqGxx9AhAn3nVWzBTbm48zOZjXiEuwt3eKjj22fUmJ2plMMe_-wlNrgtu_oKFa-lr0eu7zkKHzG46FwsgEddSP6EC_TDXIWGpknp8shA-"
-                />
+                <img alt="Chẩn đoán da với chuyên gia" className="h-full w-full object-cover" src="/img/scenes/skin-scan.png" />
               </div>
             </div>
           </section>
@@ -305,8 +288,6 @@ export default function S10Home() {
             </div>
           </section>
         </main>
-        <BottomNav role="user" active={0} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

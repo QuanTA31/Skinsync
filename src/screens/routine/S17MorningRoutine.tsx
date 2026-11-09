@@ -1,26 +1,16 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 17 · Chăm sóc da buổi sáng */
 export default function S17MorningRoutine() {
   return (
-    <Screen>
+    <Screen tab={2}>
       <div
         className="relative flex h-[844px] w-[390px] select-none flex-col overflow-hidden bg-[#F7F8F2] font-sans antialiased"
         style={{ paddingBottom: '78px' }}
       >
-        <div aria-hidden="true" className="pointer-events-none absolute -right-6 -top-6 z-10 h-44 w-44 opacity-35">
-          <svg fill="none" viewBox="0 0 200 200">
-            <path d="M190 20C150 40 120 85 130 140C100 100 115 50 145 25C160 10 178 12 190 20Z" fill="#357D64" />
-            <path d="M180 80C140 100 110 135 115 175C90 140 100 105 130 85C148 72 165 75 180 80Z" fill="#609784" />
-            <path d="M140 30C110 60 70 80 40 85C65 65 95 45 125 25C132 20 138 24 140 30Z" fill="#357D64" />
-            <path d="M165 5C135 30 115 65 110 100C95 70 105 40 130 20C145 8 158 5 165 5Z" fill="#82AB9D" />
-          </svg>
-        </div>
-        <StatusBar />
+        <SafeAreaTop />
         <main className="no-scrollbar relative z-20 flex-1 overflow-y-auto px-5 pb-8">
           <nav className="relative flex min-h-[52px] items-center justify-center pb-3 pt-3">
             <button
@@ -33,7 +23,7 @@ export default function S17MorningRoutine() {
               </svg>
             </button>
             <div className="flex flex-col items-center">
-              <BrandLogo variant="stacked" />
+              <BrandLogo />
             </div>
           </nav>
           <section className="mb-4 mt-3 text-center">
@@ -207,8 +197,6 @@ export default function S17MorningRoutine() {
             </article>
           </div>
         </main>
-        <BottomNav role="user" active={2} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

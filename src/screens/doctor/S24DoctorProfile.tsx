@@ -9,7 +9,7 @@ const doctor = {
   rating: '4.9',
   reviews: '320 đánh giá',
   experience: '8 năm kinh nghiệm',
-  image: 'https://randomuser.me/api/portraits/women/44.jpg',
+  image: '/img/people/doctor-minh-anh.jpg',
 }
 
 const certificates = [
@@ -45,11 +45,6 @@ export default function S24DoctorProfile() {
   return (
     <ScopedScreen id="s24" css="" tab={0}>
       <main className="phone">
-        <div className="status-bar">
-          <span>9:41</span>
-          <span className="status-icons">●●● ◖ ▰</span>
-        </div>
-
         <header className="top-header">
           <button className="back-button" data-back="s23">
             ‹

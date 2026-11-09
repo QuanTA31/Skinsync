@@ -24,11 +24,6 @@ export default function S27Consultation() {
   return (
     <ScopedScreen id="s27" css={css} tab={0}>
       <main className="phone sc-screen sc-video">
-        <div className="status-bar">
-          <span>9:41</span>
-          <span>●●● ◖ ▰</span>
-        </div>
-
         <div className="sc-video-top">
           <header className="booking-header">
             <button className="back-button" data-back="s26">
@@ -57,16 +52,12 @@ export default function S27Consultation() {
         </div>
 
         <section className="sc-video-container">
-          <img
-            className="sc-doctor-video"
-            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700"
-            alt="Bác sĩ Nguyễn Thị Minh Anh"
-          />
+          <img className="sc-doctor-video" src="/img/people/doctor-minh-anh.jpg" alt="Bác sĩ Nguyễn Thị Minh Anh" />
           <div className="sc-doctor-label">
             <span>●</span> BS. Nguyễn Thị Minh Anh
           </div>
           <div className="sc-self-video">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Người khám" />
+            <img src="/img/people/doctor-minh-anh.jpg" alt="Người khám" />
             <span>▣ Bạn</span>
           </div>
         </section>

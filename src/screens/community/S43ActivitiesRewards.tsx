@@ -4,7 +4,7 @@ import css from '@/styles/scoped/compact.css?inline'
 
 const activities = [
   {
-    icon: '💆🏻',
+    image: '/img/skin/clear-face.jpg',
     tag: 'THỬ THÁCH',
     title: 'Chụp ảnh tiến trình 14 ngày',
     desc: 'Cập nhật hình ảnh da sau 14 ngày và chia sẻ cảm nhận của bạn.',
@@ -12,7 +12,7 @@ const activities = [
     go: 's06',
   },
   {
-    icon: '🧾',
+    image: '/img/skin/acne-cheek-3.jpg',
     tag: 'CÂU ĐỐ KIẾN THỨC',
     title: 'Hiểu đúng về mụn',
     desc: 'Trả lời 5 câu hỏi để nhận ngay mã ưu đãi chăm sóc da.',
@@ -21,7 +21,7 @@ const activities = [
     toast: 'Bắt đầu câu đố: Hiểu đúng về mụn',
   },
   {
-    icon: '👩🏻‍⚕️',
+    image: '/img/people/doctor-minh-anh.jpg',
     tag: 'SỰ KIỆN ĐẶC BIỆT',
     title: 'Góc chia sẻ cùng bác sĩ',
     desc: 'Đặt câu hỏi và nhận giải đáp trực tiếp từ bác sĩ da liễu.',
@@ -29,7 +29,7 @@ const activities = [
     go: 's23',
   },
   {
-    icon: '🧴',
+    image: '/img/products/skincare-set.jpg',
     tag: 'ƯU ĐÃI ĐỐI TÁC',
     title: 'Ưu đãi độc quyền tháng 10',
     desc: 'Giảm đến 20% cho các sản phẩm chăm sóc da chính hãng.',
@@ -43,7 +43,6 @@ export default function S43ActivitiesRewards() {
   return (
     <ScopedScreen id="s43" css={css} tab={4}>
       <main className="screen">
-        <span className="leaf">🌿</span>
         <Top back="s41" />
 
         <h1>Hoạt động và quà tặng</h1>
@@ -65,13 +64,13 @@ export default function S43ActivitiesRewards() {
               Tham gia ngay →
             </button>
           </div>
-          <div style={{ fontSize: 54 }}>👩🏻‍🦰</div>
+          <img className="challenge-photo" src="/img/people/user-minh-anh.jpg" alt="Thử thách 28 ngày" />
         </div>
 
         {activities.map((x) => (
           <div className="card row" key={x.title}>
-            <div className="thumb" style={{ width: 72, height: 75, fontSize: 28 }}>
-              {x.icon}
+            <div className="thumb" style={{ width: 72, height: 75 }}>
+              <img src={x.image} alt={x.title} />
             </div>
             <div style={{ flex: 1 }}>
               <span className="pill">{x.tag}</span>

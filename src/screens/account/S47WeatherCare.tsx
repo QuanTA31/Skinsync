@@ -1,21 +1,13 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 47 · Thời tiết & chăm sóc da hôm nay */
 export default function S47WeatherCare() {
   return (
-    <Screen>
-      <div className="relative flex h-[884px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans antialiased">
-        <img
-          src="/eucalyptus-corner.png"
-          alt="Decorative foliage"
-          className="pointer-events-none absolute right-0 top-0 z-10 w-[120px]"
-          style={{ mixBlendMode: 'multiply' }}
-        />
-        <StatusBar />
+    <Screen tab={0}>
+      <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans antialiased">
+        <SafeAreaTop />
         <main className="flex flex-1 flex-col justify-between overflow-hidden px-4 pb-2 pt-1" style={{ paddingBottom: '74px' }}>
           <header className="relative flex h-[36px] items-center justify-between px-1">
             <button
@@ -63,7 +55,7 @@ export default function S47WeatherCare() {
           </section>
           <section className="shadow-xs relative mt-2 h-[142px] w-full overflow-hidden rounded-[20px] border border-[#E2E5D2]">
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXAlOCT2qli4afJDBdenfAl7Yy0StgOyT-YnMHPXDsT1TUKMFY7g03P-i6eMIWQTKImtBOQmYdtKRGZ8P-Zz8USUg2aT6BVrLqVuYVHsS5ZGnNZSA3LKGx9rxfh75JpOeQomSb8EwW35T8V3M_5uUESWMJcsGwE0FnZ3g5-9F235sMAWz1wQLBdwgl3C-sc_YnzEA_h3BrXSJFeTh8jABQfCK59K8aMIJINLY8qxI"
+              src="/img/scenes/da-nang.jpg"
               alt="Da Nang Dragon Bridge"
               className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
             />
@@ -178,7 +170,7 @@ export default function S47WeatherCare() {
               <ul className="z-10 flex-1 space-y-1.5">
                 <li className="flex items-center gap-2 text-[10.5px] font-semibold text-[#3D5C51]">
                   <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv5fIWWEqoEXOSil0rXPGYCtl4GCjP4cUztQToQKecS_jFc4D5_gqP3BKuna2URTuTjr-ULh3rOGSoAd_OD_bG0TazRI9wP22fZuKIotSMdllGjyYO8kkTPyXdw1Gjrw0ufrLu2CnEpX3k7WjDgA1-BNPYyw3DGbhg5uymqCxWITxLfozrqioJdw4BOuA4D0ljG7cutq_VmJxcYxDHUolOW9ZLaw3OTwhvjfYq-p8"
+                    src="/img/products/sunscreen.jpg"
                     alt="Kem chống nắng SPF 50"
                     className="shadow-xs h-7 w-7 shrink-0 rounded-full bg-white/70 object-contain p-0.5"
                     style={{ backgroundColor: 'rgb(220,235,229)' }}
@@ -187,7 +179,7 @@ export default function S47WeatherCare() {
                 </li>
                 <li className="flex items-center gap-2 text-[10.5px] font-semibold text-[#3D5C51]">
                   <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxOOrHNOgRXu-uemYV1i7Utu_x5PGOolTOBiRkKO-nHaMX6LKllFYMfVeyPSu3HQdQvlHMWul5bNmAq8MW9qhX9GHIBk0tyskQzuSR8RztPzJ_A0hL773aGt7U_iU0LGz7eT76pDTdptcS5I3HoD5R9QB8rLpJIux3PfSRtxRxTC6KP0NYmvMhwAA4WOdHiOZghQIvJvJwcA7rqQH7ZUec52IOB-rFUS8eFfskJ28"
+                    src="/img/scenes/sun-hat.jpg"
                     alt="Nón rộng vành che nắng"
                     className="shadow-xs h-7 w-7 shrink-0 rounded-full bg-white/70 object-contain p-0.5"
                     style={{ backgroundColor: 'rgb(220,235,229)' }}
@@ -196,7 +188,7 @@ export default function S47WeatherCare() {
                 </li>
                 <li className="flex items-center gap-2 text-[10.5px] font-semibold text-[#3D5C51]">
                   <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN1xHe4sw5TbR7pKEGFR74J1mLWMyd-o91juwNaHXfqCSZwT_mvWFO0r9ZEKdVQ00lkwxpI2D9iiU928VTGG9xzZAbcV6icENkAm0M79niZQT_XUKpRcy0B-8HN0-W7KG7R0BcVJ9KJwXm99kzwDNJbdKWTsfC8rHjNQorhGk4cQTGHq3WzG7MradwR8Ts1VB2gBZoQv_-tqWo3ukoevP66E_qFrA6xStcUoGoW_I"
+                    src="/img/products/mineral-water.jpg"
                     alt="Nước khoáng cấp ẩm"
                     className="shadow-xs h-7 w-7 shrink-0 rounded-full bg-white/70 object-contain p-0.5"
                     style={{ backgroundColor: 'rgb(220,235,229)' }}
@@ -209,7 +201,7 @@ export default function S47WeatherCare() {
                 style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 38%)' }}
               >
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1vekXZfLHLg0SOOQM_an7BT8HAm_rklL_onCyddBuyciqxoSpFnHgRoSoHke3PyhUmRlFfRIapymCAShRt1I6jDADPH9StNEN9U2jdwX73N_YoB4-nW6Gfb7icHad0hlJrlO_CXibPIJD7jgWnkqmuJMeYZZMOgcUcbtoZo4R3_jrPXFpW8md8GnA31h9npcjgplIZsNdiB7CcTnEsMOzRqouZMOUcBlMyhbMZgk"
+                  src="/img/products/skincare-set.jpg"
                   alt="Cosmetic skincare tube and cream jar"
                   className="h-full w-full object-cover object-center"
                   style={{ mixBlendMode: 'multiply' }}
@@ -244,8 +236,6 @@ export default function S47WeatherCare() {
             </button>
           </section>
         </main>
-        <BottomNav role="user" active={0} />
-        <HomeIndicator variant="inline" />
       </div>
     </Screen>
   )

@@ -1,27 +1,14 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 11 · Phân tích làn da */
 export default function S11SkinAnalysis() {
   return (
-    <Screen>
+    <Screen tab={0}>
       <div className="relative flex h-[844px] w-[390px] select-none flex-col overflow-hidden bg-[#F7F8F2] font-sans antialiased">
-        <StatusBar />
-        <div
-          className="no-scrollbar relative flex-1 overflow-y-auto px-5 pb-24 pt-2"
-          style={{ backgroundImage: 'radial-gradient(circle at 100% 0%,rgba(89,148,127,.12) 0%,transparent 60%)' }}
-        >
-          <svg
-            className="pointer-events-none absolute right-0 top-0 h-28 w-28 text-[#467162] opacity-25"
-            fill="currentColor"
-            viewBox="0 0 100 100"
-          >
-            <path d="M98,2 C70,10 50,35 48,65 C78,60 92,30 98,2 Z" />
-            <path d="M80,3 C50,22 45,55 46,75 C70,65 80,35 80,3 Z" opacity="0.6" />
-          </svg>
+        <SafeAreaTop />
+        <div className="no-scrollbar relative flex-1 overflow-y-auto px-5 pb-24 pt-2">
           <div className="relative mb-2 mt-1 flex items-center justify-between">
             <button
               data-back="s10"
@@ -58,7 +45,7 @@ export default function S11SkinAnalysis() {
             <div className="rounded-[20px] border border-[#DFEAE5] bg-white p-3 shadow-sm">
               <div className="flex gap-3">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDseZXlcmXlQVRQg2oPhe9v4lFHJG-8vJJXBpvuM_V-FOirdJeLpuaGBH2y9H0bm5xhlHIrIwJ9lzXQP8dqDyRhLiZtx5GLjCP_PvQL8NVn9PuIhzh1hERqPOnm9w2IlZxpbaApQSwIuDFLkQ3fKdxsFbcnDu48FtlUfRQm7bDnClLaghO_ufW_EodcQiPU3QaCFw-eC0sXjr2FQHra7KCdNvPuGe_LW5HQa5fYeLA"
+                  src="/img/skin/acne-cheek-4.jpg"
                   alt="Ảnh phân tích da"
                   className="h-[106px] w-[96px] shrink-0 rounded-[14px] border border-black/5 object-cover"
                 />
@@ -176,7 +163,7 @@ export default function S11SkinAnalysis() {
               <div data-go="s13" className="flex items-center justify-between pt-1">
                 <div className="flex items-center space-x-2.5">
                   <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDseZXlcmXlQVRQg2oPhe9v4lFHJG-8vJJXBpvuM_V-FOirdJeLpuaGBH2y9H0bm5xhlHIrIwJ9lzXQP8dqDyRhLiZtx5GLjCP_PvQL8NVn9PuIhzh1hERqPOnm9w2IlZxpbaApQSwIuDFLkQ3fKdxsFbcnDu48FtlUfRQm7bDnClLaghO_ufW_EodcQiPU3QaCFw-eC0sXjr2FQHra7KCdNvPuGe_LW5HQa5fYeLA"
+                    src="/img/skin/acne-cheek-4.jpg"
                     alt="Ảnh phân tích da"
                     className="h-10 w-10 shrink-0 rounded-[10px] border border-black/5 object-cover"
                   />
@@ -195,7 +182,7 @@ export default function S11SkinAnalysis() {
               <div data-go="s13" className="flex items-center justify-between pt-2.5">
                 <div className="flex items-center space-x-2.5">
                   <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDseZXlcmXlQVRQg2oPhe9v4lFHJG-8vJJXBpvuM_V-FOirdJeLpuaGBH2y9H0bm5xhlHIrIwJ9lzXQP8dqDyRhLiZtx5GLjCP_PvQL8NVn9PuIhzh1hERqPOnm9w2IlZxpbaApQSwIuDFLkQ3fKdxsFbcnDu48FtlUfRQm7bDnClLaghO_ufW_EodcQiPU3QaCFw-eC0sXjr2FQHra7KCdNvPuGe_LW5HQa5fYeLA"
+                    src="/img/skin/acne-cheek-4.jpg"
                     alt="Ảnh phân tích da"
                     className="h-10 w-10 shrink-0 rounded-[10px] border border-black/5 object-cover"
                   />
@@ -213,7 +200,7 @@ export default function S11SkinAnalysis() {
               <div data-go="s13" className="flex items-center justify-between pt-2.5">
                 <div className="flex items-center space-x-2.5">
                   <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDseZXlcmXlQVRQg2oPhe9v4lFHJG-8vJJXBpvuM_V-FOirdJeLpuaGBH2y9H0bm5xhlHIrIwJ9lzXQP8dqDyRhLiZtx5GLjCP_PvQL8NVn9PuIhzh1hERqPOnm9w2IlZxpbaApQSwIuDFLkQ3fKdxsFbcnDu48FtlUfRQm7bDnClLaghO_ufW_EodcQiPU3QaCFw-eC0sXjr2FQHra7KCdNvPuGe_LW5HQa5fYeLA"
+                    src="/img/skin/acne-cheek-4.jpg"
                     alt="Ảnh phân tích da"
                     className="h-10 w-10 shrink-0 rounded-[10px] border border-black/5 object-cover"
                   />
@@ -232,8 +219,6 @@ export default function S11SkinAnalysis() {
             </div>
           </section>
         </div>
-        <BottomNav role="user" active={0} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

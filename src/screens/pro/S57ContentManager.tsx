@@ -1,36 +1,16 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 57 · Quản lý bài viết / video */
 export default function S57ContentManager() {
   return (
-    <Screen iconSize="sm">
+    <Screen tab={1} role="doctor" iconSize="sm">
       <div
         className="relative flex select-none flex-col overflow-hidden"
-        style={{ width: '390px', height: '884px', backgroundColor: '#F7F8F2' }}
+        style={{ width: '390px', height: '844px', backgroundColor: '#F7F8F2' }}
       >
-        <img
-          alt=""
-          aria-hidden="true"
-          src="/eucalyptus-corner.png"
-          style={{
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            zIndex: 0,
-            width: '112px',
-            height: '112px',
-            objectFit: 'contain',
-            objectPosition: 'top right',
-            opacity: '.48',
-            mixBlendMode: 'multiply',
-            pointerEvents: 'none',
-          }}
-        />
-        <StatusBar />
+        <SafeAreaTop />
         <header className="relative z-40 flex items-center justify-between px-5 pb-1.5 pt-2">
           <button
             aria-label="Menu"
@@ -44,7 +24,7 @@ export default function S57ContentManager() {
             <BrandLogo />
           </div>
           <div data-go="s58" className="shadow-xs h-8 w-8 overflow-hidden rounded-full border border-[#D3DFDA] bg-white">
-            <img alt="Doctor avatar" className="h-full w-full object-cover" src="/img/avatar.svg" />
+            <img alt="Doctor avatar" className="h-full w-full object-cover" src="/img/people/doctor-lan.jpg" />
           </div>
         </header>
         <main className="relative z-20 flex flex-1 flex-col justify-between overflow-hidden px-4 pb-[90px] pt-1">
@@ -183,8 +163,6 @@ export default function S57ContentManager() {
             </button>
           </div>
         </main>
-        <BottomNav role="doctor" active={1} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

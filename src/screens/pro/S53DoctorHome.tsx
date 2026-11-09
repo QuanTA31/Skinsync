@@ -1,18 +1,16 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 53 · Trang chủ bác sĩ */
 export default function S53DoctorHome() {
   return (
-    <Screen>
+    <Screen tab={0} role="doctor">
       <div
-        className="relative flex h-[884px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans text-[#1F2937] antialiased"
+        className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans text-[#1F2937] antialiased"
         style={{
           width: '390px',
-          height: '884px',
+          height: '844px',
           backgroundColor: 'rgb(247,248,242)',
           position: 'relative',
           overflow: 'hidden',
@@ -20,31 +18,7 @@ export default function S53DoctorHome() {
           flexDirection: 'column',
         }}
       >
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute right-0 top-0 z-0 overflow-hidden"
-          style={{ width: '88px', height: '64px', lineHeight: 0, background: 'transparent' }}
-        >
-          <img
-            src="/eucalyptus-corner.png"
-            alt=""
-            className="select-none"
-            style={{
-              position: 'absolute',
-              top: 0,
-              right: 0,
-              width: '112px',
-              maxWidth: 'none',
-              height: '112px',
-              objectFit: 'cover',
-              objectPosition: 'top right',
-              opacity: 0.52,
-              mixBlendMode: 'multiply',
-              pointerEvents: 'none',
-            }}
-          />
-        </div>
-        <StatusBar />
+        <SafeAreaTop />
         <header className="relative z-20 flex-shrink-0 px-6 pt-0">
           <nav className="mt-1 flex items-center justify-between">
             <button
@@ -63,7 +37,7 @@ export default function S53DoctorHome() {
               <img
                 alt="Avatar Bác sĩ Lan"
                 className="relative z-10 h-8 w-8 rounded-full object-cover shadow-sm ring-2 ring-white"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe4IXlViD1haUPyBs2puLX5IG3Q7md9No1Dv_DVKXRn3hN0vw0iqNcve3hGKqq_s8IspBobD8Qt-V8RkZ5DfFZVOffuiqqF703HgHCZSMO4lHVe0sAw-h2YjxMKOBqm1rxtTDjWLciHPa6ZD8V8w_9KkRzoQ4OHx5s_-CY6QOsghKHSDx6T0AEMNeYYmULaXTkd_sg846b4oWsuRttYb5DLbveFUiUcY2dKhycG9M"
+                src="/img/people/doctor-lan.jpg"
               />
             </div>
           </nav>
@@ -197,7 +171,7 @@ export default function S53DoctorHome() {
                   <img
                     alt="Nguyễn Minh Anh"
                     className="h-9 w-9 flex-shrink-0 rounded-full border border-gray-100 object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaFLkmWrLbKIfjDEP-0uDBd-_SsdjXDLpCwh0VYwROqzKL2WRJRPNAXePPZcmBSReZ_akCChKogmSqdwK3bEP752__W9RYYH8y6vHsPlQ9TNJh_VBLFDMsaHhIDUx-2EG65Ica4RVV_yex00aMmxl8s_2EuXkW0iuOYUVp5UlP6gzhGEDPfjjQ7DpROy8mniiHtpH8wIZyoWVIibLpGeD5F1dtR_zHLJfmLY3-J3o"
+                    src="/img/people/user-minh-anh.jpg"
                   />
                   <div>
                     <p className="mb-0.5 text-[11px] font-medium leading-none text-[#768F86]">09:00 - 09:30</p>
@@ -224,7 +198,7 @@ export default function S53DoctorHome() {
                   <img
                     alt="Trần Hoàng Nam"
                     className="h-9 w-9 flex-shrink-0 rounded-full border border-gray-100 object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKmSZMjvIKHks9zBGj6ERrBCaOrEkqqKGrT69hqMlS-QbvNE3VPXpXjo1istNOtJZZpdLMwIIIqrgPUFmkx2xtgWUNrzgKY7JRGdPyiFGY9D6_djM728JZewZzC6b5eTu03uIQ2B1Ppu-7BHRpc1KR3EtArRCw_zs9c_Fa7femU5uhIbsjIVK18pMdEFLUEx9DI4N0SJ8Iot8sS-bAqdh4D67o2v90jyCVzKXUObw"
+                    src="/img/people/patient-hoang-nam.jpg"
                   />
                   <div>
                     <p className="mb-0.5 text-[11px] font-medium leading-none text-[#768F86]">10:00 - 10:30</p>
@@ -251,7 +225,7 @@ export default function S53DoctorHome() {
                   <img
                     alt="Lê Thu Hà"
                     className="h-9 w-9 flex-shrink-0 rounded-full border border-gray-100 object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwKqZQSRhD3St9sDt_wGVYWks52VcH8t_iqwBekd-Q91oo-qp_AsIzH723Hdqo23b5HbgZ_w90N5gojkzhUJvAbiWSseUa1g_-JvXSM9XxR1_X02qa74d4jvhduMI0K90W5U559P2KhK1GOlvEaeqfxShfIYHQz2jRA7aCTjd_XN7Jg-_NvsD78dv1QsUi1bpLpnniLw8iGNfD-60dskCdxGHAOsuaQWHKeKJutTk"
+                    src="/img/people/patient-thu-ha.jpg"
                   />
                   <div>
                     <p className="mb-0.5 text-[11px] font-medium leading-none text-[#768F86]">11:00 - 11:30</p>
@@ -301,8 +275,6 @@ export default function S53DoctorHome() {
             </button>
           </section>
         </main>
-        <BottomNav role="doctor" active={0} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

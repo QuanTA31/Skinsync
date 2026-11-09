@@ -1,26 +1,13 @@
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 14 · Bắt đầu hành trình chăm sóc da */
 export default function S14JourneyStart() {
   return (
     <Screen>
-      <div className="relative flex h-[852px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans antialiased">
-        <div className="pointer-events-none absolute -right-6 -top-3 z-10 h-36 w-36 opacity-35">
-          <svg fill="none" viewBox="0 0 200 200">
-            <path
-              d="M180 10C120 30 110 90 125 150C130 110 160 50 190 25C170 50 165 95 180 135"
-              stroke="#357D64"
-              strokeLinecap="round"
-              strokeWidth="3"
-            />
-            <path d="M150 40C120 45 90 70 85 105C100 85 130 70 150 40Z" fill="#528472" fillOpacity="0.35" />
-            <path d="M125 75C95 90 75 120 80 155C90 130 115 105 125 75Z" fill="#528472" fillOpacity="0.25" />
-            <path d="M165 20C140 10 115 25 100 45C125 40 150 30 165 20Z" fill="#528472" fillOpacity="0.4" />
-          </svg>
-        </div>
-        <StatusBar />
+      <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans antialiased">
+        <SafeAreaTop />
         <main className="no-scrollbar flex-1 overflow-y-auto px-4 pb-4 pt-1">
           <section className="relative flex items-center justify-center pb-4 pt-2">
             <button
@@ -33,7 +20,7 @@ export default function S14JourneyStart() {
               </svg>
             </button>
             <div className="flex flex-col items-center">
-              <BrandLogo variant="stacked" />
+              <BrandLogo />
             </div>
           </section>
           <h1 className="mb-3.5 mt-1 text-center font-serif text-[21px] font-bold leading-snug text-[#173B32]">
@@ -368,7 +355,6 @@ export default function S14JourneyStart() {
               <span className="truncate">Tư vấn bác sĩ</span>
             </button>
           </div>
-          <div className="mx-auto mb-0.5 mt-1 h-1 w-32 rounded-full bg-black/40" />
         </footer>
       </div>
     </Screen>

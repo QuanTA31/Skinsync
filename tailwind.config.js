@@ -31,6 +31,12 @@ export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
+      spacing: {
+        // vùng an toàn của thiết bị (styles/tokens.css)
+        'safe-top': 'var(--safe-top)',
+        'safe-bottom': 'var(--safe-bottom)',
+        nav: 'var(--nav-height)',
+      },
       fontFamily: {
         sans: ['var(--font-body)'],
         serif: ['var(--font-heading)'],

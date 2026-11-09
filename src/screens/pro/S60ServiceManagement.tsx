@@ -1,33 +1,16 @@
 import { PLANS } from '@/data/plans'
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
 
 /** Màn 60 · Quản lý dịch vụ */
 export default function S60ServiceManagement() {
   return (
-    <Screen iconSize="sm">
-      <div className="relative flex h-[884px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2]">
-        <header className="relative isolate z-20 w-full flex-shrink-0 overflow-hidden px-6 pt-2.5">
-          <div
-            className="pointer-events-none absolute -right-1 -top-1 z-0 h-[68px] w-[104px] overflow-hidden opacity-60"
-            aria-hidden="true"
-          >
-            <img src="/eucalyptus-corner.png" alt="" className="h-[104px] w-[104px] object-cover object-right-top mix-blend-multiply" />
-          </div>
-          <div className="pointer-events-none absolute left-1/2 top-[10px] z-30 flex h-[30px] w-[112px] -translate-x-1/2 items-center justify-between rounded-full bg-black px-3">
-            <div className="h-2.5 w-2.5 rounded-full bg-[#1a1a1a]" />
-            <div className="h-2.5 w-2.5 rounded-full border border-[#173B32]/40 bg-[#0D231E]/60" />
-          </div>
-          <div className="relative z-20 flex h-5 items-center justify-between px-1 pt-1 text-[13px] font-semibold tracking-tight text-neutral-800">
-            <span>9:41</span>
-            <div className="flex items-center space-x-1.5 text-neutral-800">
-              <span className="material-symbols-outlined !text-[15px]">signal_cellular_4_bar</span>
-              <span className="material-symbols-outlined !text-[15px]">wifi</span>
-              <span className="material-symbols-outlined !text-[18px]">battery_full</span>
-            </div>
-          </div>
-          <div className="relative z-20 mb-1 mt-3 flex items-center justify-between">
+    <Screen tab={3} role="doctor" iconSize="sm">
+      <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2]">
+        <header className="relative isolate z-20 w-full flex-shrink-0 overflow-hidden px-6">
+          <SafeAreaTop />
+          <div className="relative z-20 mb-1 mt-1 flex items-center justify-between">
             <button
               aria-label="Menu"
               data-toast="Menu bác sĩ (minh họa)"
@@ -42,7 +25,7 @@ export default function S60ServiceManagement() {
               data-go="s58"
               className="shadow-xs flex h-7 w-7 items-center justify-center overflow-hidden rounded-full border border-[#357D64]/20 bg-[#D9EAE3]"
             >
-              <img src="/img/avatar.svg" alt="Doctor Avatar" className="h-full w-full rounded-full object-cover" />
+              <img src="/img/people/doctor-lan.jpg" alt="Doctor Avatar" className="h-full w-full rounded-full object-cover" />
             </div>
           </div>
         </header>
@@ -312,10 +295,6 @@ export default function S60ServiceManagement() {
             </button>
           </div>
         </main>
-        <BottomNav role="doctor" active={3} />
-        <div className="pointer-events-none absolute bottom-[8px] left-1/2 z-50 -translate-x-1/2">
-          <div className="h-[5px] w-[134px] rounded-full bg-[#111111]" />
-        </div>
       </div>
     </Screen>
   )

@@ -1,25 +1,16 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 20 · Chi tiết sản phẩm */
 export default function S20ProductDetail() {
   return (
-    <Screen>
+    <Screen tab={3}>
       <div
         className="relative flex h-[844px] w-[390px] select-none flex-col overflow-hidden bg-[#F7F8F2] font-sans text-[#173B32] antialiased"
         style={{ paddingBottom: '78px' }}
       >
-        <div aria-hidden="true" className="pointer-events-none absolute right-0 top-0 z-10 h-36 w-36 opacity-40">
-          <svg fill="none" viewBox="0 0 140 140">
-            <path d="M140 0C105 18 85 55 90 92C80 62 92 25 140 0Z" fill="#6F9688" />
-            <path d="M140 35C118 45 106 72 112 98C103 76 110 50 140 35Z" fill="#84AA9D" />
-            <path d="M125 0C100 8 72 32 68 62C65 38 88 15 125 0Z" fill="#9DB2A9" />
-          </svg>
-        </div>
-        <StatusBar />
+        <SafeAreaTop />
         <nav className="relative z-20 flex shrink-0 items-center justify-between px-5 pb-2 pt-3">
           <button
             aria-label="Quay lại"
@@ -328,8 +319,6 @@ export default function S20ProductDetail() {
             </div>
           </section>
         </div>
-        <BottomNav role="user" active={3} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

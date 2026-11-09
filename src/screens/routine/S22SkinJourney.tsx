@@ -1,24 +1,13 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 22 · Hành trình làn da của tôi */
 export default function S22SkinJourney() {
   return (
-    <Screen>
+    <Screen tab={2}>
       <div className="relative flex h-[844px] w-[390px] select-none flex-col overflow-hidden bg-[#F7F8F2] font-sans text-[#173B32] antialiased">
-        <div className="pointer-events-none absolute -right-6 -top-4 z-0 h-36 w-36 opacity-30">
-          <svg fill="none" viewBox="0 0 160 160">
-            <path d="M120 20C95 32 75 62 82 92C85 106 95 116 108 120C125 125 145 105 150 85C155 60 142 35 120 20Z" fill="#4E8773" />
-            <path d="M120 20C100 45 92 78 108 120" stroke="#357D64" strokeLinecap="round" strokeWidth="2.5" />
-            <path d="M72 48C55 58 42 78 46 98C50 110 60 115 70 115C84 115 95 98 94 82C93 65 84 54 72 48Z" fill="#679D8A" />
-            <path d="M72 48C60 65 62 88 70 115" stroke="#357D64" strokeWidth="2" />
-            <path d="M135 70C118 78 105 92 110 112C118 116 128 110 134 100C140 88 142 78 135 70Z" fill="#357D64" />
-          </svg>
-        </div>
-        <StatusBar />
+        <SafeAreaTop />
         <section className="relative z-20 flex flex-col items-center px-5 pb-2 pt-3">
           <button
             aria-label="Quay lại"
@@ -30,7 +19,7 @@ export default function S22SkinJourney() {
             </svg>
           </button>
           <div className="flex flex-col items-center">
-            <BrandLogo variant="stacked" />
+            <BrandLogo />
           </div>
           <div className="mt-3.5 text-center">
             <h2 className="font-serif text-[20px] font-bold leading-snug text-[#173B32]">Hành trình làn da của tôi</h2>
@@ -82,14 +71,14 @@ export default function S22SkinJourney() {
               <img
                 alt="Da sau 14 ngày"
                 className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[center_35%]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuABdH0BXVGswMhJCA1-vBIcCtAKjrg2Yzb8Rlq2DzYyPZrsNov0Wvobaps62gyXKO0Z1DASPY5HepwYd9fDTdY4OxLZydcQYQfRa3rG9U5hHhefepEfR9DhEvn0-emmOBd2XVqev-qVMAv4_4umcMHX3AYRIxz6TfM93u06Em5dr8YVQT9s1bk8t1tQXyuMHS7PNbfTPlshaLW6rI954qOmhnefYlQ6LDhp7ICZCLk"
+                src="/img/skin/clear-cheek.jpg"
               />
               <div data-slider-clip="" className="absolute inset-y-0 left-0 w-1/2 overflow-hidden border-r-2 border-white shadow-md">
                 <img
                   alt="Da trước điều trị"
                   className="pointer-events-none absolute inset-0 h-full w-full object-cover"
                   style={{ objectPosition: '80% 35%', width: '390px', maxWidth: 'none' }}
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT5RYUYmMMvaFS7YC32yktiehJIU5IqLmuh8e0kk8AWGDXv5BHVbakZBn8WgPujTZWGu6sRWBBwYglBUfAwOlMni3TJAncF8VTdaK0ENQgab80YHMWG3m1-LfDO9tXvT5Q42FHX8g3ISl0F-_OYyfj3Vy4wiBZHIQHguSGCLEk2uNF81cN2an_pmPQpke8kNOcdtKVra9kq7V5xMi7Mv7ljJ5mhZC34CI4VZzsliE"
+                  src="/img/skin/acne-cheek-3.jpg"
                 />
               </div>
               <div
@@ -185,7 +174,7 @@ export default function S22SkinJourney() {
               className="flex items-center space-x-3 rounded-2xl border border-[#DFE9E5] bg-white p-2.5 shadow-[0_2px_10px_rgba(23,59,50,0.04)] transition active:bg-[#F1F6F4]/50"
             >
               <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl border border-[#DFE9E5]/60">
-                <img alt="Nhật ký 17/10/2024" className="h-full w-full object-cover object-center" src="/img/photo.svg" />
+                <img alt="Nhật ký 17/10/2024" className="h-full w-full object-cover object-center" src="/img/skin/acne-cheek-1.jpg" />
               </div>
               <div className="min-w-0 flex-1">
                 <h4 className="text-[12px] font-bold leading-tight text-[#173B32]">17/10/2024</h4>
@@ -264,8 +253,6 @@ export default function S22SkinJourney() {
             </button>
           </div>
         </footer>
-        <BottomNav role="user" active={2} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

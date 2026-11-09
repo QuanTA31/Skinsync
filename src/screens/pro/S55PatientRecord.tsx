@@ -1,38 +1,17 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
 
 /** Màn 55 · Hồ sơ bệnh nhân */
 export default function S55PatientRecord() {
   return (
-    <Screen iconSize="sm">
+    <Screen tab={4} role="doctor" iconSize="sm">
       <div
         className="relative flex select-none flex-col justify-between overflow-hidden"
-        style={{ width: '390px', height: '884px', backgroundColor: '#F7F8F2', color: '#173B32' }}
+        style={{ width: '390px', height: '844px', backgroundColor: '#F7F8F2', color: '#173B32' }}
       >
-        <div className="relative z-40 h-[46px] w-full flex-shrink-0 bg-[#F7F8F2]">
-          <div className="pointer-events-none absolute left-1/2 top-[10px] flex h-[32px] w-[112px] -translate-x-1/2 items-center justify-between rounded-full bg-black px-3">
-            <div className="h-2.5 w-2.5 rounded-full bg-[#151515]" />
-            <div className="flex h-3 w-3 items-center justify-center rounded-full bg-[#1b1c28]/60">
-              <div className="h-1.5 w-1.5 rounded-full bg-[#081a2e]" />
-            </div>
-          </div>
-          <div className="absolute left-7 top-[15px] text-[13px] font-semibold tracking-tight text-neutral-900">9:41</div>
-          <div className="absolute right-7 top-[15px] flex items-center space-x-1.5 text-neutral-900">
-            <span className="material-symbols-outlined text-[15px]">signal_cellular_4_bar</span>
-            <span className="material-symbols-outlined text-[15px]">wifi</span>
-            <span className="material-symbols-outlined text-[18px]">battery_full</span>
-          </div>
-        </div>
+        <SafeAreaTop />
         <main className="flex flex-1 flex-col overflow-hidden px-4 pb-1 pt-1" style={{ paddingBottom: '86px' }}>
-          <div className="pointer-events-none absolute right-0 top-0 z-10 flex h-28 w-28 items-start justify-end overflow-hidden">
-            <img
-              src="/eucalyptus-corner.png"
-              alt=""
-              className="h-28 w-28 object-contain object-top opacity-70"
-              style={{ mixBlendMode: 'multiply' }}
-            />
-          </div>
           <header className="relative z-20 mb-1.5 flex h-9 items-center justify-between">
             <button
               data-back="s54"
@@ -60,11 +39,7 @@ export default function S55PatientRecord() {
           >
             <div className="flex items-center space-x-3">
               <div className="shadow-xs h-11 w-11 flex-shrink-0 overflow-hidden rounded-full border border-[#E5E8D8] bg-amber-50">
-                <img
-                  alt="Nguyễn Minh Anh"
-                  className="h-full w-full rounded-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8BTxuqKvldWgdN8qxig1d041T01K35HTlGZ2X6NxsxdZiBBV-bYm_y6hEqIC1vGKKroCfSrlFBFUPStk6lOpBRMnMcqTf8ZM84rEKCt2aZIRkLyhZhjrTL4npV31WBeBVK7WRFWIAfK82d8IMTN2BOExyv3pPE37xR7_km9biRPW1Oz3bWnNAqINuCQZL-4Mui5q5g9OuKUeywcftD1kx6aXmtw3DKuK7iMv_O6w"
-                />
+                <img alt="Nguyễn Minh Anh" className="h-full w-full rounded-full object-cover" src="/img/people/user-minh-anh.jpg" />
               </div>
               <div>
                 <h2 className="text-[13.5px] font-bold leading-tight text-[#173B32]" style={{ fontFamily: 'var(--font-heading)' }}>
@@ -144,7 +119,7 @@ export default function S55PatientRecord() {
                       alt="01/08/2024"
                       className="absolute h-full max-w-none object-cover"
                       style={{ left: '0%', width: '400%' }}
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3mUy91qIpB05yXil5cfX5_icemYhvN5ilKtzVvFWDvk5B56EITJgWwRH1P2dYY2Va_dmariMVCX1HDS__dhUBb-EHkV2iFYi-RMPjLjBbIRnuD6wizeAy0mi_iE5ItKhyj7Gaxf-1I8nZp3tBQWdPGOlbUWUhEjhh-REpFz8-hU_jUAho83yCnpt24kWv3j250zWWM6_V9HrMsSwbWoKVZ3xohqb-1pFAPxefy8uyS_mpjHWnrjQ7"
+                      src="/img/skin/acne-cheek-1.jpg"
                     />
                   </div>
                   <span className="mt-0.5 block text-[8.5px] font-medium text-neutral-600">01/08/2024</span>
@@ -155,7 +130,7 @@ export default function S55PatientRecord() {
                       alt="15/08/2024"
                       className="absolute h-full max-w-none object-cover"
                       style={{ left: '-100%', width: '400%' }}
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3mUy91qIpB05yXil5cfX5_icemYhvN5ilKtzVvFWDvk5B56EITJgWwRH1P2dYY2Va_dmariMVCX1HDS__dhUBb-EHkV2iFYi-RMPjLjBbIRnuD6wizeAy0mi_iE5ItKhyj7Gaxf-1I8nZp3tBQWdPGOlbUWUhEjhh-REpFz8-hU_jUAho83yCnpt24kWv3j250zWWM6_V9HrMsSwbWoKVZ3xohqb-1pFAPxefy8uyS_mpjHWnrjQ7"
+                      src="/img/skin/acne-cheek-1.jpg"
                     />
                   </div>
                   <span className="mt-0.5 block text-[8.5px] font-medium text-neutral-600">15/08/2024</span>
@@ -166,7 +141,7 @@ export default function S55PatientRecord() {
                       alt="10/09/2024"
                       className="absolute h-full max-w-none object-cover"
                       style={{ left: '-200%', width: '400%' }}
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3mUy91qIpB05yXil5cfX5_icemYhvN5ilKtzVvFWDvk5B56EITJgWwRH1P2dYY2Va_dmariMVCX1HDS__dhUBb-EHkV2iFYi-RMPjLjBbIRnuD6wizeAy0mi_iE5ItKhyj7Gaxf-1I8nZp3tBQWdPGOlbUWUhEjhh-REpFz8-hU_jUAho83yCnpt24kWv3j250zWWM6_V9HrMsSwbWoKVZ3xohqb-1pFAPxefy8uyS_mpjHWnrjQ7"
+                      src="/img/skin/acne-cheek-1.jpg"
                     />
                   </div>
                   <span className="mt-0.5 block text-[8.5px] font-medium text-neutral-600">10/09/2024</span>
@@ -177,7 +152,7 @@ export default function S55PatientRecord() {
                       alt="22/10/2024"
                       className="absolute h-full max-w-none object-cover"
                       style={{ left: '-300%', width: '400%' }}
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3mUy91qIpB05yXil5cfX5_icemYhvN5ilKtzVvFWDvk5B56EITJgWwRH1P2dYY2Va_dmariMVCX1HDS__dhUBb-EHkV2iFYi-RMPjLjBbIRnuD6wizeAy0mi_iE5ItKhyj7Gaxf-1I8nZp3tBQWdPGOlbUWUhEjhh-REpFz8-hU_jUAho83yCnpt24kWv3j250zWWM6_V9HrMsSwbWoKVZ3xohqb-1pFAPxefy8uyS_mpjHWnrjQ7"
+                      src="/img/skin/acne-cheek-1.jpg"
                     />
                   </div>
                   <span className="mt-0.5 block text-[8.5px] font-medium text-neutral-600">22/10/2024</span>
@@ -195,19 +170,19 @@ export default function S55PatientRecord() {
               </div>
               <div className="grid grid-cols-5 gap-1.5">
                 <div className="shadow-xs flex h-12 items-center justify-center overflow-hidden rounded-lg border border-[#E9EBDB] bg-[#F7F8F2]">
-                  <img src="/img/product.svg" alt="Sữa rửa mặt" className="h-10 w-full object-contain p-0.5" />
+                  <img src="/img/products/effaclar-gel.jpg" alt="Sữa rửa mặt" className="h-10 w-full object-contain p-0.5" />
                 </div>
                 <div className="shadow-xs flex h-12 items-center justify-center overflow-hidden rounded-lg border border-[#E9EBDB] bg-[#F7F8F2]">
-                  <img src="/img/product.svg" alt="Serum" className="h-10 w-full object-contain p-0.5" />
+                  <img src="/img/products/serum-dropper.jpg" alt="Serum" className="h-10 w-full object-contain p-0.5" />
                 </div>
                 <div className="shadow-xs flex h-12 items-center justify-center overflow-hidden rounded-lg border border-[#E9EBDB] bg-[#F7F8F2]">
-                  <img src="/img/product.svg" alt="Kem dưỡng ẩm" className="h-10 w-full object-contain p-0.5" />
+                  <img src="/img/products/cream-jar.jpg" alt="Kem dưỡng ẩm" className="h-10 w-full object-contain p-0.5" />
                 </div>
                 <div className="shadow-xs flex h-12 items-center justify-center overflow-hidden rounded-lg border border-[#E9EBDB] bg-[#F7F8F2]">
-                  <img src="/img/product.svg" alt="Kem chống nắng" className="h-10 w-full object-contain p-0.5" />
+                  <img src="/img/products/sunscreen.jpg" alt="Kem chống nắng" className="h-10 w-full object-contain p-0.5" />
                 </div>
                 <div className="shadow-xs flex h-12 items-center justify-center overflow-hidden rounded-lg border border-[#E9EBDB] bg-[#F7F8F2]">
-                  <img src="/img/product.svg" alt="Toner dưỡng ẩm" className="h-10 w-full object-contain p-0.5" />
+                  <img src="/img/products/toner-blue.jpg" alt="Toner dưỡng ẩm" className="h-10 w-full object-contain p-0.5" />
                 </div>
               </div>
             </article>
@@ -223,7 +198,7 @@ export default function S55PatientRecord() {
               <div className="grid grid-cols-2 gap-2">
                 <div className="flex items-center space-x-2 rounded-lg border border-[#E9EBDB] bg-[#F7F8F2] p-1.5">
                   <div className="shadow-xs flex h-8 w-8 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg border border-[#E9EBDB] bg-white">
-                    <img src="/img/product.svg" alt="Adapalene tube" className="h-7 w-7 object-contain" />
+                    <img src="/img/products/tube-treatment.jpg" alt="Adapalene tube" className="h-7 w-7 object-contain" />
                   </div>
                   <div className="overflow-hidden">
                     <p className="truncate text-[10px] font-bold leading-tight text-neutral-800">Adapalene 0.1%</p>
@@ -269,10 +244,6 @@ export default function S55PatientRecord() {
             </button>
           </section>
         </main>
-        <BottomNav role="doctor" active={4} />
-        <div className="relative z-30 flex h-[18px] w-full items-start justify-center bg-[#F7F8F2] pb-2">
-          <div className="h-[5px] w-[134px] rounded-full bg-[#111111]" />
-        </div>
       </div>
     </Screen>
   )

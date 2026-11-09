@@ -1,6 +1,6 @@
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaBottom, SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 13 · Kết quả phân tích */
 export default function S13AnalysisResult() {
@@ -10,11 +10,9 @@ export default function S13AnalysisResult() {
         className="relative flex h-[844px] w-[390px] select-none flex-col overflow-hidden font-sans text-[#173B32] antialiased"
         style={{
           backgroundColor: '#F7F8F2',
-          backgroundImage:
-            'radial-gradient(at top right,rgba(142,168,157,.15),transparent 45%),radial-gradient(at bottom left,rgba(142,168,157,.18),transparent 40%)',
         }}
       >
-        <StatusBar />
+        <SafeAreaTop />
         <div className="relative z-20 flex items-center px-5 pt-3">
           <button
             aria-label="Quay lại"
@@ -27,7 +25,7 @@ export default function S13AnalysisResult() {
             </svg>
           </button>
           <div className="flex flex-1 flex-col items-center justify-center pr-9">
-            <BrandLogo variant="stacked" />
+            <BrandLogo />
           </div>
         </div>
         <div className="no-scrollbar flex-1 space-y-3.5 overflow-y-auto px-5 pb-8 pt-3">
@@ -65,7 +63,7 @@ export default function S13AnalysisResult() {
                 <img
                   alt="Vùng da má có mụn viêm nhẹ và lỗ chân lông to"
                   className="h-full w-full object-cover object-center"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlTujFStOsXkkuZmo_gmdGN94k4aI6HFILDEphdbZDMGf_5SZaw6aKZBbBTBU287KGOuyNrcuT6AXXDte2-i6h8HxrkD9LrIAFmKWLsFeCjg-syKldvsb2RHXTzCcFQOnsSgPgnOe89xLvb8MqoChI8D8QxeLQvfaVx-pmsbLr5Vdf1xl-P7-vTYwCd-pqJzUXgGmyawkL9tojhviuartstSOqnisL8LGzMKGaung"
+                  src="/img/skin/acne-cheek-2.jpg"
                 />
               </div>
               <div className="flex h-full flex-col justify-between pl-0.5">
@@ -257,9 +255,7 @@ export default function S13AnalysisResult() {
             </div>
           </div>
         </div>
-        <footer className="flex w-full justify-center bg-transparent pb-2 pt-1">
-          <div className="h-1 w-32 rounded-full bg-gray-900/80" />
-        </footer>
+        <SafeAreaBottom />
       </div>
     </Screen>
   )

@@ -1,23 +1,19 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 16 · Quy trình chăm sóc của tôi */
 export default function S16MyRoutine() {
   return (
-    <Screen>
+    <Screen tab={2}>
       <div
         className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans text-[#173B32] antialiased"
         style={{
           paddingBottom: '78px',
-          backgroundImage:
-            'radial-gradient(circle at 100% 0%,rgba(79,144,122,.08) 0%,transparent 60%),radial-gradient(circle at 0% 100%,rgba(79,144,122,.06) 0%,transparent 50%)',
         }}
       >
         <header className="z-30 w-full shrink-0">
-          <StatusBar />
+          <SafeAreaTop />
           <div className="relative mt-1 flex items-center justify-between px-5 pb-1">
             <button
               aria-label="Quay lại"
@@ -29,7 +25,7 @@ export default function S16MyRoutine() {
               </svg>
             </button>
             <div className="pointer-events-none absolute left-1/2 top-0 flex -translate-x-1/2 flex-col items-center justify-center">
-              <BrandLogo variant="stacked" />
+              <BrandLogo />
             </div>
             <div className="h-9 w-9 opacity-0" />
           </div>
@@ -280,8 +276,6 @@ export default function S16MyRoutine() {
             </button>
           </div>
         </footer>
-        <BottomNav role="user" active={2} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

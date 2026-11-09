@@ -1,24 +1,13 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 21 · Giỏ hàng */
 export default function S21Cart() {
   return (
-    <Screen>
+    <Screen tab={3}>
       <div className="relative flex h-[844px] w-[390px] select-none flex-col overflow-hidden bg-[#F7F8F2] font-sans text-[#173B32] antialiased">
-        <div
-          className="pointer-events-none absolute -right-12 -top-12 z-0 h-48 w-48 rounded-full opacity-70"
-          style={{ backgroundImage: 'radial-gradient(circle at top right,rgba(53,125,100,.08) 0%,transparent 60%)' }}
-        />
-        <div className="pointer-events-none absolute -right-8 top-28 z-0 h-40 w-24 opacity-20">
-          <svg fill="#357D64" viewBox="0 0 100 160">
-            <path d="M10,80 C30,20 80,10 90,0 C95,50 70,120 20,150 C5,130 0,100 10,80 Z" />
-          </svg>
-        </div>
-        <StatusBar />
+        <SafeAreaTop />
         <nav className="relative z-20 flex items-center justify-between px-5 pb-2 pt-3">
           <button
             aria-label="Quay lại"
@@ -377,8 +366,6 @@ export default function S21Cart() {
             </svg>
           </button>
         </footer>
-        <BottomNav role="user" active={3} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

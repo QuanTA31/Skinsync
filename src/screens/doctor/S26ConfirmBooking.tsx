@@ -9,25 +9,16 @@ const doctor = {
   rating: '4.9',
   reviews: '320 đánh giá',
   experience: '8 năm kinh nghiệm',
-  image: 'https://randomuser.me/api/portraits/women/44.jpg',
+  image: '/img/people/doctor-minh-anh.jpg',
 }
 
-const skinImages = [
-  'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=150',
-  'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=150',
-  'https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=150',
-]
+const skinImages = ['/img/products/effaclar-box.jpg', '/img/scenes/facial-treatment.jpg', '/img/products/tube-treatment.jpg']
 
 /** Màn 26 · Xác nhận thông tin đặt lịch */
 export default function S26ConfirmBooking() {
   return (
     <ScopedScreen id="s26" css={css} tab={0}>
       <main className="phone confirmation-screen">
-        <div className="status-bar">
-          <span>9:41</span>
-          <span className="status-icons">●●● ◖ ▰</span>
-        </div>
-
         <header className="booking-header">
           <button className="back-button" data-back="s25">
             ‹

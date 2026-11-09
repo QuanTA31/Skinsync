@@ -9,7 +9,6 @@ export default function S38ServiceFit() {
   return (
     <ScopedScreen id="s38" css={css} tab={0}>
       <main className="screen">
-        <span className="leaf">🌿</span>
         <Top back="s37" />
 
         <h1>Dịch vụ này có phù hợp với bạn?</h1>
@@ -17,7 +16,7 @@ export default function S38ServiceFit() {
 
         <div className="card row" data-go="s39">
           <div className="thumb" style={{ width: 100, height: 80 }}>
-            💆🏻‍♀️
+            <img src="/img/scenes/facial-treatment.jpg" alt="Điều trị laser trị mụn" />
           </div>
           <div style={{ flex: 1 }}>
             <h3>Điều trị laser trị mụn</h3>

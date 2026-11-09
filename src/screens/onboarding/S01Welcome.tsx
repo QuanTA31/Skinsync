@@ -4,7 +4,7 @@ import { Screen } from '@/components/layout/Screen'
 /** Màn 01 · Chào mừng */
 export default function S01Welcome() {
   return (
-    <Screen>
+    <Screen decor={false}>
       <div
         className="flex select-none flex-col justify-between font-sans antialiased"
         style={{ width: '390px', height: '844px', backgroundColor: '#F7F8F2', position: 'relative', overflow: 'hidden' }}
@@ -18,7 +18,7 @@ export default function S01Welcome() {
         </header>
         <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKBTW5kihaP6KbxcFCU6A3RGjnhM2oa_xOwd3npC1PS7L7U96GnKC3aXCkKoFGixPnToquUn0ExqjaaInfmhqeLnQUUmNz4eo5nmxX5004laI0h8KMgv2lu543QAHc9sSvU18870iTOKJejin4guZBffdbPRibie4HrZEi2UoxOPHH1vIlKUwhWuWSnbLowxhdOeZBnR5bR2bA0Kkgu_LV4fkqDSr7BsuIJx3tnhzKwFbvCEkMca6t85teSeyaM2tF"
+            src="/img/scenes/welcome-hero.png"
             alt="Hero visual"
             className="h-full w-full object-cover"
             style={{ objectPosition: '50% 65%' }}
@@ -58,7 +58,6 @@ export default function S01Welcome() {
           >
             Đăng nhập
           </a>
-          <div className="-mb-3 mt-4 h-1 w-32 rounded-full bg-black/20" />
         </section>
       </div>
     </Screen>

@@ -1,47 +1,13 @@
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 02 · Đăng nhập */
 export default function S02Login() {
   return (
     <Screen>
       <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans text-brand-text">
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            width: '170px',
-            height: '180px',
-            pointerEvents: 'none',
-            opacity: '.85',
-            backgroundImage: 'radial-gradient(circle at 100% 0%,rgba(130,171,157,.22) 0%,transparent 70%)',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            width: '190px',
-            height: '180px',
-            pointerEvents: 'none',
-            opacity: '.8',
-            backgroundImage: 'radial-gradient(circle at 0% 100%,rgba(130,171,157,.25) 0%,transparent 70%)',
-          }}
-        />
-        <svg className="pointer-events-none absolute right-0 top-0 -mr-4 -mt-2 h-36 w-36 opacity-45" fill="none" viewBox="0 0 160 160">
-          <path d="M160 0C130 30 110 75 125 110C105 85 95 50 110 15C125 -5 145 0 160 0Z" fill="#548272" />
-          <path d="M160 30C130 55 105 100 120 135C102 110 90 75 108 45C122 25 145 25 160 30Z" fill="#6C9C8B" />
-          <path d="M120 0C105 25 80 50 85 75C75 55 72 30 85 10C95 -5 110 -2 120 0Z" fill="#87AB9E" />
-        </svg>
-        <svg className="pointer-events-none absolute bottom-0 left-0 -mb-4 -ml-6 h-40 w-40 opacity-45" fill="none" viewBox="0 0 160 160">
-          <path d="M0 160C30 130 50 85 35 50C55 75 65 110 50 145C35 165 15 160 0 160Z" fill="#548272" />
-          <path d="M0 130C30 105 55 60 40 25C58 50 70 85 52 115C38 135 15 135 0 130Z" fill="#6C9C8B" />
-          <path d="M40 160C55 135 80 110 75 85C85 105 88 130 75 150C65 165 50 162 40 160Z" fill="#87AB9E" />
-        </svg>
-        <StatusBar />
+        <SafeAreaTop />
         <main className="relative z-10 flex flex-1 flex-col justify-start px-7 pt-2">
           <div className="mb-1 flex items-center">
             <button
@@ -196,7 +162,6 @@ export default function S02Login() {
               Đăng ký ngay
             </a>
           </p>
-          <div className="mx-auto mt-4 h-1 w-32 rounded-full bg-stone-800/80" />
         </footer>
       </div>
     </Screen>

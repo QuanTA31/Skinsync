@@ -14,7 +14,6 @@ export default function S41RewardPoints() {
   return (
     <ScopedScreen id="s41" css={css} tab={4}>
       <main className="screen">
-        <span className="leaf">🌿</span>
         <Top back="s48" />
 
         <h1>Điểm thưởng của tôi</h1>
@@ -48,8 +47,8 @@ export default function S41RewardPoints() {
         </div>
         {history.map((r) => (
           <div className="listrow" key={r[0]} data-go="s36">
-            <div className="thumb" style={{ width: 42, height: 42, fontSize: 18 }}>
-              ▶
+            <div className="thumb video" style={{ width: 42, height: 42 }}>
+              <img src="/img/skin/clear-cheek.jpg" alt="Video" />
             </div>
             <div style={{ flex: 1 }}>
               <b>{r[0]}</b>

@@ -1,44 +1,13 @@
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaBottom, SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 04 · Tạo tài khoản */
 export default function S04SignUp() {
   return (
     <Screen>
       <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans text-[#173B32] antialiased">
-        <div className="pointer-events-none absolute -right-6 -top-6 z-0 h-48 w-48 opacity-85">
-          <svg className="h-full w-full rotate-12 transform" fill="none" viewBox="0 0 200 200">
-            <defs>
-              <linearGradient id="leafGrad1" x1="0%" x2="100%" y1="0%" y2="100%">
-                <stop offset="0%" stopColor="#6F9E8D" stopOpacity="0.9" />
-                <stop offset="60%" stopColor="#357D64" stopOpacity="0.75" />
-                <stop offset="100%" stopColor="#357D64" stopOpacity="0.5" />
-                <linearGradient id="leafGrad2" x1="0%" x2="100%" y1="100%" y2="0%">
-                  <stop offset="0%" stopColor="#83B4A3" stopOpacity="0.8" />
-                  <stop offset="100%" stopColor="#357D64" stopOpacity="0.6" />
-                  <filter height="140%" id="softBlur" width="140%" x="-20%" y="-20%">
-                    <feGaussianBlur stdDeviation="1.5" />
-                  </filter>
-                </linearGradient>
-              </linearGradient>
-            </defs>
-            <path d="M190,10 C160,50 135,110 110,180" opacity="0.6" stroke="#558574" strokeLinecap="round" strokeWidth="2.5" />
-            <path d="M165,30 C130,25 115,55 125,75 C145,70 170,55 165,30 Z" fill="url(#leafGrad1)" filter="url(#softBlur)" />
-            <path d="M150,65 C115,65 105,100 120,118 C138,110 155,90 150,65 Z" fill="url(#leafGrad2)" />
-            <path d="M135,110 C98,115 90,150 108,168 C124,158 140,135 135,110 Z" fill="url(#leafGrad1)" />
-            <path d="M178,55 C195,85 170,110 152,102 C150,82 165,65 178,55 Z" fill="url(#leafGrad2)" />
-            <path d="M152,110 C175,135 155,165 136,155 C132,138 142,120 152,110 Z" fill="url(#leafGrad1)" />
-          </svg>
-        </div>
-        <div className="pointer-events-none absolute -bottom-10 -right-8 z-0 h-36 w-36 opacity-75">
-          <svg className="h-full w-full -rotate-45 transform" fill="none" viewBox="0 0 150 150">
-            <path d="M10,140 C50,110 95,85 140,70" opacity="0.5" stroke="#558574" strokeLinecap="round" strokeWidth="2" />
-            <path d="M50,115 C55,85 85,80 98,96 C88,112 68,122 50,115 Z" fill="#5C9581" opacity="0.75" />
-            <path d="M90,90 C100,60 130,62 138,82 C122,95 105,100 90,90 Z" fill="#357D64" opacity="0.7" />
-          </svg>
-        </div>
-        <StatusBar />
+        <SafeAreaTop />
         <main className="no-scrollbar relative z-10 flex flex-1 flex-col justify-between overflow-y-auto px-6 pb-2 pt-3">
           <div>
             <nav className="mb-4">
@@ -251,9 +220,7 @@ export default function S04SignUp() {
               </div>
             </form>
           </div>
-          <footer className="flex w-full flex-col items-center pb-1 pt-2">
-            <div className="mt-3 h-[4px] w-32 rounded-full bg-stone-800/80" />
-          </footer>
+          <SafeAreaBottom />
         </main>
       </div>
     </Screen>

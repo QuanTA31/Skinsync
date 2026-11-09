@@ -1,6 +1,6 @@
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaBottom, SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 15 · Làn da cần đánh giá thêm */
 export default function S15NeedsReview() {
@@ -28,7 +28,7 @@ export default function S15NeedsReview() {
           <path d="M135 125C158 135 185 130 205 118C185 138 155 142 135 125Z" fill="#82B7A5" fillOpacity="0.5" />
           <path d="M175 60C155 40 152 15 158 -10C172 12 182 38 175 60Z" fill="#A2C1B4" fillOpacity="0.5" />
         </svg>
-        <StatusBar />
+        <SafeAreaTop />
         <section className="relative z-10 px-5 pb-2 pt-3">
           <div className="relative flex items-center justify-between">
             <button
@@ -42,7 +42,7 @@ export default function S15NeedsReview() {
               </svg>
             </button>
             <div className="flex flex-1 flex-col items-center justify-center pr-9">
-              <BrandLogo variant="stacked" />
+              <BrandLogo />
             </div>
           </div>
         </section>
@@ -121,7 +121,7 @@ export default function S15NeedsReview() {
             <div className="relative flex h-24 w-[34%] items-end justify-end">
               <div className="relative flex h-24 w-24 items-center justify-center">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuASNA4V8WFebUSAjEvtXrfZnCxnv54WtOdMPXVjSiUKJjF8p9NEYool2_9Zma5tnrhUlAd1Aw6HAKCdH_JjIzn5ldDNteJP1TY5HGCT0Zjzu7GYVYiIo_vUeKi-GSQ1SdohMGE7Y5NyseS_jOFdRXono3GODPQ9qcSYihbUQ3pXqfJQEnJw-toPji8A2VvQ5xgm1xwwBLhiKCq62UizG72FTky309JOF-3P-w6mhmQ"
+                  src="/img/people/doctor-consult.jpg"
                   alt="Bác sĩ da liễu"
                   className="relative z-10 h-20 w-20 rounded-full object-cover shadow-sm"
                 />
@@ -271,9 +271,7 @@ export default function S15NeedsReview() {
               <span>Tìm phòng khám gần tôi</span>
             </button>
           </div>
-          <div className="flex justify-center pb-1 pt-2">
-            <div className="h-1 w-32 rounded-full bg-stone-300" />
-          </div>
+          <SafeAreaBottom />
         </footer>
       </div>
     </Screen>

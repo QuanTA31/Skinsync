@@ -11,7 +11,6 @@ export default function S39ServiceInfo() {
   return (
     <ScopedScreen id="s39" css={css} tab={0}>
       <main className="screen">
-        <span className="leaf">🌿</span>
         <Top
           back="s38"
           right={
@@ -31,7 +30,7 @@ export default function S39ServiceInfo() {
         <p>Tìm hiểu chi tiết về dịch vụ làm đẹp được thực hiện bởi cơ sở uy tín và bác sĩ có chuyên môn.</p>
 
         <div className="cover" style={{ height: 170, marginTop: 10 }}>
-          💆🏻‍♀️
+          <img src="/img/scenes/facial-treatment.jpg" alt="Điều trị laser trị mụn" />
         </div>
         <div className="row between" style={{ marginTop: 10 }}>
           <h2>Điều trị laser trị mụn</h2>
@@ -56,7 +55,7 @@ export default function S39ServiceInfo() {
         <h3>Cơ sở cung cấp</h3>
         <div className="card row" data-go="s29">
           <div className="thumb" style={{ width: 65, height: 55 }}>
-            🏥
+            <img src="/img/scenes/clinic-room.jpg" alt="Phòng khám" />
           </div>
           <div style={{ flex: 1 }}>
             <b>SIS Dermatology Clinic　✓</b>
@@ -68,7 +67,9 @@ export default function S39ServiceInfo() {
 
         <h3>Bác sĩ phụ trách</h3>
         <div className="card row" data-go="s24">
-          <div className="avatar">👩🏻‍⚕️</div>
+          <div className="avatar">
+            <img src="/img/people/doctor-minh-anh.jpg" alt="BS. Nguyễn Thị Minh Anh" />
+          </div>
           <div>
             <b>BS. Nguyễn Thị Minh Anh　✓</b>
             <p>Bác sĩ Chuyên khoa Da liễu</p>

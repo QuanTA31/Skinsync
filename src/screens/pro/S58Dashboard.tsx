@@ -1,28 +1,16 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 58 · Bảng thống kê */
 export default function S58Dashboard() {
   return (
-    <Screen iconSize="sm">
+    <Screen tab={0} role="doctor" iconSize="sm">
       <div
         className="relative flex select-none flex-col justify-between overflow-hidden text-neutral-800"
-        style={{ width: '390px', height: '884px', backgroundColor: '#F7F8F2' }}
+        style={{ width: '390px', height: '844px', backgroundColor: '#F7F8F2' }}
       >
-        <StatusBar />
-        <div
-          className="pointer-events-none absolute z-10"
-          style={{ top: 0, right: 0, width: '120px', height: '120px', mixBlendMode: 'multiply', overflow: 'hidden' }}
-        >
-          <img
-            src="/eucalyptus-corner.png"
-            alt=""
-            className="h-full w-full object-cover"
-            style={{ transform: 'scale(1.05)', transformOrigin: 'top right', opacity: 0.95 }}
-          />
-        </div>
+        <SafeAreaTop />
         <div className="flex flex-1 flex-col justify-between px-3.5 pt-0.5" style={{ paddingBottom: '100px' }}>
           <section className="flex items-center justify-between py-1">
             <button
@@ -39,11 +27,7 @@ export default function S58Dashboard() {
               data-go="s53"
               className="flex h-7 w-7 items-center justify-center overflow-hidden rounded-full border border-[#357D64]/50 bg-[#DCE7E2]"
             >
-              <img
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=120"
-                alt="Doctor avatar"
-                className="h-full w-full object-cover"
-              />
+              <img src="/img/people/doctor-lan.jpg" alt="Doctor avatar" className="h-full w-full object-cover" />
             </div>
           </section>
           <section className="mb-1.5 mt-0.5 flex items-start justify-between">
@@ -316,8 +300,6 @@ export default function S58Dashboard() {
             </button>
           </section>
         </div>
-        <BottomNav role="doctor" active={0} />
-        <div className="pointer-events-none absolute bottom-[4px] left-1/2 z-50 h-[5px] w-[134px] -translate-x-1/2 rounded-[3px] bg-[#111111]" />
       </div>
     </Screen>
   )

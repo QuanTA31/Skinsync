@@ -1,30 +1,13 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 52 · Cài đặt tài khoản */
 export default function S52AccountSettings() {
   return (
-    <Screen>
-      <div className="relative flex h-[884px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans">
-        <div
-          className="pointer-events-none absolute right-0 top-0 z-0 h-[104px] w-[108px] select-none overflow-hidden"
-          aria-hidden="true"
-          style={{
-            WebkitMaskImage: 'linear-gradient(135deg, transparent 0%, #000 30%, #000 68%, transparent 100%)',
-            maskImage: 'linear-gradient(135deg, transparent 0%, #000 30%, #000 68%, transparent 100%)',
-          }}
-        >
-          <img
-            src="/eucalyptus-corner.png"
-            alt=""
-            className="pointer-events-none h-full w-full object-cover"
-            style={{ objectPosition: '100% 0', opacity: 0.52, mixBlendMode: 'multiply' }}
-          />
-        </div>
-        <StatusBar />
+    <Screen tab={4}>
+      <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans">
+        <SafeAreaTop />
         <header className="relative z-20 flex-shrink-0 px-4 pb-1 pt-1" style={{ paddingTop: '14px', paddingBottom: '2px' }}>
           <div className="relative mb-0.5 flex items-center justify-between">
             <button
@@ -359,8 +342,6 @@ export default function S52AccountSettings() {
             <span className="font-sans text-[12px] font-semibold text-[#DC2626]">Đăng xuất</span>
           </button>
         </main>
-        <BottomNav role="user" active={4} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

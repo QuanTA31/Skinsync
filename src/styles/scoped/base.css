@@ -60,10 +60,11 @@ button {
 
 /* 3. COMMON MOBILE FRAME */
 .phone {
-  width: 390px;
-  height: 844px;
+  /* nằm dưới status bar (ScopedScreen đã chừa --safe-top) */
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
-  padding: 13px 16px 12px;
+  padding: 4px 16px 12px;
   background: var(--background);
   color: var(--navy);
   position: relative;

@@ -1,21 +1,13 @@
-import { BottomNav } from '@/components/layout/BottomNav'
+import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 56 · Theo dõi liệu trình */
 export default function S56TreatmentTracking() {
   return (
-    <Screen>
-      <div className="relative flex h-[884px] w-[390px] select-none flex-col overflow-hidden bg-[#F7F8F2] font-sans antialiased">
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-[110px] w-[120px] overflow-hidden opacity-70">
-          <img
-            src="/eucalyptus-corner.png"
-            alt=""
-            className="object-top-right pointer-events-none h-full w-full object-contain"
-            style={{ mixBlendMode: 'multiply' }}
-          />
-        </div>
-        <StatusBar />
+    <Screen tab={2} role="doctor">
+      <div className="relative flex h-[844px] w-[390px] select-none flex-col overflow-hidden bg-[#F7F8F2] font-sans antialiased">
+        <SafeAreaTop />
         <main className="flex flex-1 flex-col overflow-hidden px-4 pb-1 pt-1" style={{ paddingBottom: '86px' }}>
           <nav className="relative flex items-center justify-between border-b border-brand-border/40 pb-1.5 pt-0.5">
             <button
@@ -25,19 +17,9 @@ export default function S56TreatmentTracking() {
             >
               <span className="material-symbols-outlined text-[20px]">menu</span>
             </button>
-            <div className="flex items-center space-x-1.5">
-              <span
-                className="text-[17px] font-bold uppercase tracking-[0.14em]"
-                style={{ fontFamily: 'var(--font-heading)', color: '#173B32' }}
-              >
-                Skinsync
-              </span>
-              <svg className="h-4 w-4 opacity-85" style={{ color: '#173B32' }} fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A9.49 9.49 0 0 0 12 21c7 0 11-8 11-8s-2.14-1.22-6-5zm-5 11c-2.45 0-4.6-1.12-6-2.88.94-2.58 2.5-5.32 6-6.12 0 3 .5 6.5 0 9z" />
-              </svg>
-            </div>
+            <BrandLogo />
             <div data-go="s58" className="h-8 w-8 overflow-hidden rounded-full border border-brand-border bg-brand-pill p-[1.5px]">
-              <img alt="Bác sĩ điều trị" className="h-full w-full rounded-full object-cover" src="/img/avatar.svg" />
+              <img alt="Bác sĩ điều trị" className="h-full w-full rounded-full object-cover" src="/img/people/doctor-lan.jpg" />
             </div>
           </nav>
           <section className="mb-2 mt-2 flex flex-col">
@@ -89,7 +71,7 @@ export default function S56TreatmentTracking() {
                   <img
                     alt="Nguyễn Minh Anh"
                     className="h-8 w-8 rounded-full border border-brand-border/50 object-cover"
-                    src="/img/avatar.svg"
+                    src="/img/people/user-minh-anh.jpg"
                   />
                   <div>
                     <h2 className="text-[12px] font-bold leading-tight text-neutral-900">Nguyễn Minh Anh</h2>
@@ -117,10 +99,18 @@ export default function S56TreatmentTracking() {
               </div>
               <div className="flex items-center gap-2 pt-0.5">
                 <div className="flex flex-shrink-0 items-center space-x-1">
-                  <img alt="" className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover" src="/img/photo.svg" />
-                  <img alt="" className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover" src="/img/photo.svg" />
+                  <img
+                    alt=""
+                    className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover"
+                    src="/img/skin/acne-cheek-4.jpg"
+                  />
+                  <img
+                    alt=""
+                    className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover"
+                    src="/img/skin/clear-cheek.jpg"
+                  />
                   <div className="relative h-[34px] w-[34px] overflow-hidden rounded-md border border-neutral-200">
-                    <img alt="" className="h-full w-full object-cover" src="/img/photo.svg" />
+                    <img alt="" className="h-full w-full object-cover" src="/img/skin/acne-cheek-1.jpg" />
                     <div className="absolute inset-0 flex items-center justify-center bg-neutral-900/60 text-[10px] font-semibold text-white">
                       +2
                     </div>
@@ -164,7 +154,7 @@ export default function S56TreatmentTracking() {
                   <img
                     alt="Trần Hoàng Nam"
                     className="h-8 w-8 rounded-full border border-brand-border/50 object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrwj-H51LJXyYXSXABak72mXodHIux-JeOKD57Kt6bXI_XjEOQywtDCMoyvqjFL34FUbLXl6_qMDla3h4jNf9idWsjiG-zddIT811BdCe_Gfg76IhrlKMuH4XdauD8YUeTNUKf5CeLAhB9V1RjKDm0a5OPO-UbRcErUShq50b68QkQsbL9WyBUr-ve1SQNv-yihIjcQQ-VltGseRVRSwBPVT05RakhZ0QWliWJVxE"
+                    src="/img/people/patient-hoang-nam.jpg"
                   />
                   <div>
                     <h2 className="text-[12px] font-bold leading-tight text-neutral-900">Trần Hoàng Nam</h2>
@@ -192,9 +182,21 @@ export default function S56TreatmentTracking() {
               </div>
               <div className="flex items-center gap-2 pt-0.5">
                 <div className="flex flex-shrink-0 items-center space-x-1">
-                  <img alt="" className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover" src="/img/photo.svg" />
-                  <img alt="" className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover" src="/img/photo.svg" />
-                  <img alt="" className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover" src="/img/photo.svg" />
+                  <img
+                    alt=""
+                    className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover"
+                    src="/img/skin/acne-cheek-2.jpg"
+                  />
+                  <img
+                    alt=""
+                    className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover"
+                    src="/img/skin/acne-cheek-4.jpg"
+                  />
+                  <img
+                    alt=""
+                    className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover"
+                    src="/img/skin/clear-cheek.jpg"
+                  />
                 </div>
                 <div className="flex min-h-[34px] flex-1 flex-col justify-center rounded-md border border-brand-border/60 bg-[#F7F8F2] p-1.5">
                   <span className="flex items-center gap-1 text-[9.5px] font-bold text-neutral-700">
@@ -231,7 +233,11 @@ export default function S56TreatmentTracking() {
             <article className="shadow-xs flex flex-col gap-1.5 rounded-xl border border-brand-border/70 bg-white p-2.5">
               <div data-go="s55" className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <img alt="Lê Thu Hà" className="h-8 w-8 rounded-full border border-brand-border/50 object-cover" src="/img/avatar.svg" />
+                  <img
+                    alt="Lê Thu Hà"
+                    className="h-8 w-8 rounded-full border border-brand-border/50 object-cover"
+                    src="/img/people/patient-thu-ha.jpg"
+                  />
                   <div>
                     <h2 className="text-[12px] font-bold leading-tight text-neutral-900">Lê Thu Hà</h2>
                     <p className="text-[10px] text-neutral-500">32 tuổi • MS: BN003</p>
@@ -258,13 +264,21 @@ export default function S56TreatmentTracking() {
               </div>
               <div className="flex items-center gap-2 pt-0.5">
                 <div className="flex flex-shrink-0 items-center space-x-1">
-                  <img alt="" className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover" src="/img/photo.svg" />
                   <img
                     alt=""
                     className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwFeXairy2TkFSKLr8w-RmVm6yahikxzML5alLWeb06zqgRYI2b0rANNFldMzgz5RZtUm-j0yJza_6YxbbW7s1_73Q0xbtktOLMRzyGlOePlI_DwEpmGoIxEv8rT1Ybwgo5NafbFzJ-h6yCZMxUdOtPGKK6e_ygkE72vLFk8mSRc66xUdgX2vKYLcaK7IkIXf8wJ8XP64NCBrKIOwT8Ji9xsiWlE3J_WpZgf8_3mGBdRN-0fUsC8jL"
+                    src="/img/skin/acne-cheek-2.jpg"
                   />
-                  <img alt="" className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover" src="/img/photo.svg" />
+                  <img
+                    alt=""
+                    className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover"
+                    src="/img/skin/acne-cheek-3.jpg"
+                  />
+                  <img
+                    alt=""
+                    className="h-[34px] w-[34px] rounded-md border border-neutral-200 object-cover"
+                    src="/img/skin/acne-cheek-4.jpg"
+                  />
                 </div>
                 <div className="flex min-h-[34px] flex-1 flex-col justify-center rounded-md border border-brand-border/60 bg-[#F7F8F2] p-1.5">
                   <span className="flex items-center gap-1 text-[9.5px] font-bold text-neutral-700">
@@ -300,10 +314,6 @@ export default function S56TreatmentTracking() {
             </article>
           </div>
         </main>
-        <BottomNav role="doctor" active={2} />
-        <footer className="flex h-[18px] w-full flex-shrink-0 items-center justify-center bg-[#F7F8F2] pb-1.5">
-          <div className="h-[5px] w-[134px] rounded-full bg-[#111111]" />
-        </footer>
       </div>
     </Screen>
   )

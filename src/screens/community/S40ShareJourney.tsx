@@ -12,7 +12,6 @@ export default function S40ShareJourney() {
   return (
     <ScopedScreen id="s40" css={css} tab={1}>
       <main className="screen">
-        <span className="leaf">🌿</span>
         <Top back="s36" />
 
         <h1>Chia sẻ hành trình của bạn</h1>
@@ -42,7 +41,7 @@ export default function S40ShareJourney() {
             </p>
           </div>
           <div className="thumb" style={{ width: 100, height: 102 }}>
-            💆🏻
+            <img src="/img/skin/clear-face.jpg" alt="Ảnh hành trình" />
           </div>
         </div>
 

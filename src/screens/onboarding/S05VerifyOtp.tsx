@@ -1,18 +1,12 @@
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaBottom, SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 05 · Xác thực tài khoản (OTP) */
 export default function S05VerifyOtp() {
   return (
     <Screen>
-      <div
-        className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] antialiased"
-        style={{
-          backgroundImage:
-            'radial-gradient(at 100% 0%,rgba(122,167,151,.12) 0px,transparent 50%),radial-gradient(at 0% 100%,rgba(109,158,141,.15) 0px,transparent 45%),radial-gradient(at 100% 100%,rgba(205,195,175,.2) 0px,transparent 40%)',
-        }}
-      >
+      <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] antialiased">
         <div aria-hidden="true" style={{ position: 'absolute', top: 0, right: 0, pointerEvents: 'none', opacity: '.55' }}>
           <svg fill="none" height="220" viewBox="0 0 190 220" width="190">
             <path
@@ -38,11 +32,7 @@ export default function S05VerifyOtp() {
             <path d="M0 238C38 198 72 150 90 85" stroke="#357D64" strokeDasharray="2 2" strokeOpacity="0.35" strokeWidth="1.2" />
           </svg>
         </div>
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -bottom-16 -right-16 h-56 w-56 rounded-full bg-[#E4E7D3]/50 blur-2xl"
-        />
-        <StatusBar />
+        <SafeAreaTop />
         <div className="relative z-10 flex flex-1 flex-col px-6 pb-6 pt-3">
           <div className="mb-1 flex items-center">
             <button
@@ -129,9 +119,7 @@ export default function S05VerifyOtp() {
             </button>
           </div>
         </div>
-        <footer className="relative z-20 flex w-full items-center justify-center pb-2">
-          <div className="mb-1 h-1 w-32 rounded-full bg-[#222]/40" />
-        </footer>
+        <SafeAreaBottom />
       </div>
     </Screen>
   )

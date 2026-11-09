@@ -42,9 +42,10 @@ src/
 ├── components/
 │   ├── brand/BrandLogo.tsx      # logo SKINSYNC duy nhất (inline · stacked · wordmark)
 │   ├── layout/
-│   │   ├── Screen.tsx           # khung điện thoại bọc MỌI màn + xử lý điều hướng data-*
+│   │   ├── Screen.tsx           # "thân máy" 390×844 cho MỌI màn: tai thỏ, status bar, tab bar, thanh home, lá trang trí
+│   │   ├── SafeArea.tsx         # SafeAreaTop / SafeAreaBottom: chừa chỗ cho status bar & thanh home
 │   │   ├── ScopedScreen.tsx     # khung cho màn viết bằng CSS thuần (CSS bọc @scope)
-│   │   ├── StatusBar.tsx        # thanh trạng thái iOS
+│   │   ├── StatusBar.tsx        # status bar + tai thỏ (chỉ Screen render)
 │   │   ├── BottomNav.tsx        # tab bar dùng chung (người dùng / bác sĩ)
 │   │   ├── HomeIndicator.tsx
 │   │   ├── AppHeader.tsx        # header + icon nhóm màn Premium
@@ -73,6 +74,12 @@ src/
 ## Quy ước
 
 - **Mỗi màn = 1 component** `S<số><TênMàn>.tsx`, `export default`, bọc trong `<Screen>` (hoặc `<ScopedScreen>`).
+- **Header & footer chung**: mọi màn bọc trong `<Screen>`, cao đúng 844px. Không tự vẽ status bar, tai thỏ, tab bar hay thanh home:
+  - đầu màn đặt `<SafeAreaTop />` (44px) để nội dung bắt đầu ngay dưới tai thỏ;
+  - tab bar: `<Screen tab={0}>` (bác sĩ: `<Screen tab={0} role="doctor">`);
+  - màn không có tab bar: đặt `<SafeAreaBottom />` ở cuối để nút không đè thanh home.
+- **Trang trí**: chỉ dùng lá góc chung do `<Screen>` vẽ (`decor={false}` để tắt, vd màn ảnh toàn khung). Không thêm họa tiết riêng từng màn.
+- **Ảnh**: dùng ảnh cục bộ trong `public/img/` (people/, skin/, products/, scenes/). Mỗi nhân vật luôn dùng cùng một ảnh, vd BS. Nguyễn Thị Minh Anh = `/img/people/doctor-minh-anh.jpg`, người dùng Nguyễn Minh Anh = `/img/people/user-minh-anh.jpg`.
 - **Logo**: luôn dùng `<BrandLogo />`, không tự viết chữ "SKINSYNC".
 - **Màu**: ưu tiên class token (`bg-primary`, `text-ink`, `bg-ivory`, `border-line`); không thêm mã màu mới.
 - **Điều hướng** bằng thuộc tính trên phần tử bấm được:

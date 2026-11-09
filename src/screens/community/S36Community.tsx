@@ -9,7 +9,6 @@ export default function S36Community() {
   return (
     <ScopedScreen id="s36" css={css} tab={1}>
       <main className="screen">
-        <span className="leaf">🌿</span>
         <Top back="s10" right={<span data-toast="Tìm kiếm bài viết (minh họa)">⌕</span>} />
 
         <h1>Cộng đồng yêu da</h1>
@@ -25,7 +24,7 @@ export default function S36Community() {
         <article className="card">
           <div className="row">
             <div className="avatar" data-go="s24">
-              👩🏻‍⚕️
+              <img src="/img/people/doctor-minh-anh.jpg" alt="BS. Nguyễn Thị Minh Anh" />
             </div>
             <div style={{ flex: 1 }} data-go="s24">
               <b>BS. Nguyễn Thị Minh Anh　✓</b>
@@ -37,7 +36,7 @@ export default function S36Community() {
             Làm thế nào để xây dựng thói quen chăm sóc da phù hợp?
           </h3>
           <div className="thumb hero" data-go="s37">
-            👩🏻‍⚕️
+            <img src="/img/scenes/facial-treatment.jpg" alt="Chăm sóc da cùng bác sĩ" />
           </div>
           <div className="row between">
             <div className="row">
@@ -59,7 +58,9 @@ export default function S36Community() {
 
         <article className="card">
           <div className="row">
-            <div className="avatar">👩🏻</div>
+            <div className="avatar">
+              <img src="/img/people/patient-thu-ha.jpg" alt="Nguyễn Thu Hà" />
+            </div>
             <div style={{ flex: 1 }} data-go="s37">
               <b>Nguyễn Thu Hà</b>
               <p>Thành viên Premium · 5 ngày trước</p>
@@ -71,10 +72,10 @@ export default function S36Community() {
           <h3 data-go="s37">Cập nhật da sau 4 tuần: sự khác biệt thật sự!</h3>
           <div className="grid2" data-go="s37">
             <div className="thumb" style={{ height: 95 }}>
-              🌸
+              <img src="/img/skin/acne-cheek-2.jpg" alt="Trước" />
             </div>
             <div className="thumb" style={{ height: 95 }}>
-              ✨
+              <img src="/img/skin/clear-cheek.jpg" alt="Sau 4 tuần" />
             </div>
           </div>
         </article>

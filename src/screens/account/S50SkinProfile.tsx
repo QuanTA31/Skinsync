@@ -1,23 +1,13 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 50 · Hồ sơ làn da */
 export default function S50SkinProfile() {
   return (
-    <Screen>
-      <div className="relative flex h-[884px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans antialiased">
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-[120px] w-[120px] overflow-hidden opacity-90">
-          <img
-            src="/eucalyptus-corner.png"
-            alt=""
-            className="object-top-right pointer-events-none h-full w-full object-contain"
-            style={{ background: 'transparent', mixBlendMode: 'multiply' }}
-          />
-        </div>
-        <StatusBar />
+    <Screen tab={4}>
+      <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans antialiased">
+        <SafeAreaTop />
         <main className="flex flex-1 flex-col justify-between overflow-hidden px-3.5 pb-[88px] pt-0">
           <header className="relative flex items-center justify-between py-1">
             <button
@@ -39,11 +29,7 @@ export default function S50SkinProfile() {
           </div>
           <div data-go="s13" className="flex items-center space-x-3 rounded-xl border border-[#E3E6D3] bg-white p-2.5 shadow-sm">
             <div className="relative h-[76px] w-[76px] shrink-0 overflow-hidden rounded-lg border border-[#E8EBDA] bg-[#F4F6ED]">
-              <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvd1N5zw96XzfhzEBIlIU17dpZM36l_nK_Gkre6vkzwChFcS_YjCDG6mlvBnT6maCthl9yy-VdGL9dXd7omPF3GvgLJ0f3tU3agaEuowNIGT9Miz_KQAltu4QNSih-KGcuODxcnblpfGlhxDMSZskNrXOEJWR1Xk5eblF_5PQpKTuVb4xeG_Nh_QT-9v-fI5_LyYwQh8tAYhGJwIfe0A30gKZaACddwNtb0JRn95M"
-                alt="Ảnh soi da"
-                className="h-full w-full object-cover"
-              />
+              <img src="/img/skin/acne-cheek-1.jpg" alt="Ảnh soi da" className="h-full w-full object-cover" />
               <div className="absolute inset-x-0 bottom-0 bg-black/60 py-0.5 text-center backdrop-blur-[2px]">
                 <span className="block text-[8px] font-medium tracking-tight text-white">14/10/2024</span>
               </div>
@@ -163,44 +149,28 @@ export default function S50SkinProfile() {
             <div className="grid grid-cols-4 gap-1.5">
               <div className="flex flex-col items-center rounded-lg border border-[#E7EAD8] bg-[#F7F8F2] p-1 text-center">
                 <div className="mb-1 flex h-7 w-7 items-center justify-center overflow-hidden rounded border border-[#DADDC9] bg-white">
-                  <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuARz9A9N3luLvI9-VyWcUUb8bgGQE5zjBr0Hyn9YsruXMsc-ICXOsWtthiAL0btNarIAQu0SXPUwlNcpRxiDMt8Qgv4LEEevbdZsCF2qi6rE2f_frc-gF_9IZXZC1wL_JBUj9VfOUtc6oI_f_Ch8OkriTsq0jLHc6d4KD5CtsyJujYOvvxA5LoABdmPxRFrv_Aho_feGNFsW9p-Jr8CawsCiy3WJ3Y-WJ3R-6jAl3g"
-                    alt="La Roche-Posay"
-                    className="h-full w-full object-contain p-0.5"
-                  />
+                  <img src="/img/products/effaclar-gel.jpg" alt="La Roche-Posay" className="h-full w-full object-contain p-0.5" />
                 </div>
                 <span className="line-clamp-1 text-[8.5px] font-bold leading-tight text-[#173B32]">Sữa rửa mặt</span>
                 <span className="mt-0.5 w-full truncate text-[7.5px] leading-tight text-[#71786D]">La Roche-Posay</span>
               </div>
               <div className="flex flex-col items-center rounded-lg border border-[#E7EAD8] bg-[#F7F8F2] p-1 text-center">
                 <div className="mb-1 flex h-7 w-7 items-center justify-center overflow-hidden rounded border border-[#DADDC9] bg-white">
-                  <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAihwJ8EPyBLCmWCZKSmOEA2OZZF9AyiIbD_aK45CvYRodulZ5FVPVG7gPua0RIcFB1bvKtaMHtiBLosXLUvtdUBYcYmiu9L6e5Tv0nMdP7adMD-DZIVTKJerzjz_eqyvyjzV3-DJcyOYCuRUS8H3JpVFP1fM9SOYI-wnabAFGa16bKCzYfxsyIaLN0rCoM7Sd8DQTiCD2R4wUfF6YPo_R52n5jFug1ORfSf-oEv0"
-                    alt="Some By Mi"
-                    className="h-full w-full object-contain p-0.5"
-                  />
+                  <img src="/img/products/toner-blue.jpg" alt="Some By Mi" className="h-full w-full object-contain p-0.5" />
                 </div>
                 <span className="line-clamp-1 text-[8.5px] font-bold leading-tight text-[#173B32]">Toner</span>
                 <span className="mt-0.5 w-full truncate text-[7.5px] leading-tight text-[#71786D]">Some By Mi</span>
               </div>
               <div className="flex flex-col items-center rounded-lg border border-[#E7EAD8] bg-[#F7F8F2] p-1 text-center">
                 <div className="mb-1 flex h-7 w-7 items-center justify-center overflow-hidden rounded border border-[#DADDC9] bg-white">
-                  <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrJJa5psrcuk_j7yh9epYtABaZvKS0mX5KODKCgnSkfbeM9UYkg8qyOwqnVKqtqk_hqOIIRuYLje1yz780JIJjIqLmXtmFEtC__Zcxohix-OGHmcyBP1U-JpNViyirWOb0MsJyAFdgTeedtFbz9nGSBGFr7R2cb8Yc3nIYtAwX1OaAnimrV4hY2sN7I9tLAXR-uvjYO-0KVDcs7QwEawQFHQlb7wsSSzjUlucX2xQ"
-                    alt="The Ordinary"
-                    className="h-full w-full object-contain p-0.5"
-                  />
+                  <img src="/img/products/serum-dropper.jpg" alt="The Ordinary" className="h-full w-full object-contain p-0.5" />
                 </div>
                 <span className="line-clamp-1 text-[8.5px] font-bold leading-tight text-[#173B32]">Serum</span>
                 <span className="mt-0.5 w-full truncate text-[7.5px] leading-tight text-[#71786D]">The Ordinary</span>
               </div>
               <div className="flex flex-col items-center rounded-lg border border-[#E7EAD8] bg-[#F7F8F2] p-1 text-center">
                 <div className="mb-1 flex h-7 w-7 items-center justify-center overflow-hidden rounded border border-[#DADDC9] bg-white">
-                  <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4pN48EGIYOXrlagTPFFg471EmBYxSUXrXgynY1-i1L-HojJX94MlwbqMlRPlOrOKJkSGLAUcwvOXJWf3b2rII0Ny7Jf0YYXwCGPTdA-h8UosVouP2HRBw2WbtFwZvHJNLc1uppvhcwjukf0LQh0Dj2Mdae9Fi2c8b_PQXn2NUrPNmY3hs7dRaCbQYroq2ROBkE4oH3JFgA52g2Vrwa11_2Vn2TqV-YYTDf_Ophdg"
-                    alt="Anessa"
-                    className="h-full w-full object-contain p-0.5"
-                  />
+                  <img src="/img/products/anessa.jpg" alt="Anessa" className="h-full w-full object-contain p-0.5" />
                 </div>
                 <span className="line-clamp-1 text-[8.5px] font-bold leading-tight text-[#173B32]">Kem chống nắng</span>
                 <span className="mt-0.5 w-full truncate text-[7.5px] leading-tight text-[#71786D]">Anessa</span>
@@ -228,8 +198,6 @@ export default function S50SkinProfile() {
             </div>
           </div>
         </main>
-        <BottomNav role="user" active={4} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

@@ -1,27 +1,15 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 import { Toggle } from '@/components/ui/Toggle'
 
 /** Màn 45 · Tùy chỉnh nhắc nhở */
 export default function S45ReminderSettings() {
   return (
-    <Screen>
-      <div className="relative flex h-[884px] w-[390px] flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans font-medium text-[#173B32] antialiased">
-        <StatusBar />
+    <Screen tab={2}>
+      <div className="relative flex h-[844px] w-[390px] flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans font-medium text-[#173B32] antialiased">
+        <SafeAreaTop />
         <header className="relative shrink-0 px-5 pb-1 pt-0.5">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute right-0 top-0 z-0 h-[82px] w-[108px] select-none overflow-hidden mix-blend-multiply"
-          >
-            <img
-              src="/eucalyptus-corner.png"
-              alt=""
-              className="object-top-right pointer-events-none absolute right-0 top-0 h-[108px] w-[108px] max-w-none object-cover opacity-90"
-            />
-          </div>
           <div className="relative z-10 mb-1.5 flex items-center justify-between">
             <button
               aria-label="Quay lại"
@@ -282,8 +270,6 @@ export default function S45ReminderSettings() {
             </button>
           </div>
         </main>
-        <BottomNav role="user" active={2} />
-        <HomeIndicator variant="inline" />
       </div>
     </Screen>
   )

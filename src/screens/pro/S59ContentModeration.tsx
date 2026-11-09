@@ -1,16 +1,14 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 59 · Kiểm duyệt nội dung */
 export default function S59ContentModeration() {
   return (
-    <Screen>
-      <div className="relative flex h-[884px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] text-[#2D312E]">
+    <Screen tab={1} role="doctor">
+      <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] text-[#2D312E]">
         <div className="flex w-full flex-1 flex-col overflow-hidden">
-          <StatusBar />
+          <SafeAreaTop />
           <header className="relative z-10 flex shrink-0 items-center justify-between px-4 pb-1 pt-1">
             <button
               aria-label="Menu"
@@ -40,15 +38,9 @@ export default function S59ContentModeration() {
               <img
                 alt="Avatar Bác sĩ"
                 className="h-8 w-8 rounded-full border border-[#D3DFDA] object-cover shadow-sm"
-                src="/img/avatar.svg"
+                src="/img/people/doctor-lan.jpg"
               />
             </div>
-            <img
-              src="/eucalyptus-corner.png"
-              alt=""
-              className="pointer-events-none absolute right-0 top-0 z-0 object-contain opacity-85"
-              style={{ width: '120px', height: '120px', mixBlendMode: 'multiply', transform: 'translate(15%, -15%)' }}
-            />
           </header>
           <main className="no-scrollbar flex flex-1 flex-col justify-start gap-1.5 overflow-y-auto px-3.5 pb-24">
             <div>
@@ -122,11 +114,15 @@ export default function S59ContentModeration() {
             <div className="flex flex-col gap-1.5">
               <article className="shadow-xs rounded-[11px] border border-[#E3E6D3] bg-white p-2">
                 <div className="flex items-center gap-2">
-                  <img alt="" className="h-[58px] w-[58px] shrink-0 rounded-lg border border-[#ECEEE0] object-cover" src="/img/photo.svg" />
+                  <img
+                    alt=""
+                    className="h-[58px] w-[58px] shrink-0 rounded-lg border border-[#ECEEE0] object-cover"
+                    src="/img/scenes/facial-treatment.jpg"
+                  />
                   <div className="flex min-w-0 flex-1 flex-col justify-between py-0.5">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1.5 truncate">
-                        <img alt="" className="h-4 w-4 rounded-full object-cover" src="/img/avatar.svg" />
+                        <img alt="" className="h-4 w-4 rounded-full object-cover" src="/img/people/member-3.jpg" />
                         <span className="truncate text-[11px] font-semibold text-[#173B32]">Nguyễn Thảo Vy</span>
                         <span className="shrink-0 text-[9.5px] text-[#868F88]">2 giờ trước</span>
                       </div>
@@ -253,7 +249,7 @@ export default function S59ContentModeration() {
               <article className="shadow-xs rounded-[11px] border border-[#E3E6D3] bg-white p-2">
                 <div className="flex items-center gap-2">
                   <div className="relative h-[58px] w-[58px] shrink-0 overflow-hidden rounded-lg border border-[#ECEEE0]">
-                    <img alt="" className="h-full w-full object-cover" src="/img/photo.svg" />
+                    <img alt="" className="h-full w-full object-cover" src="/img/products/moisturizer-set.jpg" />
                     <div className="absolute inset-0 flex items-center justify-center bg-black/30">
                       <div className="shadow-xs flex h-5 w-5 items-center justify-center rounded-full bg-white/90">
                         <svg width="10" height="10" viewBox="0 0 24 24" fill="#357D64" stroke="#357D64" strokeWidth="1">
@@ -265,11 +261,7 @@ export default function S59ContentModeration() {
                   <div className="flex min-w-0 flex-1 flex-col justify-between py-0.5">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1.5 truncate">
-                        <img
-                          alt=""
-                          className="h-4 w-4 rounded-full object-cover"
-                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg1L0Ubd64tFiyLqb446PZ0I_vyx0fB4Q8ch0Jzm8SrSpGEcXuzCy4MeXxk41Sa7D9jiVKcLg89sfrCtofRWph8Oj6rL2KCpouKRyvWWyhARypLuNZbO2v7NEcx_IKyZ8Q4Q8a_-02wCTOlsIAhAKo97VISKVFICIuv7zHMJoOctsarDPTdhfTwesg7AAh6GlvuPmO-YOEv5o68j1IcyDRc7Lzf1E-KTrjWBN_aqU"
-                        />
+                        <img alt="" className="h-4 w-4 rounded-full object-cover" src="/img/people/member-5.jpg" />
                         <span className="truncate text-[11px] font-semibold text-[#173B32]">Trần Minh Quân</span>
                         <span className="shrink-0 text-[9.5px] text-[#868F88]">5 giờ trước</span>
                       </div>
@@ -393,11 +385,15 @@ export default function S59ContentModeration() {
               </article>
               <article className="shadow-xs rounded-[11px] border border-[#F0D5D5] bg-white p-2">
                 <div className="flex items-center gap-2">
-                  <img alt="" className="h-[58px] w-[58px] shrink-0 rounded-lg border border-[#F5E0E0] object-cover" src="/img/photo.svg" />
+                  <img
+                    alt=""
+                    className="h-[58px] w-[58px] shrink-0 rounded-lg border border-[#F5E0E0] object-cover"
+                    src="/img/products/cleansing-oil.jpg"
+                  />
                   <div className="flex min-w-0 flex-1 flex-col justify-between py-0.5">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1.5 truncate">
-                        <img alt="" className="h-4 w-4 rounded-full object-cover" src="/img/avatar.svg" />
+                        <img alt="" className="h-4 w-4 rounded-full object-cover" src="/img/people/member-2.jpg" />
                         <span className="truncate text-[11px] font-semibold text-[#173B32]">Lê Thu Hà</span>
                         <span className="shrink-0 text-[9.5px] text-[#868F88]">1 ngày trước</span>
                       </div>
@@ -542,11 +538,15 @@ export default function S59ContentModeration() {
               </article>
               <article className="shadow-xs rounded-[11px] border border-[#E3E6D3] bg-white p-2">
                 <div className="flex items-center gap-2">
-                  <img alt="" className="h-[58px] w-[58px] shrink-0 rounded-lg border border-[#ECEEE0] object-cover" src="/img/photo.svg" />
+                  <img
+                    alt=""
+                    className="h-[58px] w-[58px] shrink-0 rounded-lg border border-[#ECEEE0] object-cover"
+                    src="/img/scenes/facial-treatment.jpg"
+                  />
                   <div className="flex min-w-0 flex-1 flex-col justify-between py-0.5">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1.5 truncate">
-                        <img alt="" className="h-4 w-4 rounded-full object-cover" src="/img/avatar.svg" />
+                        <img alt="" className="h-4 w-4 rounded-full object-cover" src="/img/people/member-4.jpg" />
                         <span className="truncate text-[11px] font-semibold text-[#173B32]">Phạm Quỳnh Trang</span>
                         <span className="shrink-0 text-[9.5px] text-[#868F88]">3 giờ trước</span>
                       </div>
@@ -673,7 +673,7 @@ export default function S59ContentModeration() {
               <article className="shadow-xs rounded-[11px] border border-[#E3E6D3] bg-white p-2">
                 <div className="flex items-center gap-2">
                   <div className="relative h-[58px] w-[58px] shrink-0 overflow-hidden rounded-lg border border-[#ECEEE0]">
-                    <img alt="" className="h-full w-full object-cover" src="/img/photo.svg" />
+                    <img alt="" className="h-full w-full object-cover" src="/img/products/moisturizer-set.jpg" />
                     <div className="absolute inset-0 flex items-center justify-center bg-black/30">
                       <div className="shadow-xs flex h-5 w-5 items-center justify-center rounded-full bg-white/90">
                         <svg width="10" height="10" viewBox="0 0 24 24" fill="#357D64" stroke="#357D64" strokeWidth="1">
@@ -685,11 +685,7 @@ export default function S59ContentModeration() {
                   <div className="flex min-w-0 flex-1 flex-col justify-between py-0.5">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1.5 truncate">
-                        <img
-                          alt=""
-                          className="h-4 w-4 rounded-full object-cover"
-                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg1L0Ubd64tFiyLqb446PZ0I_vyx0fB4Q8ch0Jzm8SrSpGEcXuzCy4MeXxk41Sa7D9jiVKcLg89sfrCtofRWph8Oj6rL2KCpouKRyvWWyhARypLuNZbO2v7NEcx_IKyZ8Q4Q8a_-02wCTOlsIAhAKo97VISKVFICIuv7zHMJoOctsarDPTdhfTwesg7AAh6GlvuPmO-YOEv5o68j1IcyDRc7Lzf1E-KTrjWBN_aqU"
-                        />
+                        <img alt="" className="h-4 w-4 rounded-full object-cover" src="/img/people/member-5.jpg" />
                         <span className="truncate text-[11px] font-semibold text-[#173B32]">Hoàng Đức Thịnh</span>
                         <span className="shrink-0 text-[9.5px] text-[#868F88]">4 giờ trước</span>
                       </div>
@@ -865,8 +861,6 @@ export default function S59ContentModeration() {
             </div>
           </main>
         </div>
-        <BottomNav role="doctor" active={1} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

@@ -1,21 +1,13 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 49 · Thông tin của tôi */
 export default function S49PersonalInfo() {
   return (
-    <Screen>
-      <div className="relative flex h-[884px] w-[390px] select-none flex-col overflow-hidden bg-[#F7F8F2] font-sans antialiased">
-        <img
-          src="/eucalyptus-corner.png"
-          alt=""
-          className="pointer-events-none absolute right-0 top-0 z-10 w-[120px] select-none"
-          style={{ mixBlendMode: 'multiply' }}
-        />
-        <StatusBar />
+    <Screen tab={4}>
+      <div className="relative flex h-[844px] w-[390px] select-none flex-col overflow-hidden bg-[#F7F8F2] font-sans antialiased">
+        <SafeAreaTop />
         <header className="relative flex shrink-0 items-center justify-between px-4 pb-1 pt-1">
           <button
             aria-label="Quay lại"
@@ -40,7 +32,7 @@ export default function S49PersonalInfo() {
               <img
                 alt="Ảnh đại diện"
                 className="h-[84px] w-[84px] rounded-full border-2 border-white object-cover shadow-sm"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXkyVhjMLsUtZa3KSvD9RvBn3udOWL8b0dxJYL0KgORjV1ICnQQ231dek0ciEt4F_j7OfMnCx6UgAmRQPaaExneq4mmQ2c-3c1vuLFPjpMU2VUiezbs5jEjJyunLy2u1ghcz7gkT1qVS6q-oASF7-INJPOXKeoQDRbi-yN3NzhceGmiyHuop66lAHV5fESBwNE9-2bY46rao3rSrHbCvPOEBC0xmzj9opMGB44Lw0"
+                src="/img/people/user-minh-anh.jpg"
               />
               <button
                 aria-label="Đổi ảnh đại diện"
@@ -140,8 +132,6 @@ export default function S49PersonalInfo() {
             </button>
           </div>
         </main>
-        <BottomNav role="user" active={4} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

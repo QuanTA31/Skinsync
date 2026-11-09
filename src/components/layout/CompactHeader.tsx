@@ -1,23 +1,16 @@
 import { useState, type ReactNode } from 'react'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { StatusBar } from './StatusBar'
 
-/** Header chung của các màn Cộng đồng (36–43): status bar, nút quay lại, logo, nội dung bên phải. */
+/** Header chung của các màn Cộng đồng (36–43): nút quay lại, logo, nội dung bên phải. */
 export function Top({ back, right }: { back: string; right?: ReactNode }) {
   return (
-    <>
-      {/* bù padding của .screen để status bar sát mép như các màn khác */}
-      <div className="-mx-5 -mt-[26px] mb-1">
-        <StatusBar />
-      </div>
-      <header className="top">
-        <span className="back" data-back={back}>
-          ‹
-        </span>
-        <BrandLogo className="brand" />
-        {right ?? <span style={{ width: 30 }} />}
-      </header>
-    </>
+    <header className="top">
+      <span className="back" data-back={back}>
+        ‹
+      </span>
+      <BrandLogo className="brand" />
+      {right ?? <span style={{ width: 30 }} />}
+    </header>
   )
 }
 

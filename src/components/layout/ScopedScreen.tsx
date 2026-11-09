@@ -1,7 +1,5 @@
 import type { ReactNode } from 'react'
 import baseCss from '@/styles/scoped/base.css?inline'
-import { BottomNav } from './BottomNav'
-import { HomeIndicator } from './HomeIndicator'
 import { Screen } from './Screen'
 
 interface ScopedScreenProps {
@@ -22,20 +20,15 @@ const scoped = (selector: string, css: string) => `@scope (${selector}) {\n${css
  *  - styles/scoped/base.css: bộ style nền, áp dụng trong `.scoped`
  *  - css riêng của màn: áp dụng trong `.${id}`
  * Cả hai được bọc @scope nên không rò rỉ sang màn khác.
+ * Vùng nội dung bắt đầu dưới status bar (pt-safe-top) nên nội dung cuộn không chạy dưới tai thỏ.
  */
 export function ScopedScreen({ id, css, tab, role = 'user', children }: ScopedScreenProps) {
   return (
-    <Screen>
-      <div className={`scoped ${id} relative h-[844px] w-[390px] overflow-hidden bg-ivory`}>
+    <Screen tab={tab ?? undefined} role={role}>
+      <div className={`scoped ${id} relative h-full w-full overflow-hidden bg-ivory pt-safe-top`}>
         <style>{scoped('.scoped', baseCss)}</style>
         <style>{scoped(`.${id}`, css)}</style>
         {children}
-        {tab !== null && (
-          <>
-            <BottomNav role={role} active={tab} />
-            <HomeIndicator />
-          </>
-        )}
       </div>
     </Screen>
   )

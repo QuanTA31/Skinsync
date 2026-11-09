@@ -1,20 +1,14 @@
-import { BotanicalCorner } from '@/components/ui/BotanicalCorner'
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 44 · Thông báo của bạn */
 export default function S44Notifications() {
   return (
-    <Screen>
+    <Screen tab={0}>
       <div
         className="relative flex select-none flex-col overflow-hidden font-sans text-stone-800"
-        style={{ width: '390px', height: '884px', position: 'relative', overflow: 'hidden', background: 'rgb(247,248,242)' }}
+        style={{ width: '390px', height: '844px', position: 'relative', overflow: 'hidden', background: 'rgb(247,248,242)' }}
       >
-        <BotanicalCorner />
-        <StatusBar variant="floating" />
         <div className="z-20 shrink-0 px-5 pt-3" style={{ paddingTop: '50px' }}>
           <div className="relative flex h-8 w-full items-center justify-center">
             <button
@@ -309,8 +303,6 @@ export default function S44Notifications() {
             <span className="text-[11px] font-semibold tracking-tight">Cài đặt thông báo</span>
           </button>
         </div>
-        <BottomNav role="user" active={0} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

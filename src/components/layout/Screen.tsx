@@ -1,22 +1,41 @@
 import { useEffect, useRef } from 'react'
 import type { ReactNode, RefObject } from 'react'
+import { BotanicalCorner } from '@/components/ui/BotanicalCorner'
 import { useNav } from '@/navigation/NavProvider'
 import { useDelegatedClicks } from '@/navigation/useDelegatedClicks'
+import { BottomNav } from './BottomNav'
+import { HomeIndicator } from './HomeIndicator'
+import { StatusBar } from './StatusBar'
 
 interface ScreenProps {
   children: ReactNode
+  /** tab đang chọn trên tab bar (0–4). Bỏ trống = màn không có tab bar */
+  tab?: number
+  /** tab bar phía người dùng hay bác sĩ */
+  role?: 'user' | 'doctor'
+  /** màu chữ status bar + thanh home: "light" khi đỉnh/đáy màn là ảnh tối */
+  tone?: 'dark' | 'light'
+  /** lá trang trí góc phải trên (mặc định có). Tắt cho màn toàn ảnh như màn chào, camera */
+  decor?: boolean
   /** "sm": icon Material mặc định 19px (một số màn thiết kế dùng icon nhỏ) */
   iconSize?: 'sm'
 }
 
 /**
- * Khung điện thoại dùng chung cho MỌI màn hình.
- *  - vẽ viền máy, bo góc, nền ivory (xem .phone-frame trong styles/app.css)
- *  - bắt click theo thuộc tính data-go / data-back / data-tab / data-toast… (navigation/useDelegatedClicks.ts)
- *  - [data-auto-go="sNN"] (+ data-auto-delay="ms"): tự chuyển màn sau một khoảng thời gian
- *  - [data-slider]: thanh trượt so sánh ảnh trước / sau
+ * "Thân máy" dùng chung cho MỌI màn hình – 390×844 (iPhone 14).
+ *
+ *  ┌──────────────────────────┐
+ *  │ 9:41   (tai thỏ)   ▮▮ ⌔ ▭ │  ← StatusBar: luôn cùng vị trí (màn chừa chỗ bằng <SafeAreaTop />)
+ *  │                      🌿   │  ← BotanicalCorner: trang trí chung
+ *  │        nội dung màn       │
+ *  │ ⌂     ◫     ◷     ▢     ◯ │  ← BottomNav (khi có prop `tab`)
+ *  │          ▬▬▬▬▬            │  ← HomeIndicator
+ *  └──────────────────────────┘
+ *
+ * Ngoài ra: bắt click theo data-go / data-back / data-tab / data-toast… (navigation/useDelegatedClicks.ts),
+ * [data-auto-go] tự chuyển màn, [data-slider] thanh so sánh ảnh trước/sau.
  */
-export function Screen({ children, iconSize }: ScreenProps) {
+export function Screen({ children, tab, role = 'user', tone = 'dark', decor = true, iconSize }: ScreenProps) {
   const onClick = useDelegatedClicks()
   const { go } = useNav()
   const ref = useRef<HTMLDivElement>(null)
@@ -25,8 +44,14 @@ export function Screen({ children, iconSize }: ScreenProps) {
   useCompareSlider(ref)
 
   return (
-    <div ref={ref} className="phone-frame" data-icon-size={iconSize} onClick={onClick} onSubmit={(e) => e.preventDefault()}>
-      {children}
+    <div className="phone-frame" data-icon-size={iconSize} onClick={onClick} onSubmit={(e) => e.preventDefault()}>
+      <div ref={ref} className="phone-screen">
+        {children}
+        {decor && <BotanicalCorner />}
+        {tab !== undefined && <BottomNav role={role} active={tab} />}
+        <StatusBar tone={tone} />
+        <HomeIndicator tone={tab !== undefined ? 'dark' : tone} />
+      </div>
     </div>
   )
 }

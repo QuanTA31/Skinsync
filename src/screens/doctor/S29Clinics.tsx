@@ -9,7 +9,7 @@ const clinics = [
     distance: '0.8 km',
     address: '123 Nguyễn Văn Linh, Đà Nẵng',
     doctors: '3 bác sĩ da liễu',
-    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400',
+    image: '/img/scenes/clinic-room.jpg',
     tags: ['Khám trực tiếp', 'Khám trực tuyến', 'Điều trị da', 'Laser & thẩm mỹ da'],
   },
   {
@@ -17,7 +17,7 @@ const clinics = [
     distance: '1.5 km',
     address: '456 Lê Duẩn, Đà Nẵng',
     doctors: '4 bác sĩ da liễu',
-    image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=400',
+    image: '/img/scenes/clinic-checkup.jpg',
     tags: ['Khám trực tiếp', 'Điều trị mụn', 'Chăm sóc da chuyên sâu', 'Trẻ hóa da'],
   },
 ]
@@ -36,11 +36,6 @@ export default function S29Clinics() {
   return (
     <ScopedScreen id="s29" css={css} tab={0}>
       <main className="phone sc-screen sc-clinics">
-        <div className="status-bar">
-          <span>9:41</span>
-          <span>●●● ◖ ▰</span>
-        </div>
-
         <header className="booking-header">
           <button className="back-button" data-back="s15">
             ‹

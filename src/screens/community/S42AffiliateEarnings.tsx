@@ -3,9 +3,9 @@ import { Top } from '@/components/layout/CompactHeader'
 import css from '@/styles/scoped/compact.css?inline'
 
 const products = [
-  ['🧴', 'La Roche-Posay', 'Sữa rửa mặt dịu nhẹ'],
-  ['🧪', 'Skin1004', 'Serum rau má'],
-  ['🫙', 'CeraVe', 'Kem dưỡng ẩm'],
+  ['/img/products/effaclar-gel.jpg', 'La Roche-Posay', 'Sữa rửa mặt dịu nhẹ'],
+  ['/img/products/serum-dropper.jpg', 'Skin1004', 'Serum rau má'],
+  ['/img/products/cream-jar.jpg', 'CeraVe', 'Kem dưỡng ẩm'],
 ]
 const orders = [
   ['La Roche-Posay Effaclar Duo+', '12/10/2024', '+24.000đ'],
@@ -18,7 +18,6 @@ export default function S42AffiliateEarnings() {
   return (
     <ScopedScreen id="s42" css={css} tab={4}>
       <main className="screen">
-        <span className="leaf">🌿</span>
         <Top back="s41" />
 
         <h1>Thu nhập từ giới thiệu sản phẩm</h1>
@@ -66,7 +65,7 @@ export default function S42AffiliateEarnings() {
           {products.map((p) => (
             <div className="card" key={p[1]} style={{ padding: 7 }}>
               <div className="product" data-go="s20">
-                {p[0]}
+                <img src={p[0]} alt={p[2]} />
               </div>
               <p>
                 <b>{p[1]}</b>
@@ -89,7 +88,9 @@ export default function S42AffiliateEarnings() {
         </div>
         {orders.map((x) => (
           <div className="listrow" key={x[0]} data-go="s51">
-            <span>🧴</span>
+            <div className="thumb" style={{ width: 40, height: 40 }}>
+              <img src="/img/products/effaclar-gel.jpg" alt="" />
+            </div>
             <div style={{ flex: 1 }}>
               <b>{x[0]}</b>
               <p>

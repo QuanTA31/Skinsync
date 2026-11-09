@@ -1,6 +1,6 @@
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 03 · Cùng SKINSYNC hiểu làn da */
 export default function S03OnboardingIntro() {
@@ -10,43 +10,7 @@ export default function S03OnboardingIntro() {
         className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-brand-ivory font-sans text-brand-dark antialiased"
         style={{ backgroundColor: '#F7F8F2' }}
       >
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            width: '130px',
-            height: '150px',
-            pointerEvents: 'none',
-            opacity: '.75',
-            background: 'radial-gradient(ellipse at 80% 10%,rgba(85,140,121,.28) 0%,rgba(124,172,155,.15) 40%,transparent 70%)',
-            borderBottomLeftRadius: '90px',
-          }}
-        >
-          <svg className="h-full w-full text-brand-sage/40" fill="currentColor" viewBox="0 0 120 120">
-            <path d="M120,0 C100,45 65,70 15,95 C10,98 5,105 0,120 C45,115 80,85 105,45 C115,28 119,12 120,0 Z" opacity="0.4" />
-            <path d="M120,20 C100,55 75,78 40,90 C35,70 55,45 85,25 C98,16 110,12 120,20 Z" opacity="0.3" />
-          </svg>
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            width: '140px',
-            height: '140px',
-            pointerEvents: 'none',
-            opacity: '.65',
-            background: 'radial-gradient(ellipse at 10% 90%,rgba(85,140,121,.25) 0%,rgba(124,172,155,.12) 45%,transparent 70%)',
-            borderTopRightRadius: '100px',
-          }}
-        >
-          <svg className="h-full w-full text-brand-sage/40" fill="currentColor" viewBox="0 0 120 120">
-            <path d="M0,120 C20,75 55,50 105,25 C110,22 115,15 120,0 C75,5 40,35 15,75 C5,92 1,108 0,120 Z" opacity="0.4" />
-            <path d="M0,100 C20,65 45,42 80,30 C85,50 65,75 35,95 C22,104 10,108 0,100 Z" opacity="0.3" />
-          </svg>
-        </div>
-        <StatusBar />
+        <SafeAreaTop />
         <div className="relative z-10 flex flex-1 flex-col justify-start px-6">
           <div className="relative mt-2 flex min-h-[44px] items-center">
             <button
@@ -180,7 +144,6 @@ export default function S03OnboardingIntro() {
           >
             Để sau
           </button>
-          <div className="mt-4 h-1 w-32 rounded-full bg-black/25" />
         </footer>
       </div>
     </Screen>

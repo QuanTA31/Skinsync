@@ -31,14 +31,14 @@ export default function S37PostDetail() {
         >
           ‹
         </span>
-        <div className="cover" style={{ height: 255, fontSize: 80 }}>
-          👩🏻‍⚕️
+        <div className="cover" style={{ height: 255 }}>
+          <img src="/img/scenes/facial-treatment.jpg" alt="Chăm sóc da cùng bác sĩ" />
         </div>
 
         <article className="card">
           <div className="row">
             <div className="avatar" data-go="s24">
-              👩🏻‍⚕️
+              <img src="/img/people/doctor-minh-anh.jpg" alt="BS. Nguyễn Thị Minh Anh" />
             </div>
             <div style={{ flex: 1 }} data-go="s24">
               <b>BS. Nguyễn Thị Minh Anh　✓</b>
@@ -82,7 +82,9 @@ export default function S37PostDetail() {
           </span>
         </div>
         <div className="listrow">
-          <div className="avatar">👩🏻</div>
+          <div className="avatar">
+            <img src="/img/people/member-3.jpg" alt="Linh Trần" />
+          </div>
           <div>
             <b>Linh Trần · 1 ngày trước</b>
             <p>Cảm ơn bác sĩ, video rất dễ hiểu và hữu ích!</p>

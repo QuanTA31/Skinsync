@@ -1,5 +1,5 @@
 import { ScopedScreen } from '@/components/layout/ScopedScreen'
-import { ArrowRightIcon, Svg, AppHeader, appMainStyle } from '@/components/layout/AppHeader'
+import { ArrowRightIcon, Svg, AppHeader, appMainStyle, DoctorAvatar } from '@/components/layout/AppHeader'
 import css from '@/screens/premium/premium.css?inline'
 
 const ChevronRightIcon = () => (
@@ -11,15 +11,6 @@ const CalendarIcon = () => (
   <Svg>
     <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
   </Svg>
-)
-
-const DoctorAvatar = () => (
-  <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-[#D2E4DD]">
-    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#357D64" strokeWidth="1.5">
-      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-      <circle cx="12" cy="7" r="4" />
-    </svg>
-  </div>
 )
 
 const stages = [

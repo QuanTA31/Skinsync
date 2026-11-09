@@ -1,5 +1,5 @@
+import { SafeAreaBottom, SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 06 · Chụp ảnh làn da */
 export default function S06SkinCapture() {
@@ -9,11 +9,9 @@ export default function S06SkinCapture() {
         className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden font-sans text-[#173B32] antialiased shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]"
         style={{
           backgroundColor: '#F7F8F2',
-          backgroundImage:
-            'radial-gradient(circle at 100% 100%,rgba(82,139,119,.08) 0%,transparent 45%),radial-gradient(circle at 0% 0%,rgba(82,139,119,.04) 0%,transparent 35%)',
         }}
       >
-        <StatusBar />
+        <SafeAreaTop />
         <nav className="relative z-20 flex items-center px-5 pt-3">
           <button
             aria-label="Quay lại"
@@ -39,7 +37,7 @@ export default function S06SkinCapture() {
             <img
               alt="Xem trước khuôn mặt trực tiếp"
               className="pointer-events-none h-full w-full object-cover object-center"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXLtiVVz1hqUs9Lrg_u4AlHLeu_K1x_vE3qJ7_B7z7nNaYjwx46-oTpzzVGxREZF14EARJfmUzjEBNN8Qk_5WaINXpNSKl7aMmO5W9VgcqOQEz96U84-3NGTuxWReS098VwtE6Jb6aVNxzK1hvmUFYBU7N273m3zvvPFxM0fAG1a1HHiz8A09OckTYyEZAf6xBraRLX5MOD9XaVMUAYRmdBtqimOScxWV5DqtXJqY"
+              src="/img/skin/face-front.jpg"
             />
             <div className="absolute left-4 top-4 h-5 w-5 rounded-tl-[3px] border-l-[3px] border-t-[3px] border-white shadow-sm" />
             <div className="absolute right-4 top-4 h-5 w-5 rounded-tr-[3px] border-r-[3px] border-t-[3px] border-white shadow-sm" />
@@ -64,7 +62,7 @@ export default function S06SkinCapture() {
                   <img
                     alt="Góc chụp chính diện"
                     className="h-full w-full scale-150 object-cover object-[center_28%]"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXLtiVVz1hqUs9Lrg_u4AlHLeu_K1x_vE3qJ7_B7z7nNaYjwx46-oTpzzVGxREZF14EARJfmUzjEBNN8Qk_5WaINXpNSKl7aMmO5W9VgcqOQEz96U84-3NGTuxWReS098VwtE6Jb6aVNxzK1hvmUFYBU7N273m3zvvPFxM0fAG1a1HHiz8A09OckTYyEZAf6xBraRLX5MOD9XaVMUAYRmdBtqimOScxWV5DqtXJqY"
+                    src="/img/skin/face-front.jpg"
                   />
                 </div>
               </div>
@@ -80,7 +78,7 @@ export default function S06SkinCapture() {
                   <img
                     alt="Góc chụp bên trái"
                     className="h-full w-full -rotate-[15deg] scale-150 object-cover object-[center_28%] brightness-95 filter"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKAVwb49kIJjT3NICeAJQAhyAlhtdh-D9EkJUzMBQo6PTi-Uahz8XJbZd50a_gXChKO0hPPeTRB0tme8RqCvaiuY5oFMq75tgKHngbcNwbZ12UnGFCkn1iyJ7nswjiTmRjOHEizVXv2cTdwHMHVhv1pr372WbeUFF1JhcmYRvSNXpNlaLmw6d3igWnsjqoo3UBmOUuQuO66RAOXtlFyi-3xU7_hF5GbKPEkEjM65I"
+                    src="/img/skin/face-left.jpg"
                   />
                 </div>
               </div>
@@ -96,7 +94,7 @@ export default function S06SkinCapture() {
                   <img
                     alt="Góc chụp bên phải"
                     className="h-full w-full rotate-[20deg] scale-150 object-cover object-[center_28%] brightness-95 filter"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuByzph2RLL7wSegwLMU9rnQsSKXmMoqoysI4lYRFFSK8MwZEJ31mWZF1qaP7OBmrBi0x0mTjjRqoxZ4fRPhJuMdpNrfRwpKOK6KWdLZKdZDfV0bIvlZQqj7oghkUuJoGZmnLELUbTmDJ6rGpjwwxzORUL-jDnbcenVAq5hHsDV-LXZnRooc_cwRtnuVMemMqdp0LAS77HdcxFksZiXb5Zpb7gu0Qu13kN_K_Kel8bI"
+                    src="/img/skin/face-right.jpg"
                   />
                 </div>
               </div>
@@ -194,9 +192,7 @@ export default function S06SkinCapture() {
             </button>
           </section>
         </main>
-        <footer className="flex w-full items-center justify-center pb-2 pt-1">
-          <div className="h-[4.5px] w-[134px] rounded-full bg-[#173B32]" />
-        </footer>
+        <SafeAreaBottom />
       </div>
     </Screen>
   )

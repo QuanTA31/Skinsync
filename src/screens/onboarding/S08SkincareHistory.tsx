@@ -1,34 +1,13 @@
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaBottom, SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 08 · Lịch sử chăm sóc da */
 export default function S08SkincareHistory() {
   return (
     <Screen>
-      <div className="relative flex h-[852px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans text-[#173B32] antialiased">
-        <div
-          className="pointer-events-none absolute -right-12 -top-12 z-0 h-48 w-48"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 100% 0%,rgba(122,173,155,.18) 0%,rgba(198,219,210,.08) 45%,transparent 70%)',
-          }}
-        />
-        <div
-          className="pointer-events-none absolute -bottom-10 -left-10 z-0 h-44 w-44"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 0% 100%,rgba(122,173,155,.15) 0%,rgba(198,219,210,.05) 50%,transparent 70%)',
-          }}
-        />
-        <svg
-          className="pointer-events-none absolute right-0 top-0 z-0 h-36 w-36 text-[#5D9B85] opacity-35"
-          fill="currentColor"
-          viewBox="0 0 100 100"
-        >
-          <path d="M100 0 C 80 15 65 35 60 60 C 55 40 45 25 20 15 C 50 15 75 5 100 0 Z" />
-          <path d="M100 20 C 85 30 75 45 72 70 C 68 55 58 45 40 38 C 65 38 85 30 100 20 Z" opacity="0.6" />
-          <path d="M85 0 C 70 20 50 35 48 55 C 52 40 60 25 85 0 Z" opacity="0.4" />
-        </svg>
-        <StatusBar />
+      <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans text-[#173B32] antialiased">
+        <SafeAreaTop />
         <main className="no-scrollbar relative z-10 flex-1 overflow-y-auto px-4 pb-24 pt-2">
           <nav className="relative flex items-center justify-center pb-2 pt-1">
             <button
@@ -42,7 +21,7 @@ export default function S08SkincareHistory() {
               </svg>
             </button>
             <div className="flex flex-col items-center">
-              <BrandLogo variant="stacked" />
+              <BrandLogo />
             </div>
           </nav>
           <section className="mb-4 mt-3 px-2 text-center">
@@ -390,9 +369,7 @@ export default function S08SkincareHistory() {
               </svg>
             </button>
           </div>
-          <div className="mt-3 flex flex-col items-center">
-            <div className="mb-0.5 mt-1.5 h-1 w-32 rounded-full bg-black/80" />
-          </div>
+          <SafeAreaBottom />
         </footer>
       </div>
     </Screen>

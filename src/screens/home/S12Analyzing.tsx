@@ -1,6 +1,6 @@
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaBottom, SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 12 · Đang phân tích */
 export default function S12Analyzing() {
@@ -11,27 +11,7 @@ export default function S12Analyzing() {
         data-auto-delay="4500"
         className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans text-[#173B32] antialiased"
       >
-        <svg
-          className="pointer-events-none absolute -left-10 top-56 h-44 w-32 -rotate-12 transform text-[#598475] opacity-[0.16]"
-          fill="currentColor"
-          viewBox="0 0 100 140"
-        >
-          <path d="M10,120 Q55,90 45,10 Q85,50 80,105 Q65,135 10,120 Z" />
-          <path d="M45,15 Q46,75 22,115" fill="none" opacity="0.4" stroke="currentColor" strokeWidth="2" />
-          <path d="M46,55 Q65,70 70,82" fill="none" opacity="0.4" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M46,78 Q25,88 22,100" fill="none" opacity="0.4" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-        <svg
-          className="pointer-events-none absolute -right-8 top-64 h-48 w-36 rotate-12 scale-x-[-1] transform text-[#598475] opacity-[0.16]"
-          fill="currentColor"
-          viewBox="0 0 100 140"
-        >
-          <path d="M10,120 Q55,90 45,10 Q85,50 80,105 Q65,135 10,120 Z" />
-          <path d="M45,15 Q46,75 22,115" fill="none" opacity="0.4" stroke="currentColor" strokeWidth="2" />
-          <path d="M46,55 Q65,70 70,82" fill="none" opacity="0.4" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M46,78 Q25,88 22,100" fill="none" opacity="0.4" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-        <StatusBar />
+        <SafeAreaTop />
         <main className="z-20 flex flex-1 flex-col justify-between px-5 pb-2 pt-3">
           <section className="relative flex min-h-[46px] w-full items-center justify-center">
             <button
@@ -83,7 +63,7 @@ export default function S12Analyzing() {
                 <img
                   alt="Cận cảnh kiểm tra da mặt"
                   className="h-full w-full scale-110 transform object-cover object-center"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt3l0ILr_xUZ3khwj1T4uJaT0nndW9TZdDIUsWo89fILHRJ56pZVz7XPrfF5pxFZpn8u1H8t9Fza3yQGVP7oEegMcNV5oIclmf-ezxEmQnIWvQIYUCbFEHWyDNexG3XfLeQS5vzNgOaojZBiYJxKBJO0mDxM3K8Ut9u55pLOLqzVL_ds_rdjAlKmyNcR4LRGD5awpl-YG4g-DHSd13xWzIkEiWhlCRnElSg90l-ZY"
+                  src="/img/skin/clear-face.jpg"
                 />
                 <div className="scanner-grid pointer-events-none absolute inset-0 opacity-45" />
                 <div className="animate-laser pointer-events-none absolute inset-x-0 h-[2.5px] bg-[#96eed3] shadow-[0_0_10px_2px_#3fe5b5,0_0_4px_1px_rgba(255,255,255,0.9)]" />
@@ -153,9 +133,7 @@ export default function S12Analyzing() {
             </button>
           </section>
         </main>
-        <footer className="z-30 flex w-full justify-center pb-2 pt-1">
-          <div className="h-1 w-32 rounded-full bg-neutral-900/80" />
-        </footer>
+        <SafeAreaBottom />
       </div>
     </Screen>
   )

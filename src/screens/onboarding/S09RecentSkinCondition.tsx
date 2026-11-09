@@ -1,6 +1,6 @@
 import { BrandLogo } from '@/components/brand/BrandLogo'
+import { SafeAreaBottom, SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 09 · Tình trạng da gần đây */
 export default function S09RecentSkinCondition() {
@@ -9,8 +9,6 @@ export default function S09RecentSkinCondition() {
       <div
         className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans text-[#173B32] antialiased"
         style={{
-          backgroundImage:
-            'radial-gradient(circle at 100% 0%,rgba(128,177,160,.15) 0%,transparent 40%),radial-gradient(circle at 100% 100%,rgba(128,177,160,.12) 0%,transparent 40%)',
           backgroundColor: '#F7F8F2',
         }}
       >
@@ -50,7 +48,7 @@ export default function S09RecentSkinCondition() {
           <path d="M150 80C120 95 90 120 85 150C110 145 135 125 150 80Z" fill="#76A192" opacity="0.45" />
           <path d="M130 110C100 120 80 135 70 160C95 150 120 135 130 110Z" fill="#578B79" opacity="0.35" />
         </svg>
-        <StatusBar />
+        <SafeAreaTop />
         <main className="no-scrollbar relative z-10 flex-1 space-y-4 overflow-y-auto px-5 pb-6 pt-2">
           <nav className="relative mb-1 flex min-h-[50px] items-center justify-between">
             <button
@@ -64,7 +62,7 @@ export default function S09RecentSkinCondition() {
               </svg>
             </button>
             <div className="pointer-events-none absolute left-1/2 flex -translate-x-1/2 flex-col items-center">
-              <BrandLogo variant="stacked" />
+              <BrandLogo />
             </div>
             <div className="h-9 w-9 opacity-0" />
           </nav>
@@ -337,9 +335,7 @@ export default function S09RecentSkinCondition() {
               Các thông tin bạn cung cấp là do bạn tự khai báo và không thay thế cho chẩn đoán y khoa.
             </p>
           </div>
-          <div className="flex justify-center pt-1.5">
-            <div className="h-1 w-32 rounded-full bg-neutral-900/60" />
-          </div>
+          <SafeAreaBottom />
         </footer>
       </div>
     </Screen>

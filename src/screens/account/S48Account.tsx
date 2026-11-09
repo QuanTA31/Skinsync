@@ -1,33 +1,15 @@
 import { usePlan } from '@/state/PlanProvider'
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 48 · Tài khoản của tôi */
 export default function S48Account() {
   const { active } = usePlan()
   return (
-    <Screen iconSize="sm">
-      <div className="relative flex h-[884px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans antialiased">
-        <img
-          alt=""
-          src="/eucalyptus-corner.png"
-          style={{
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            width: '125px',
-            height: '125px',
-            objectFit: 'contain',
-            pointerEvents: 'none',
-            zIndex: 10,
-            mixBlendMode: 'multiply',
-            opacity: '.85',
-          }}
-        />
-        <StatusBar />
+    <Screen tab={4} iconSize="sm">
+      <div className="relative flex h-[844px] w-[390px] select-none flex-col justify-between overflow-hidden bg-[#F7F8F2] font-sans antialiased">
+        <SafeAreaTop />
         <div className="z-20 mb-[74px] flex flex-1 flex-col justify-between overflow-hidden px-4 pb-1 pt-1">
           <div className="flex flex-col">
             <div className="relative mb-1 flex h-7 items-center justify-between">
@@ -49,11 +31,7 @@ export default function S48Account() {
           </div>
           <div className="flex items-center gap-3 rounded-[18px] border border-[#E7ECEA] bg-white px-3.5 py-3 shadow-[0_2px_10px_rgba(0,0,0,0.03)]">
             <div className="shadow-xs h-[52px] w-[52px] shrink-0 overflow-hidden rounded-full border border-[#DEE4E2] bg-[#EDEFE2]">
-              <img
-                alt="Nguyễn Minh Anh"
-                className="h-full w-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuACg_yoZow7Qan2dfuEvie8wLh4x-5HVSct7-C6moksn6GyUOHKbIjl3Z7o0-W2XIvZB6EuZbB8EjhWIAKq4YMcfAlsK9YzISMVRqaVGDmPQkOB_ZTWVQG96PS48Jizm9jNts1XrL-s7QXw0QBghc-q8x6OD7NLnnIoa5q5hoiFjD_XtsSZGN98PuJlAo5Bh77Ze48seC4SIiGkb3dd3ZqAEABhqy0Hd8LupF_TMe0"
-              />
+              <img alt="Nguyễn Minh Anh" className="h-full w-full object-cover" src="/img/people/user-minh-anh.jpg" />
             </div>
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2">
@@ -212,8 +190,6 @@ export default function S48Account() {
             <span className="text-[13px] font-bold text-[#E04F5F]">Đăng xuất</span>
           </button>
         </div>
-        <BottomNav role="user" active={4} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

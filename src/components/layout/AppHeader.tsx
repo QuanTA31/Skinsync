@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /* Header + icon dùng chung cho nhóm màn Premium (30–35) */
 
@@ -84,19 +83,10 @@ export const BatteryIcon = () => (
   </svg>
 )
 
-/** Họa tiết lá góc trên + status bar + header (nút quay lại · logo). */
+/** Header (nút quay lại · logo). */
 export function AppHeader({ back, backToast }: { back: string; backToast?: string }) {
   return (
     <>
-      <div className="pointer-events-none absolute right-0 top-0 z-10 h-32 w-32 overflow-hidden opacity-40">
-        <svg viewBox="0 0 100 100" fill="none" className="h-full w-full">
-          <path d="M100 0C70 10 50 40 40 80C35 50 10 20 0 0H100Z" fill="#357D64" opacity="0.15" />
-          <path d="M100 0C80 20 70 50 65 100C60 70 30 30 0 0H100Z" fill="#357D64" opacity="0.2" />
-        </svg>
-      </div>
-
-      <StatusBar />
-
       <div className="z-20 flex shrink-0 items-center justify-between px-5 py-2">
         <button
           data-back={back}
@@ -120,3 +110,15 @@ export const appMainStyle = {
   flexDirection: 'column',
   overflow: 'hidden',
 } as const
+
+/** Ảnh bác sĩ phụ trách (BS. Nguyễn Thị Minh Anh) – dùng ở các màn Premium */
+export const DoctorAvatar = ({ size = 56 }: { size?: number }) => (
+  <img
+    src="/img/people/doctor-minh-anh.jpg"
+    alt="BS. Nguyễn Thị Minh Anh"
+    width={size}
+    height={size}
+    className="shrink-0 rounded-2xl border border-line object-cover"
+    style={{ width: size, height: size }}
+  />
+)

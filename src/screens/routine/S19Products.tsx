@@ -1,27 +1,13 @@
-import { BottomNav } from '@/components/layout/BottomNav'
 import { BrandLogo } from '@/components/brand/BrandLogo'
-import { HomeIndicator } from '@/components/layout/HomeIndicator'
+import { SafeAreaTop } from '@/components/layout/SafeArea'
 import { Screen } from '@/components/layout/Screen'
-import { StatusBar } from '@/components/layout/StatusBar'
 
 /** Màn 19 · Sản phẩm chăm sóc da */
 export default function S19Products() {
   return (
-    <Screen>
+    <Screen tab={3}>
       <div className="relative flex h-[844px] w-[390px] select-none flex-col overflow-hidden bg-[#F7F8F2] font-sans text-[#173B32] antialiased">
-        <div aria-hidden="true" className="pointer-events-none absolute -left-12 -top-12 z-0 h-36 w-36 opacity-30">
-          <svg fill="#357D64" viewBox="0 0 100 100">
-            <path d="M20,60 Q40,20 80,10 Q60,50 40,60 Q30,65 20,60 Z" />
-            <path d="M40,50 Q60,30 90,30 Q70,60 50,60 Z" opacity="0.6" />
-          </svg>
-        </div>
-        <div aria-hidden="true" className="pointer-events-none absolute -right-10 -top-10 z-0 h-36 w-36 rotate-45 opacity-30">
-          <svg fill="#357D64" viewBox="0 0 100 100">
-            <path d="M10,80 Q40,30 90,20 Q65,60 40,75 Z" />
-            <path d="M30,70 Q60,45 85,50 Q60,80 40,80 Z" opacity="0.6" />
-          </svg>
-        </div>
-        <StatusBar />
+        <SafeAreaTop />
         <section className="relative z-20 px-5 pb-2 pt-1.5">
           <div className="mb-3 flex items-center justify-between">
             <button
@@ -538,8 +524,6 @@ export default function S19Products() {
             </div>
           </section>
         </main>
-        <BottomNav role="user" active={3} />
-        <HomeIndicator />
       </div>
     </Screen>
   )

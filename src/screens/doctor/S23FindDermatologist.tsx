@@ -23,7 +23,7 @@ const doctors: Doctor[] = [
     rating: '4.9',
     reviews: '320',
     experience: '8 năm kinh nghiệm',
-    image: 'https://randomuser.me/api/portraits/women/44.jpg',
+    image: '/img/people/doctor-minh-anh.jpg',
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const doctors: Doctor[] = [
     rating: '4.8',
     reviews: '215',
     experience: '10 năm kinh nghiệm',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    image: '/img/people/doctor-hoang-long.jpg',
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const doctors: Doctor[] = [
     rating: '4.8',
     reviews: '186',
     experience: '7 năm kinh nghiệm',
-    image: 'https://randomuser.me/api/portraits/women/68.jpg',
+    image: '/img/people/doctor-thu-ha.jpg',
   },
 ]
 
@@ -97,11 +97,6 @@ export default function S23FindDermatologist() {
   return (
     <ScopedScreen id="s23" css={css} tab={0}>
       <main className="phone">
-        <div className="status-bar">
-          <span>9:41</span>
-          <span className="status-icons">●●● ◖ ▰</span>
-        </div>
-
         <header className="header">
           <button className="back-button" data-back="s15">
             ‹

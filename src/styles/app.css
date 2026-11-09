@@ -45,6 +45,7 @@
   .phone-frame {
     position: relative;
     width: max-content;
+    box-sizing: content-box;
     border: var(--phone-bezel) solid #111;
     border-radius: var(--phone-radius);
     overflow: hidden;
@@ -55,6 +56,14 @@
     font-family: var(--font-body);
     color: var(--color-ink);
     user-select: none;
+  }
+
+  /* Màn hình bên trong khung: kích thước cố định cho mọi màn */
+  .phone-screen {
+    position: relative;
+    width: var(--phone-width);
+    height: var(--phone-height);
+    overflow: hidden;
   }
 
   /* Logo SKINSYNC (components/brand/BrandLogo.tsx) */
@@ -203,7 +212,7 @@
   /* lá bạch đàn trang trí (components/ui/BotanicalCorner.tsx) */
   .botanical-corner {
     position: absolute;
-    top: 36px;
+    top: 30px;
     right: -20px;
     z-index: 1;
     width: 150px;
