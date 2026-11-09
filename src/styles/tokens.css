@@ -1,0 +1,40 @@
+/* =====================================================================
+   SKINSYNC · Design tokens
+   Bộ nhận diện: Sage Green + Ivory
+   - Mọi màu / phông / bo góc / bóng của app đều lấy từ đây.
+   - Tailwind (tailwind.config.js) map các token này thành class: bg-primary, text-ink, bg-ivory…
+   ===================================================================== */
+:root {
+  /* ---- Màu thương hiệu ---- */
+  --color-primary: #357d64; /* xanh đậm – nút chính, trạng thái active, liên kết */
+  --color-primary-hover: #2b6551;
+  --color-primary-soft: #d7eae1; /* nền nhấn nhẹ, badge */
+  --color-primary-tint: #eef6f2; /* nền thẻ được chọn */
+  --color-ink: #173b32; /* chữ chính, tiêu đề */
+  --color-ink-soft: #4c6a60; /* chữ phụ */
+  --color-muted: #8a958f; /* chú thích, icon không active */
+  --color-bg: #f7f8f2; /* nền kem (ivory) */
+  --color-surface: #ffffff; /* thẻ, ô nhập */
+  --color-border: #e3e6d9;
+  --color-gold: #c99a3e; /* điểm nhấn gói Premium */
+  --color-gold-soft: #faf1df;
+  --color-danger: #c53030;
+
+  /* ---- Phông chữ: chỉ dùng 2 họ ---- */
+  --font-heading: 'Playfair Display', Georgia, serif; /* logo, tiêu đề màn hình */
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; /* toàn bộ nội dung */
+
+  /* ---- Hình khối ---- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+  --shadow-card: 0 2px 10px -2px rgba(23, 59, 50, 0.06);
+  --shadow-cta: 0 6px 18px -6px rgba(53, 125, 100, 0.45);
+
+  /* ---- Khung điện thoại demo ---- */
+  --phone-width: 390px;
+  --phone-bezel: 8px;
+  --phone-radius: 54px;
+}

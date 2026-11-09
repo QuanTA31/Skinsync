@@ -1,0 +1,771 @@
+/* ==========================================
+   SKINSYNC DESIGN SYSTEM (dùng chung cho các màn viết bằng CSS thuần)
+   Được bọc bằng @scope (.scoped) trong components/layout/ScopedScreen.tsx
+========================================== */
+
+/* 1. DESIGN TOKENS */
+:scope {
+  /* quy về token chung trong styles/tokens.css */
+  --primary: var(--color-primary);
+  --primary-dark: var(--color-primary-hover);
+  --primary-light: var(--color-primary-tint);
+
+  --background: var(--color-bg);
+  --surface: var(--color-surface);
+  --surface-soft: #ecf4f1;
+
+  --navy: var(--color-ink); /* chữ chính */
+  --text: var(--color-ink-soft);
+  --muted: var(--color-muted);
+
+  --border: var(--color-border);
+  --success: var(--color-primary);
+  --success-bg: #e6f2ed;
+
+  --gold: var(--color-gold);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 24px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+
+  font-family: var(--font-body);
+  color: var(--navy);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 2. GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 3. COMMON MOBILE FRAME */
+.phone {
+  width: 390px;
+  height: 844px;
+  margin: 0 auto;
+  padding: 13px 16px 12px;
+  background: var(--background);
+  color: var(--navy);
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.phone::-webkit-scrollbar {
+  display: none;
+}
+
+/* 4. STATUS BAR */
+.status-bar {
+  height: 24px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #111111;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status-icons {
+  font-size: 12px;
+}
+
+/* 5. COMMON LOGO */
+.logo {
+  /* logo dùng component <BrandLogo />, ở đây chỉ căn giữa */
+  display: flex;
+  justify-content: center;
+}
+
+/* 6. COMMON BACK BUTTON */
+.back-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--navy);
+  font-size: 22px;
+}
+
+/* Screen 23 header */
+.header {
+  position: relative;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.header .back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.header .logo {
+  padding-top: 9px;
+}
+
+/* Screen 24 header */
+.top-header,
+.booking-header {
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.top-header .back-button,
+.booking-header .back-button {
+  position: absolute;
+  left: 0;
+}
+
+.header-actions {
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.header-actions button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--navy);
+  font-size: 18px;
+}
+
+/* 7. COMMON TYPOGRAPHY */
+h1,
+h2,
+h3 {
+  color: var(--navy);
+}
+
+h1,
+h2,
+h3,
+.doctor-name {
+  font-family: var(--font-heading);
+}
+
+p {
+  color: var(--muted);
+}
+
+/* 8. COMMON INPUTS */
+.search-box,
+.reason-select select {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  height: 42px;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 12px;
+  color: var(--navy);
+}
+
+.search-box input::placeholder {
+  color: var(--muted);
+}
+
+.search-icon {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.filter-button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--primary);
+  font-size: 20px;
+}
+
+/* 9. COMMON BUTTONS */
+.profile-btn,
+.booking-btn,
+.main-booking-button,
+.confirm-button {
+  height: 38px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.profile-btn {
+  background: var(--surface);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.booking-btn,
+.main-booking-button,
+.confirm-button {
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  color: white;
+}
+
+.booking-btn:hover,
+.main-booking-button:hover,
+.confirm-button:hover {
+  background: var(--primary-dark);
+}
+
+/* 10. COMMON CARDS */
+.doctor-card,
+.booking-doctor-card,
+.upload-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(23, 59, 50, 0.05);
+}
+
+.promo,
+.free-banner,
+.benefit-card {
+  background: var(--primary-light);
+  border-radius: var(--radius-md);
+}
+
+/* ==========================================
+   SCREEN 24 / 25 - DOCTOR PROFILE & BOOKING (phần chung)
+========================================== */
+
+.profile-section {
+  display: flex;
+  gap: 10px;
+  height: 103px;
+  margin-top: 2px;
+}
+
+.profile-image {
+  width: 94px;
+  height: 103px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #e9edef;
+}
+
+.profile-information {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+
+.profile-information h1 {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 2px;
+}
+
+.profile-information > p {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.profile-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  margin-top: 2px;
+  color: var(--muted);
+}
+
+.profile-rating strong {
+  color: #e58c1a;
+}
+
+.experience {
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.profile-information .verified-label {
+  position: absolute;
+  left: -94px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--success-bg);
+  color: var(--success);
+  border-radius: var(--radius-pill);
+  padding: 3px 7px;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.consultation-methods {
+  display: flex;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.method-button {
+  flex: 1;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--primary);
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.method-button.active {
+  background: var(--primary-light);
+  border-color: var(--primary);
+}
+
+.content-section {
+  margin-top: 10px;
+}
+
+.content-section h2 {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.introduction p {
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.more-description {
+  margin-top: 4px;
+}
+
+.see-more {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-size: 10px;
+  text-decoration: underline;
+  margin-top: 2px;
+}
+
+.certificate-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.certificate-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.certificate-icon {
+  color: #459579;
+  font-size: 13px;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.certificate-item p {
+  font-size: 9px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.workplace-info {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+}
+
+.workplace-icon {
+  font-size: 14px;
+  color: #409476;
+}
+
+.workplace-info strong {
+  font-size: 10px;
+  font-weight: normal;
+  color: var(--text);
+}
+
+.workplace-info p {
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.specialty-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.specialty-tag {
+  padding: 5px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-soft);
+  color: #548a77;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.schedule-section {
+  margin-top: 13px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.schedule-list {
+  display: flex;
+  gap: 5px;
+}
+
+.schedule-item {
+  flex: 1;
+  min-width: 0;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.schedule-item span,
+.schedule-item strong {
+  font-size: 9px;
+}
+
+.schedule-item strong {
+  font-weight: normal;
+}
+
+.schedule-item.selected {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.free-banner {
+  margin-top: 9px;
+  min-height: 62px;
+  padding: 9px 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.free-icon {
+  font-size: 23px;
+  width: 28px;
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.free-content {
+  flex: 1;
+}
+
+.free-content strong {
+  display: block;
+  color: #357d64;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.free-content p {
+  font-size: 9px;
+  color: #6e998a;
+  line-height: 1.4;
+  margin-top: 3px;
+}
+
+.price-information {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.price-information > span {
+  font-size: 10px;
+}
+
+.price-information strong {
+  font-family: var(--font-heading);
+  font-size: 17px;
+}
+
+.main-booking-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.reason-select {
+  position: relative;
+  height: 38px;
+}
+
+.reason-select select {
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  font-size: 10px;
+  padding: 0 28px 0 10px;
+  outline: none;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: var(--primary);
+  font-size: 17px;
+  pointer-events: none;
+}
+
+.image-section h3 span {
+  font-family: var(--font-body);
+  font-size: 9px;
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.upload-card {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px;
+}
+
+.upload-icon {
+  width: 27px;
+  height: 27px;
+  border-radius: 7px;
+  background: var(--surface-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #409275;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.upload-description {
+  flex: 1;
+  min-width: 0;
+}
+
+.upload-description strong {
+  font-size: 8px;
+  font-weight: normal;
+  color: var(--text);
+  display: block;
+}
+
+.upload-description p {
+  font-size: 8px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.upload-button {
+  height: 28px;
+  padding: 0 11px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--primary);
+  color: white;
+  font-size: 8px;
+}
+
+.benefit-card {
+  margin-top: 9px;
+  overflow: hidden;
+}
+
+.benefit-main {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 10px 5px;
+}
+
+.benefit-gift {
+  width: 28px;
+  flex-shrink: 0;
+  color: var(--primary);
+  font-size: 23px;
+}
+
+.benefit-main strong {
+  display: block;
+  color: #357d64;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.benefit-main p {
+  font-size: 8px;
+  color: #72998b;
+  margin-top: 2px;
+}
+
+.premium-note {
+  min-height: 25px;
+  padding: 4px 9px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #edefe1;
+}
+
+.premium-note > span:first-child {
+  color: #d99b27;
+  font-size: 15px;
+}
+
+.premium-note p {
+  flex: 1;
+  font-size: 8px;
+  color: #8d8053;
+  line-height: 1.3;
+}
+
+.premium-arrow {
+  color: #a08e56;
+  font-size: 18px;
+}
+
+.price-row {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.price-row > span {
+  font-family: var(--font-heading);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.price-values {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.price-values del {
+  font-size: 10px;
+  color: #a7adb0;
+}
+
+.price-values strong {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  color: var(--primary);
+}
+
+.info-icon {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.confirm-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.confirm-button span {
+  font-size: 17px;
+}
+
+.safe-area {
+  height: 12px;
+}
+
+.phone:has(.profile-section) .booking-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.phone:has(.profile-section) .main-booking-button {
+  flex: 1;
+}
+
+/* chừa chỗ cho thanh tab bar dùng chung ở đáy màn hình */
+.phone {
+  padding-bottom: 92px;
+}

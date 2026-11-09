@@ -1,0 +1,253 @@
+/* SCREEN 27 - VIDEO CONSULTATION (phần riêng) */
+
+.sc-video-top {
+  position: relative;
+}
+
+.sc-video-top .sc-header {
+  height: 62px;
+}
+
+.sc-top-actions {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.sc-top-actions button {
+  width: 31px;
+  height: 31px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: white;
+  color: var(--navy);
+  font-size: 19px;
+}
+
+.sc-video-heading {
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.sc-video-heading h1 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.sc-video-heading p {
+  margin-top: 3px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.sc-connection {
+  min-height: 28px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #e5f1ec;
+  color: #357d64;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  margin-bottom: 6px;
+}
+
+.sc-signal {
+  margin-left: auto;
+  color: #45b58e;
+  font-size: 13px;
+  letter-spacing: -2px;
+}
+
+.sc-video-container {
+  position: relative;
+  height: 246px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #e4e6dd;
+}
+
+.sc-doctor-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.sc-doctor-label {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  padding: 6px 9px;
+  border-radius: 7px;
+  background: rgba(53, 125, 100, 0.75);
+  color: white;
+  font-size: 9px;
+}
+
+.sc-doctor-label span {
+  color: #6dde8d;
+}
+
+.sc-self-video {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  width: 77px;
+  height: 108px;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 9px;
+  background: #e5eae8;
+}
+
+.sc-self-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sc-self-video span {
+  position: absolute;
+  bottom: 3px;
+  left: 4px;
+  color: white;
+  font-size: 8px;
+  background: rgba(23, 59, 50, 0.6);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.sc-call-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 9px 0 7px;
+}
+
+.sc-call-controls button {
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--navy);
+}
+
+.sc-call-controls button > span {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: white;
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.sc-call-controls button small {
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.sc-call-controls .sc-end-call > span {
+  background: #d84d40;
+  border-color: #d84d40;
+  color: white;
+  font-size: 22px;
+}
+
+.sc-call-controls .sc-end-call small {
+  color: var(--navy);
+}
+
+.sc-security-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 9px;
+  border-radius: 9px;
+  background: #ecf3f0;
+  color: #357d64;
+}
+
+.sc-security-note > span {
+  font-size: 16px;
+}
+
+.sc-security-note p {
+  font-size: 9px;
+  line-height: 1.45;
+  color: #708494;
+}
+
+.sc-video-links {
+  display: flex;
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.sc-video-links button {
+  flex: 1;
+  height: 65px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--navy);
+}
+
+.sc-video-links button > span {
+  font-size: 21px;
+  color: var(--primary);
+}
+
+.sc-video-links strong {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.sc-video-links small {
+  font-size: 8px;
+  color: var(--muted);
+}
+
+.sc-video-benefit {
+  margin-top: 8px;
+  min-height: 57px;
+  border-radius: 11px;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px;
+}
+
+.sc-video-benefit > span {
+  color: var(--primary);
+  font-size: 24px;
+}
+
+.sc-video-benefit strong {
+  display: block;
+  font-size: 10px;
+  color: #357d64;
+}
+
+.sc-video-benefit p {
+  margin-top: 3px;
+  font-size: 9px;
+  color: #72998b;
+}

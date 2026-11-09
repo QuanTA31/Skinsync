@@ -1,0 +1,328 @@
+/* SCREEN 26 - BOOKING CONFIRMATION (phần riêng) */
+
+.confirmation-heading {
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.confirmation-heading h1 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--navy);
+}
+
+.confirmation-heading p {
+  margin-top: 3px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.confirmation-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  padding: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 7px rgba(23, 59, 50, 0.035);
+}
+
+.doctor-confirm-card {
+  margin-top: 0;
+}
+
+.confirmation-doctor {
+  display: flex;
+  gap: 10px;
+  min-height: 88px;
+}
+
+.confirmation-doctor-image {
+  width: 76px;
+  height: 83px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #e9edef;
+}
+
+.confirmation-doctor-info {
+  flex: 1;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.confirmation-doctor-info h2 {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  color: var(--navy);
+  line-height: 1.5;
+}
+
+.confirmation-doctor-info > p {
+  font-size: 10px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.confirmation-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.confirmation-rating .star {
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.confirmation-rating strong {
+  color: #e98b19;
+}
+
+.confirmation-experience {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 3px;
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.confirmation-experience span {
+  color: var(--primary);
+}
+
+.confirmation-divider {
+  width: 100%;
+  height: 1px;
+  background: #ebf0ee;
+  margin: 6px 0;
+}
+
+.confirmation-info-row {
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.confirmation-icon {
+  width: 21px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  color: #357d64;
+}
+
+.confirmation-info-row > strong {
+  font-size: 10px;
+  color: var(--text);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.confirmation-value {
+  flex: 1;
+  text-align: right;
+  color: #5d7890;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.detail-confirm-card {
+  padding: 8px 9px;
+}
+
+.confirmation-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  min-height: 43px;
+  padding: 3px 0;
+}
+
+.confirmation-detail-row .detail-icon {
+  padding-top: 1px;
+  font-size: 19px;
+}
+
+.confirmation-detail-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.confirmation-detail-content h3 {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.confirmation-detail-content > strong {
+  display: block;
+  font-size: 10px;
+  color: var(--navy);
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.confirmation-detail-content p {
+  font-size: 9px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.record-row {
+  position: relative;
+  min-height: 69px;
+}
+
+.record-row .confirmation-detail-content {
+  padding-right: 13px;
+}
+
+.skin-image-list {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.skin-image-list img {
+  width: 49px;
+  height: 39px;
+  border-radius: 7px;
+  object-fit: cover;
+  background: #ebeddf;
+}
+
+.record-arrow {
+  position: absolute;
+  right: 0;
+  top: 26px;
+  color: #52758a;
+  font-size: 23px;
+}
+
+.confirmation-benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 53px;
+  padding: 9px 11px;
+  margin-top: 2px;
+  background: var(--primary-light);
+  border-radius: var(--radius-md);
+}
+
+.confirmation-gift {
+  width: 28px;
+  flex-shrink: 0;
+  font-size: 25px;
+  color: var(--primary);
+}
+
+.confirmation-benefit > div {
+  flex: 1;
+}
+
+.confirmation-benefit strong {
+  display: block;
+  color: #357d64;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.confirmation-benefit p {
+  font-size: 9px;
+  margin-top: 3px;
+  color: #72998b;
+}
+
+.confirmation-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3px;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+.confirmation-price > strong {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  color: var(--navy);
+}
+
+.confirmation-price-values {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.confirmation-price-values del {
+  font-size: 12px;
+  color: #a7adb0;
+}
+
+.confirmation-price-values > strong {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  color: #173b32;
+}
+
+.confirmation-info {
+  font-size: 16px;
+  color: #7891a2;
+}
+
+.confirmation-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 2px 5px;
+}
+
+.confirmation-primary {
+  width: 100%;
+  height: 39px;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-pill);
+  background: var(--primary);
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.confirmation-primary span {
+  font-size: 17px;
+}
+
+.confirmation-secondary {
+  width: 100%;
+  height: 35px;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--primary);
+  font-size: 11px;
+}
+
+.confirmation-primary:hover {
+  background: var(--primary-dark);
+}
+
+.confirmation-secondary:hover {
+  background: var(--primary-light);
+}

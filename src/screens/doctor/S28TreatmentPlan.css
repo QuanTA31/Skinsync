@@ -1,0 +1,245 @@
+/* SCREEN 28 - TREATMENT PLAN (phần riêng) */
+
+.sc-treatment-heading {
+  text-align: center;
+  margin: 2px 0 9px;
+}
+
+.sc-treatment-heading h1 {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.sc-treatment-heading p {
+  font-size: 10px;
+  line-height: 1.4;
+  margin-top: 3px;
+}
+
+.sc-treatment-doctor {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+}
+
+.sc-treatment-doctor img {
+  width: 62px;
+  height: 63px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.sc-treatment-doctor > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.sc-treatment-doctor strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  color: var(--navy);
+}
+
+.sc-treatment-doctor p {
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.sc-treatment-doctor small {
+  display: block;
+  font-size: 8px;
+  color: #639382;
+  margin-top: 3px;
+}
+
+.sc-treatment-section {
+  margin-top: 9px;
+}
+
+.sc-section-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.sc-section-title > span {
+  width: 19px;
+  flex-shrink: 0;
+  font-size: 18px;
+  color: var(--primary);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.sc-section-title > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.sc-section-title > strong,
+.sc-section-title > div > strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+.sc-section-title p {
+  font-size: 9px;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.sc-section-title ul {
+  margin: 3px 0 0 12px;
+  padding: 0;
+}
+
+.sc-section-title li {
+  font-size: 9px;
+  line-height: 1.45;
+  color: #71899a;
+}
+
+.sc-product-list {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.sc-product {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.sc-product-image {
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sc-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sc-product strong {
+  display: block;
+  font-size: 8px;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.sc-product small {
+  display: block;
+  font-size: 7px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.sc-routine-list {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.sc-routine {
+  flex: 1;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.sc-routine.morning {
+  background: #faf1dd;
+}
+
+.sc-routine.evening {
+  background: #eaf0f5;
+}
+
+.sc-routine strong {
+  font-size: 10px;
+  display: block;
+  color: var(--navy);
+}
+
+.sc-routine ul {
+  padding-left: 12px;
+  margin-top: 4px;
+}
+
+.sc-routine li {
+  font-size: 8px;
+  line-height: 1.5;
+  color: #687d8a;
+}
+
+.sc-premium-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff2d9;
+  padding: 7px 9px;
+  border-radius: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.sc-premium-note > span {
+  font-size: 19px;
+  color: #d99b27;
+}
+
+.sc-premium-note p {
+  font-size: 9px;
+  line-height: 1.4;
+  color: #947342;
+}
+
+.sc-treatment-history {
+  width: 100%;
+  height: 35px;
+  margin-top: 7px;
+  border: none;
+  border-radius: 20px;
+  background: var(--primary);
+  color: white;
+  font-size: 10px;
+}
+
+.sc-treatment-history span {
+  margin-left: 8px;
+  font-size: 15px;
+}
+
+.sc-treatment-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+.sc-treatment-actions button {
+  flex: 1;
+  min-height: 38px;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  background: white;
+  color: var(--primary);
+  font-size: 9px;
+  line-height: 1.35;
+}

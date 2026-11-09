@@ -1,0 +1,193 @@
+/* SCREEN 25 - BOOKING APPOINTMENT (phần riêng) */
+
+.page-heading {
+  margin-top: 5px;
+  margin-bottom: 9px;
+}
+
+.page-heading h1 {
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.page-heading p {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.booking-doctor-card {
+  height: 73px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+.booking-doctor-image {
+  width: 59px;
+  height: 61px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.booking-doctor-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.booking-doctor-info h2 {
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+
+.booking-doctor-info > p {
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.booking-doctor-meta {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 2px;
+  white-space: nowrap;
+  font-size: 8px;
+  color: var(--muted);
+}
+
+.booking-doctor-meta strong {
+  color: #e98b19;
+}
+
+.booking-section {
+  margin-top: 10px;
+}
+
+.booking-section h3 {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.consultation-options {
+  display: flex;
+  gap: 7px;
+}
+
+.consultation-card {
+  position: relative;
+  flex: 1;
+  height: 45px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--primary);
+  padding: 4px;
+}
+
+.consultation-card.active {
+  border: 1px solid var(--primary);
+  background: #f7f8f2;
+}
+
+.consultation-icon {
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.consultation-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.consultation-text strong {
+  font-size: 9px;
+  font-weight: normal;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.consultation-text small {
+  font-size: 8px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.selected-check {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--success);
+  color: white;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-list {
+  display: flex;
+  gap: 5px;
+}
+
+.date-item {
+  flex: 1;
+  min-width: 0;
+  height: 43px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.date-item span,
+.date-item strong {
+  font-size: 9px;
+}
+
+.date-item strong {
+  font-weight: normal;
+}
+
+.date-item.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.time-list {
+  display: flex;
+  gap: 5px;
+}
+
+.time-item {
+  flex: 1;
+  min-width: 0;
+  height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: #68849a;
+  font-size: 9px;
+}
+
+.time-item.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}

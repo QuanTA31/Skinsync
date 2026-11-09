@@ -1,0 +1,300 @@
+/* =====================================================================
+   SKINSYNC · Stylesheet chung cho toàn bộ ứng dụng
+   1. Tailwind layers
+   2. Base (html/body, phông chữ mặc định)
+   3. Components dùng chung (khung điện thoại, nút, thẻ, icon font…)
+   4. Utilities & animation
+   Màu / phông / kích thước: xem tokens.css
+   ===================================================================== */
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------ 2. Base ------------------------------ */
+@layer base {
+  html,
+  body,
+  #root {
+    margin: 0;
+    height: 100%;
+  }
+
+  body {
+    background: #131714; /* nền tối của trang demo (ngoài khung điện thoại) */
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* tiêu đề màn hình (h1) luôn dùng phông heading để đồng bộ giữa các màn */
+  .phone-frame h1 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+  }
+}
+
+/* --------------------------- 3. Components --------------------------- */
+@layer components {
+  /* Khung điện thoại bọc mọi màn hình (components/layout/Screen.tsx) */
+  .phone-frame {
+    position: relative;
+    width: max-content;
+    border: var(--phone-bezel) solid #111;
+    border-radius: var(--phone-radius);
+    overflow: hidden;
+    background: var(--color-bg);
+    box-shadow:
+      0 30px 70px -20px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(255, 255, 255, 0.04);
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    user-select: none;
+  }
+
+  /* Logo SKINSYNC (components/brand/BrandLogo.tsx) */
+  .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-ink);
+    line-height: 1;
+  }
+  .brand-logo--stacked {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+  .brand-logo__word {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    /* bù khoảng letter-spacing cuối chữ để logo căn giữa chuẩn */
+    margin-right: -0.22em;
+  }
+  .brand-logo__tagline {
+    font-family: var(--font-body);
+    font-size: 8.5px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+    margin-right: -0.22em;
+  }
+
+  /* Nút & thẻ cơ bản – dùng cho màn mới */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 48px;
+    padding: 0 20px;
+    border-radius: var(--radius-pill);
+    font-size: 14px;
+    font-weight: 600;
+    transition:
+      background-color 0.15s,
+      opacity 0.15s,
+      transform 0.1s;
+  }
+  .btn:active {
+    transform: scale(0.98);
+  }
+  .btn-primary {
+    background: var(--color-primary);
+    color: #fff;
+    box-shadow: var(--shadow-cta);
+  }
+  .btn-primary:hover {
+    background: var(--color-primary-hover);
+  }
+  .btn-primary:disabled,
+  .btn-primary[aria-disabled='true'] {
+    opacity: 0.45;
+    box-shadow: none;
+  }
+  .btn-outline {
+    background: var(--color-surface);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+  }
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Material Symbols (icon font) */
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  .material-symbols-outlined.fill,
+  .material-symbols-outlined.fill-icon {
+    font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+  }
+  /* <Screen iconSize="sm">: icon mặc định 19px, căn giữa */
+  :where([data-icon-size='sm']) .material-symbols-outlined {
+    font-size: 19px;
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 20;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .font-serif-brand {
+    font-family: var(--font-heading);
+  }
+
+  /* ô nhập liệu (màn 57) */
+  .custom-input {
+    background-color: var(--color-surface);
+    border: 1px solid #d3dfd9;
+    border-radius: 10px;
+    padding: 7px 12px;
+    font-size: 11.5px;
+    line-height: 1.3;
+    color: var(--color-ink);
+    width: 100%;
+    outline: none;
+    transition: all 0.15s ease-in-out;
+  }
+  .custom-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary);
+  }
+  .custom-input::placeholder {
+    color: #9aa9a2;
+    font-size: 11px;
+  }
+
+  /* lá bạch đàn trang trí (components/ui/BotanicalCorner.tsx) */
+  .botanical-corner {
+    position: absolute;
+    top: 36px;
+    right: -20px;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.42;
+    mix-blend-mode: multiply;
+    -webkit-mask-image: linear-gradient(135deg, #000 58%, transparent 94%);
+    mask-image: linear-gradient(135deg, #000 58%, transparent 94%);
+  }
+  .botanical-corner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top right;
+  }
+  .botanical-bg {
+    background-image: radial-gradient(circle at 100% 0%, rgba(53, 125, 100, 0.14) 0%, rgba(247, 248, 242, 0) 65%);
+  }
+  .botanical-img {
+    position: absolute;
+    top: 44px;
+    right: -22px;
+    z-index: 0;
+    width: 138px;
+    height: 118px;
+    object-fit: cover;
+    object-position: right top;
+    opacity: 0.58;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+/* ---------------------- 4. Utilities & animation --------------------- */
+@layer utilities {
+  /* ẩn thanh cuộn nhưng vẫn cuộn được */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* hiệu ứng quét da (màn 12) */
+@keyframes scanMove {
+  0% {
+    top: 15%;
+    opacity: 0.6;
+  }
+  50% {
+    top: 80%;
+    opacity: 0.95;
+  }
+  100% {
+    top: 15%;
+    opacity: 0.6;
+  }
+}
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-laser {
+  animation: scanMove 3s ease-in-out infinite;
+}
+.animate-spin-slow {
+  animation: spinSlow 3s linear infinite;
+}
+.scanner-grid {
+  background-size: 14px 14px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.42) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.42) 1px, transparent 1px);
+}
+
+/* phần tử bấm được trong màn hình demo (xem navigation/useDelegatedClicks.ts) */
+[data-go],
+[data-back],
+[data-tab],
+[data-toast],
+[data-pills] > *,
+[data-toggle],
+[data-hide] {
+  cursor: pointer;
+}
